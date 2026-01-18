@@ -15,7 +15,7 @@ const Footer = () => {
                             <h2 className="text-2xl font-bold leading-tight">the bridge travel</h2>
                         </div>
                         <p className="text-slate-300 text-sm leading-relaxed">
-                            the bridge travel best travel agency in Egypt specialized in providing professional advice on planning Travel Packages, Nile Cruises and Day Tours.
+                            The Bridge Travel best travel agency in Egypt specialized in providing professional advice on planning Travel Packages, Nile Cruises and Day Tours.
                         </p>
                     </div>
 

@@ -6,7 +6,7 @@ const SocialFloatingButton = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const socialLinks = [
-        { icon: <Phone className="h-5 w-5" />, color: "bg-[#25D366]", label: "WhatsApp" },
+        { icon: <Phone className="h-5 w-5" />, color: "bg-[#25D366]", label: "whatsApp" },
         { icon: <Facebook className="h-5 w-5" />, color: "bg-[#1877F2]", label: "Facebook" },
         { icon: <Instagram className="h-5 w-5" />, color: "bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF]", label: "Instagram" },
         { icon: <Twitter className="h-5 w-5" />, color: "bg-[#1DA1F2]", label: "Twitter" },

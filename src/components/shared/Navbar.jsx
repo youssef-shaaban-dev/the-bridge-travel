@@ -129,7 +129,7 @@ const Navbar = () => {
                                     <nav className="flex-1 px-4 py-8 space-y-4">
                                         <MobileNavItem icon={<Home className="h-5 w-5" />} label="Home" />
                                         <MobileNavItem icon={<MapPin className="h-5 w-5" />} label="Egypt Tour Packages" />
-                                        <MobileNavItem icon={<Ship className="h-5 w-5" />} label="Nile River Cruises" />
+                                        <MobileNavItem icon={<Ship className="h-5 w-5" />} label="Nile Cruises" />
                                         <MobileNavItem icon={<Globe className="h-5 w-5" />} label="Day Excursions" />
                                         <MobileNavItem icon={<Plane className="h-5 w-5 text-[#BC8B22]" />} label="Custom Egypt Tours" />
                                         <MobileNavItem icon={<Globe className="h-5 w-5" />} label="Travel Guide" />
@@ -138,7 +138,7 @@ const Navbar = () => {
                                     </nav>
 
                                     <div className="p-6 border-t border-white/10 text-[#67e8f9]">
-                                        <p className="text-[10px] tracking-widest uppercase text-center opacity-50">Luxury Meets Reality</p>
+                                        <p className="text-[10px] tracking-widest uppercase text-center opacity-50">The Bridge to Luxury Egypt Tours</p>
                                     </div>
                                 </div>
                             </SheetContent>
