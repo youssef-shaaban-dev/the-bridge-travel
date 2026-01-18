@@ -4,53 +4,29 @@ import { Star, MapPin, Quote } from 'lucide-react';
 
 const testimonials = [
     {
-        name: "Breanna H",
-        location: "United States",
-        initials: "BH",
-        text: "This trip did not disappoint! I have traveled to many places and this trip has been my favorite by far. Luxor and Aswan Travel made our trip absolutely perfect.",
+        name: "Sarah M",
+        location: "USA",
+        initials: "SM",
+        text: "An incredible experience. Everything was seamless, the service was top-notch, and seeing the Pyramids in person was a bucket-list moment. Truly unforgettable.",
         rating: 5,
         verified: true
     },
     {
-        name: "Sergey P",
-        location: "Italy",
-        initials: "SP",
-        text: "Loved the trip! Thanks for the amazing journey through The Nile! Wonderful views, exceptional staff and incredible food. Special thanks to our guide Mr. Mohammed.",
-        rating: 5,
-        verified: true
-    },
-    {
-        name: "Deana C",
-        location: "Australia",
-        initials: "DC",
-        text: "Luxor and Aswan Travel exceeded all expectations and gave us an experience of a lifetime. Our personal Egyptologist Hassan was absolutely incredible.",
-        rating: 5,
-        verified: true
-    },
-    {
-        name: "Michael R",
+        name: "James R.",
         location: "United Kingdom",
-        initials: "MR",
-        text: "A truly magical experience from start to finish. The attention to detail and the level of luxury was unmatched. Highly recommend to anyone visiting Egypt.",
+        initials: "JR",
+        text: "Absolutely brilliant from start to finish. The organisation was spot on, the guides were first-class, and the Nile cruise was simply marvellous. Egypt exceeded all expectations.",
         rating: 5,
         verified: true
     },
     {
-        name: "Sarah L",
-        location: "Canada",
-        initials: "SL",
-        text: "The perfect blend of adventure and relaxation. Sailing the Nile on a private Dahabiya was the highlight of our year. Everything was perfectly organized.",
+        name: "Daniel T",
+        location: "Australia",
+        initials: "DT",
+        text: "Such a fantastic trip! The team was super friendly, the sights were mind-blowing, and the whole journey felt easy and relaxed. Egypt was an absolute ripper.",
         rating: 5,
         verified: true
     },
-    {
-        name: "Ahmed K",
-        location: "Saudi Arabia",
-        initials: "AK",
-        text: "Outstanding service and very knowledgeable guides. They made every moment meaningful and helped us explore the hidden gems of Luxor. Five stars!",
-        rating: 5,
-        verified: true
-    }
 ];
 
 const GuestExperiences = () => {
@@ -65,10 +41,10 @@ const GuestExperiences = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl font-bold text-[#22455C] md:text-6xl">Guest Experiences</h2>
+                    <h2 className="text-4xl font-bold text-[#22455C] md:text-6xl">What Travelers Say About Our Egypt Tours</h2>
                     <div className="mx-auto my-4 h-1 w-20 rounded-full bg-[#BC8B22]" />
                     <p className="text-slate-500 italic max-w-2xl mx-auto">
-                        Hear from travelers who have experienced the magic of Egypt with us
+                        Discover what travelers say about their Egypt journey with us
                     </p>
                 </motion.div>
 

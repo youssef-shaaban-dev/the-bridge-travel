@@ -5,26 +5,26 @@ import { GraduationCap, ShieldCheck, Star, Headset } from 'lucide-react';
 const reasons = [
     {
         icon: <GraduationCap className="h-8 w-8" />,
-        title: "Expert Egyptologists",
-        description: "Our certified Egyptologist guides bring ancient history to life with deep knowledge and passionate storytelling, ensuring an educational and immersive experience.",
+        title: "Iconic Sights, Up Close",
+        description: "See the Pyramids, Nile, and ancient temples in real life, timeless wonders you’ve only dreamed of.",
         color: "bg-[#22455C]"
     },
     {
         icon: <ShieldCheck className="h-8 w-8" />,
-        title: "Safety & Security",
-        description: "Your safety is our priority. We maintain the highest safety standards with 24/7 support, modern vehicles, and comprehensive safety protocols.",
+        title: "Effortless Luxury",
+        description: "Enjoy five-star hotels, private guides, and smooth VIP service from arrival to departure.",
         color: "bg-[#BC8B22]"
     },
     {
         icon: <Star className="h-8 w-8" />,
-        title: "Luxury Experience",
-        description: "From premium accommodations to exclusive access, we provide luxury experiences that exceed expectations and create unforgettable memories.",
+        title: "Exceptional Value",
+        description: "World-class experiences and premium comfort at a surprisingly great value.",
         color: "bg-[#6B8E23]" // Olive Green variant
     },
     {
         icon: <Headset className="h-8 w-8" />,
-        title: "Personalized Service",
-        description: "Every journey is tailored to your preferences with dedicated support from planning to departure, ensuring a seamless and personalized experience.",
+        title: "Warm Egyptian Hospitality",
+        description: "Feel truly welcomed with personal, attentive service that makes every moment special.",
         color: "bg-[#22455C]"
     }
 ];
@@ -40,10 +40,10 @@ const WhyChooseUs = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-4xl font-bold text-[#22455C] md:text-6xl">Why Choose Us</h2>
+                    <h2 className="text-4xl font-bold text-[#22455C] md:text-6xl">The Allure of Egypt</h2>
                     <div className="mx-auto my-4 h-1 w-20 rounded-full bg-[#BC8B22]" />
                     <p className="mb-16 text-slate-500 italic max-w-2xl mx-auto">
-                        Experience the difference that makes us Egypt's premier travel company
+                        Where timeless wonders, refined luxury, and warm hospitality create an unforgettable journey.
                     </p>
                 </motion.div>
 

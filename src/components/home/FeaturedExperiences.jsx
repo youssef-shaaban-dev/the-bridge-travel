@@ -92,10 +92,10 @@ const FeaturedExperiences = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl font-bold text-[#22455C] md:text-6xl">Featured Experiences</h2>
+                    <h2 className="text-4xl font-bold text-[#22455C] md:text-6xl">Egypt Tour Packages</h2>
                     <div className="mx-auto my-4 h-1 w-20 rounded-full bg-[#BC8B22]" />
                     <p className="text-slate-500 italic max-w-2xl mx-auto">
-                        Discover our most popular tours and create memories that last a lifetime
+                        Discover expertly crafted Egypt tour packages that blend iconic history, refined luxury, and authentic experiences - designed for worldwide travelers seeking a journey of a lifetime.
                     </p>
                 </motion.div>
 

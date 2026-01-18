@@ -21,25 +21,19 @@ const slides = [
         image: pyramids,
         title: "Luxor and Aswan Travel",
         subtitle: "Egypt's Premier Luxury Travel Experience",
-        badge: "Award-Winning Since 2008",
-        cta1: "Discover Egypt",
-        cta2: "View Packages"
+        cta1: "Egypt Tours",
     },
     {
         image: nile,
         title: "Sail the Majestic Nile",
         subtitle: "Experience ancient wonders from a luxury Dahabiya",
-        badge: "Limited Seasonal Offers",
         cta1: "Explore Cruises",
-        cta2: "Book Now"
     },
     {
         image: temple,
         title: "Unveil Ancient Mysteries",
         subtitle: "Private guided tours to the world's greatest temples",
-        badge: "Expert Local Guides",
         cta1: "Start Planning",
-        cta2: "Contact Us"
     }
 ];
 
@@ -84,16 +78,6 @@ const HeroSlider = () => {
                                         <AnimatePresence mode="wait">
                                             {isActive && (
                                                 <div className="flex flex-col items-center">
-                                                    <motion.div
-                                                        initial={{ opacity: 0, y: 30 }}
-                                                        animate={{ opacity: 1, y: 0 }}
-                                                        transition={{ duration: 0.8, delay: 0.2 }}
-                                                        className="mb-6 flex items-center gap-2 rounded-full bg-[#BC8B22]/80 px-6 py-2 text-sm font-medium backdrop-blur-sm"
-                                                    >
-                                                        <Calendar className="h-4 w-4" />
-                                                        {slide.badge}
-                                                    </motion.div>
-
                                                     <motion.h1
                                                         initial={{ opacity: 0, y: 40 }}
                                                         animate={{ opacity: 1, y: 0 }}
@@ -121,9 +105,6 @@ const HeroSlider = () => {
                                                         <Button className="h-14 rounded-full bg-[#BC8B22] px-10 text-lg font-bold hover:bg-[#A67A1D] shadow-xl shadow-amber-500/20">
                                                             {slide.cta1}
                                                             <ChevronRight className="ml-2 h-5 w-5" />
-                                                        </Button>
-                                                        <Button variant="outline" className="h-14 rounded-full border-2 border-white bg-transparent px-10 text-lg font-bold text-white hover:bg-white hover:text-[#22455C]">
-                                                            {slide.cta2}
                                                         </Button>
                                                     </motion.div>
                                                 </div>
