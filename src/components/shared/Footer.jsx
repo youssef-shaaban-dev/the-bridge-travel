@@ -7,7 +7,6 @@ const Footer = () => {
         <footer className="bg-[#22455C] text-white pt-16 pb-8 font-playfair">
             <div className="container-custom">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-
                     {/* Brand Info */}
                     <div className="space-y-6">
                         <div className="flex items-center gap-3">
@@ -16,8 +15,6 @@ const Footer = () => {
                         <p className="text-slate-300 text-sm leading-relaxed">
                             The Bridge Travel is a tour operator and travel agency providing services for groups and individuals traveling to Egypt.
                         </p>
-                        <ContactUsCard />
-
                     </div>
 
                     {/* Destinations */}
@@ -45,6 +42,7 @@ const Footer = () => {
                     <TripAdvisorCard />
 
                 </div>
+                <ContactBar />
 
                 <div className="mt-8 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-center items-center gap-6 text-md text-slate-400 font-medium">
                     <p>© 2026 The Bridge Travel - All content is copyrighted. Unauthorized use, including AI training, reproduction, or commercial exploitation, is strictly prohibited.
@@ -107,45 +105,41 @@ const UsersIcon = ({ className }) => (
     <svg className={className} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
 );
 
-const ContactUsCard = () => (
-    <div className="relative max-w-fit">
-        <div className="bg-white rounded-[32px] p-6 text-slate-900 shadow-2xl overflow-hidden">
-            <div className="relative z-10">
-                <div className="flex justify-center gap-2 mb-4">
-                    <span className="bg-[#BC8B22]/10 text-[#BC8B22] px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Contact us</span>
-                </div>
-
-                {/* Contact Details In Card */}
-                <div className="space-y-3 mb-6 text-left">
-                    <div className="flex items-start gap-4">
-                        <div className="mt-1 h-8 w-8 rounded-full bg-[#BC8B22]/10 flex items-center justify-center shrink-0">
-                            <MapPin className="h-4 w-4 text-[#BC8B22]" />
-                        </div>
-                        <span className="text-[13px] text-slate-600 leading-relaxed font-medium">El Nasr Road, Nasr City, Cairo - Egypt</span>
-                    </div>
-                    <div className="flex items-start gap-4">
-                        <div className="mt-1 h-8 w-8 rounded-full bg-[#BC8B22]/10 flex items-center justify-center shrink-0">
-                            <Phone className="h-4 w-4 text-[#BC8B22]" />
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="text-[13px] text-slate-600 font-medium">+20 122 77 22233</span>
-                            <span className="text-[13px] text-slate-600 font-medium">+20 100 56 47138</span>
-                        </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                        <div className="mt-1 h-8 w-8 rounded-full bg-[#BC8B22]/10 flex items-center justify-center shrink-0">
-                            <Mail className="h-4 w-4 text-[#BC8B22]" />
-                        </div>
-                        <span className="text-[13px] text-slate-600 font-medium whitespace-nowrap">info@thebridgetravel.com</span>
-                    </div>
-                </div>
-                <h3 className="text-[#BC8B22] text-lg font-bold mb-4">Follow us</h3>
-                <div className="flex gap-4">
-                    <SocialIcon icon={<Facebook className="h-5 w-5" />} />
-                    <SocialIcon icon={<Twitter className="h-5 w-5" />} />
-                </div>
+const ContactBar = () => (
+    <div className="bg-white/5 backdrop-blur-sm rounded-[32px] p-6 mb-12 flex flex-wrap items-center justify-between gap-8 border border-white/10">
+        <div className="flex items-center gap-4">
+            <div className="h-12 w-12 rounded-full bg-[#BC8B22]/10 flex items-center justify-center shrink-0">
+                <MapPin className="h-6 w-6 text-[#BC8B22]" />
             </div>
+            <div className="flex flex-col">
+                <span className="text-slate-400 text-xs uppercase tracking-widest font-bold mb-0.5">Location</span>
+                <span className="text-sm font-medium text-slate-200">El Nasr Road, Nasr City, Cairo - Egypt</span>
+            </div>
+        </div>
 
+        <div className="flex items-center gap-4">
+            <div className="h-12 w-12 rounded-full bg-[#BC8B22]/10 flex items-center justify-center shrink-0">
+                <Phone className="h-6 w-6 text-[#BC8B22]" />
+            </div>
+            <div className="flex flex-col">
+                <span className="text-slate-400 text-xs uppercase tracking-widest font-bold mb-0.5">Call Us</span>
+                <span className="text-sm font-medium text-slate-200">+20 122 77 22233 / +20 100 56 47138</span>
+            </div>
+        </div>
+
+        <div className="flex items-center gap-4">
+            <div className="h-12 w-12 rounded-full bg-[#BC8B22]/10 flex items-center justify-center shrink-0">
+                <Mail className="h-6 w-6 text-[#BC8B22]" />
+            </div>
+            <div className="flex flex-col">
+                <span className="text-slate-400 text-xs uppercase tracking-widest font-bold mb-0.5">Email</span>
+                <span className="text-sm font-medium text-slate-200">info@thebridgetravel.com</span>
+            </div>
+        </div>
+
+        <div className="flex gap-4">
+            <SocialIcon icon={<Facebook className="h-5 w-5" />} />
+            <SocialIcon icon={<Twitter className="h-5 w-5" />} />
         </div>
     </div>
 );
