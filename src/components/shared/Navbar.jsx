@@ -37,7 +37,7 @@ const Navbar = () => {
 
                     {/* Logo Area */}
                     <div className="flex items-center gap-4">
-                        <div className="w-16 h-16 relative flex items-center justify-center">
+                        <div className="w-40 h-18 relative flex items-center justify-center">
                             <img
                                 src={logo}
                                 alt="the bridge travel"
@@ -55,13 +55,6 @@ const Navbar = () => {
                                         Home
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
-
-                                <NavigationMenuItem>
-                                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
-                                        About Us
-                                    </NavigationMenuLink>
-                                </NavigationMenuItem>
-
 
                                 <NavigationMenuItem>
                                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
@@ -83,7 +76,7 @@ const Navbar = () => {
 
                                 <NavigationMenuItem>
                                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4 text-[#BC8B22]")}>
-                                        Custom Egypt Tours (Form)
+                                        Custom Egypt Tours
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
 
@@ -96,6 +89,12 @@ const Navbar = () => {
 
                                 <NavigationMenuItem>
                                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
+                                        About Us
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+
+                                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
                                         Contact Us
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
@@ -103,31 +102,10 @@ const Navbar = () => {
                         </NavigationMenu>
                     </nav>
 
-                    {/* Desktop Right Actions */}
-                    <div className="hidden xl:flex items-center gap-3">
-                        <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 h-10 w-10">
-                            <Search className="h-5 w-5" />
-                        </Button>
 
-                        <Button className="hidden xl:flex bg-[#E91E63] hover:bg-[#D81B60] text-white rounded-full px-6  items-center gap-2 font-bold shadow-lg shadow-pink-500/20">
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
-                            </span>
-                            Travel Deals
-                        </Button>
-
-                        <Button className="hidden xl:flex bg-[#BC8B22] hover:bg-[#A67A1D] text-white rounded-full px-6  items-center gap-2 font-bold shadow-lg shadow-amber-500/20">
-                            <Plane className="h-4 w-4" />
-                            Tailor-made
-                        </Button>
-                    </div>
 
                     {/* Mobile Menu Button */}
                     <div className="xl:hidden flex items-center gap-2">
-                        <Button className="flex lg:hidden bg-[#BC8B22] hover:bg-[#BC8B22] text-white rounded-md h-10 w-10 p-0 focus:ring-2 focus:ring-[#BC8B22] focus:ring-offset-2">
-                            <Search className="h-5 w-5" />
-                        </Button>
 
                         <Sheet onOpenChange={setIsMenuOpen}>
                             <SheetTrigger asChild>
@@ -150,31 +128,13 @@ const Navbar = () => {
 
                                     <nav className="flex-1 px-4 py-8 space-y-4">
                                         <MobileNavItem icon={<Home className="h-5 w-5" />} label="Home" />
-                                        <MobileNavItem icon={<Home className="h-5 w-5" />} label="About Us" />
                                         <MobileNavItem icon={<MapPin className="h-5 w-5" />} label="Egypt Tour Packages" />
                                         <MobileNavItem icon={<Ship className="h-5 w-5" />} label="Nile River Cruises" />
                                         <MobileNavItem icon={<Globe className="h-5 w-5" />} label="Day Excursions" />
-                                        <MobileNavItem icon={<Plane className="h-5 w-5" />} label="Custom Egypt Tours (Form)" />
-
+                                        <MobileNavItem icon={<Plane className="h-5 w-5 text-[#BC8B22]" />} label="Custom Egypt Tours" />
                                         <MobileNavItem icon={<Globe className="h-5 w-5" />} label="Travel Guide" />
+                                        <MobileNavItem icon={<Home className="h-5 w-5" />} label="About Us" />
                                         <MobileNavItem icon={<Mail className="h-5 w-5" />} label="Contact Us" />
-                                        <div className="pt-4 mt-4 border-t border-white/10 space-y-4">
-                                            <Button className="w-full bg-[#E91E63] hover:bg-[#D81B60] text-white rounded-lg h-14 font-bold flex items-center justify-start px-4 gap-4">
-                                                <Search className="h-5 w-5 opacity-70" />
-                                                Travel Deals
-                                            </Button>
-
-                                            <Button className="w-full bg-[#BC8B22] hover:bg-[#BC8B22]/90 text-white rounded-lg h-14 font-bold flex items-center justify-start px-4 gap-4">
-                                                <Plane className="h-5 w-5 opacity-70" />
-                                                Tailor-made
-                                            </Button>
-
-                                            <Button variant="ghost" className="w-full text-white hover:bg-white/10 justify-start px-4 h-14 text-lg border border-white/10">
-                                                <Globe className="h-5 w-5 opacity-70 mr-4" />
-                                                Language
-                                                <ChevronDown className="ml-auto h-4 w-4 opacity-50" />
-                                            </Button>
-                                        </div>
                                     </nav>
 
                                     <div className="p-6 border-t border-white/10 text-[#67e8f9]">
