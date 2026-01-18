@@ -3,7 +3,6 @@ import Navbar from './components/shared/Navbar'
 import Footer from './components/shared/Footer'
 import HeroSlider from './components/home/HeroSlider'
 import Features from './components/home/Features'
-import Awards from './components/home/Awards'
 import WhyChooseUs from './components/home/WhyChooseUs'
 import FeaturedExperiences from './components/home/FeaturedExperiences'
 import GuestExperiences from './components/home/GuestExperiences'
@@ -18,7 +17,6 @@ function App() {
       <main>
         <HeroSlider />
         <Features />
-        <Awards />
         <WhyChooseUs />
         <FeaturedExperiences />
         <GuestExperiences />

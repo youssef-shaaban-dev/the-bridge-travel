@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, Search, ChevronDown, Globe, Plane, MapPin, Ship, Home } from 'lucide-react';
+import { Menu, Search, ChevronDown, Globe, Plane, MapPin, Ship, Home, Mail } from 'lucide-react';
 import logo from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
 import {
@@ -44,10 +44,6 @@ const Navbar = () => {
                                 className="h-full object-contain brightness-0 invert"
                             />
                         </div>
-                        <div className="hidden lg:block">
-                            <h1 className="text-xl font-bold leading-none">the bridge travel</h1>
-                            <p className="text-[10px] tracking-widest uppercase opacity-80">info@thebridgetravel</p>
-                        </div>
                     </div>
 
                     {/* Desktop Navigation */}
@@ -61,29 +57,46 @@ const Navbar = () => {
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
-                                    <NavigationMenuTrigger className="bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4">
-                                        Destinations
-                                    </NavigationMenuTrigger>
-                                    <NavigationMenuContent>
-                                        <div className="w-[400px] p-4 bg-white text-slate-900 border-none">
-                                            <ul className="grid gap-3">
-                                                <li className="p-2 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">Egypt</li>
-                                                <li className="p-2 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">Jordan</li>
-                                                <li className="p-2 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">Dubai</li>
-                                            </ul>
-                                        </div>
-                                    </NavigationMenuContent>
+                                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
+                                        About Us
+                                    </NavigationMenuLink>
                                 </NavigationMenuItem>
+
 
                                 <NavigationMenuItem>
                                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
-                                        Multi Country
+                                        Egypt Tour Packages
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
                                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
-                                        Shore Excursions
+                                        Nile River Cruises
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+
+                                <NavigationMenuItem>
+                                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
+                                        Day Excursions
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+
+                                <NavigationMenuItem>
+                                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4 text-[#BC8B22]")}>
+                                        Custom Egypt Tours (Form)
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+
+
+                                <NavigationMenuItem>
+                                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
+                                        Travel Guide
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+
+                                <NavigationMenuItem>
+                                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
+                                        Contact Us
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
                             </NavigationMenuList>
@@ -91,12 +104,12 @@ const Navbar = () => {
                     </nav>
 
                     {/* Desktop Right Actions */}
-                    <div className="hidden lg:flex items-center gap-3">
+                    <div className="hidden xl:flex items-center gap-3">
                         <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 h-10 w-10">
                             <Search className="h-5 w-5" />
                         </Button>
 
-                        <Button className="bg-[#E91E63] hover:bg-[#D81B60] text-white rounded-full px-6 flex items-center gap-2 font-bold shadow-lg shadow-pink-500/20">
+                        <Button className="hidden xl:flex bg-[#E91E63] hover:bg-[#D81B60] text-white rounded-full px-6  items-center gap-2 font-bold shadow-lg shadow-pink-500/20">
                             <span className="relative flex h-2 w-2">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
@@ -104,30 +117,15 @@ const Navbar = () => {
                             Travel Deals
                         </Button>
 
-                        <Button className="bg-[#BC8B22] hover:bg-[#A67A1D] text-white rounded-full px-6 flex items-center gap-2 font-bold shadow-lg shadow-amber-500/20">
+                        <Button className="hidden xl:flex bg-[#BC8B22] hover:bg-[#A67A1D] text-white rounded-full px-6  items-center gap-2 font-bold shadow-lg shadow-amber-500/20">
                             <Plane className="h-4 w-4" />
                             Tailor-made
                         </Button>
-
-                        <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                                <Button variant="ghost" className="text-white hover:bg-white/10 flex items-center gap-2 px-4 h-10 bg-white/5 border border-white/10">
-                                    <Globe className="h-4 w-4" />
-                                    <span>EN</span>
-                                    <ChevronDown className="h-3 w-3 opacity-50" />
-                                </Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent className="bg-white border-none shadow-xl">
-                                <DropdownMenuItem>English</DropdownMenuItem>
-                                <DropdownMenuItem>Arabic</DropdownMenuItem>
-                                <DropdownMenuItem>French</DropdownMenuItem>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
                     </div>
 
                     {/* Mobile Menu Button */}
                     <div className="xl:hidden flex items-center gap-2">
-                        <Button className="bg-[#BC8B22] hover:bg-[#BC8B22] text-white rounded-md h-10 w-10 p-0 lg:hidden focus:ring-2 focus:ring-[#BC8B22] focus:ring-offset-2">
+                        <Button className="flex lg:hidden bg-[#BC8B22] hover:bg-[#BC8B22] text-white rounded-md h-10 w-10 p-0 focus:ring-2 focus:ring-[#BC8B22] focus:ring-offset-2">
                             <Search className="h-5 w-5" />
                         </Button>
 
@@ -152,10 +150,14 @@ const Navbar = () => {
 
                                     <nav className="flex-1 px-4 py-8 space-y-4">
                                         <MobileNavItem icon={<Home className="h-5 w-5" />} label="Home" />
-                                        <MobileNavItem icon={<MapPin className="h-5 w-5" />} label="Destinations" hasChildren />
-                                        <MobileNavItem icon={<Globe className="h-5 w-5" />} label="Multi Country" />
-                                        <MobileNavItem icon={<Ship className="h-5 w-5" />} label="Shore Excursions" />
+                                        <MobileNavItem icon={<Home className="h-5 w-5" />} label="About Us" />
+                                        <MobileNavItem icon={<MapPin className="h-5 w-5" />} label="Egypt Tour Packages" />
+                                        <MobileNavItem icon={<Ship className="h-5 w-5" />} label="Nile River Cruises" />
+                                        <MobileNavItem icon={<Globe className="h-5 w-5" />} label="Day Excursions" />
+                                        <MobileNavItem icon={<Plane className="h-5 w-5" />} label="Custom Egypt Tours (Form)" />
 
+                                        <MobileNavItem icon={<Globe className="h-5 w-5" />} label="Travel Guide" />
+                                        <MobileNavItem icon={<Mail className="h-5 w-5" />} label="Contact Us" />
                                         <div className="pt-4 mt-4 border-t border-white/10 space-y-4">
                                             <Button className="w-full bg-[#E91E63] hover:bg-[#D81B60] text-white rounded-lg h-14 font-bold flex items-center justify-start px-4 gap-4">
                                                 <Search className="h-5 w-5 opacity-70" />

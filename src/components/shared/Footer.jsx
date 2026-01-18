@@ -4,9 +4,9 @@ import logo from "@/assets/logo.png";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#22455C] text-white pt-20 pb-10 font-playfair">
+        <footer className="bg-[#22455C] text-white pt-16 pb-8 font-playfair">
             <div className="container-custom">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
 
                     {/* Brand Info */}
                     <div className="space-y-6">
@@ -17,116 +17,89 @@ const Footer = () => {
                         <p className="text-slate-300 text-sm leading-relaxed">
                             the bridge travel best travel agency in Egypt specialized in providing professional advice on planning Travel Packages, Nile Cruises and Day Tours.
                         </p>
-                        <div className="space-y-4 pt-4">
-                            <ContactLink icon={<MapPin className="h-5 w-5" />} text="El Fardous Tower El Fayrouz District, Luxor, Egypt" />
-                            <ContactLink icon={<Phone className="h-5 w-5" />} text="+1 (917) 267-8628" />
-                            <ContactLink icon={<Phone className="h-5 w-5" />} text="+201004880015" />
-                            <ContactLink icon={<Mail className="h-5 w-5" />} text="info@thebridgetravel.com" />
-                        </div>
                     </div>
 
                     {/* Destinations */}
                     <div>
-                        <h3 className="text-[#BC8B22] text-xl font-bold mb-8">Destinations</h3>
-                        <ul className="space-y-4">
-                            <FooterLink text="Egypt" />
-                            <FooterLink text="Jordan" />
-                            <FooterLink text="Dubai" />
-                            <FooterLink text="Morocco" />
-                            <FooterLink text="Oman" />
-                            <FooterLink text="Turkey" />
-                            <FooterLink text="African Safari" />
+                        <h3 className="text-[#BC8B22] text-xl font-bold mb-5">Our Tours</h3>
+                        <ul className="space-y-2.5">
+                            <FooterLink text="Book now" />
+                            <FooterLink text="Blog" />
+                            <FooterLink text="About us" />
+                            <FooterLink text="Trip planner" />
+                            <FooterLink text="Contact us" />
+                            <FooterLink text="Payment Policy" />
+                            <FooterLink text="Why Us" />
                         </ul>
                     </div>
 
                     {/* General Links */}
                     <div>
-                        <h3 className="text-[#BC8B22] text-xl font-bold mb-8">General</h3>
-                        <ul className="space-y-4">
-                            <FooterLink text="About Luxor and Aswan Travel" />
-                            <FooterLink text="Why Luxor and Aswan Travel" />
-                            <FooterLink text="Terms and Conditions" />
-                            <FooterLink text="Privacy Policy" />
-                            <FooterLink text="Travel Tips" />
+                        <h3 className="text-[#BC8B22] text-xl font-bold mb-5">The Bridge Travel</h3>
+                        <ul className="space-y-2.5">
+                            <FooterLink text="Home" />
+                            <FooterLink text="About Us" />
+                            <FooterLink text="Why Us" />
+                            <FooterLink text="Trip Planner" />
                             <FooterLink text="Blog" />
+                            <FooterLink text="Contact Us" />
+                            <FooterLink text="Payment Policy" />
                         </ul>
                     </div>
 
-                    {/* Award Card */}
                     <div className="relative">
-                        <div className="bg-white rounded-[32px] p-8 text-slate-900 text-center shadow-2xl">
-                            <div className="flex justify-center gap-2 mb-4">
-                                <span className="bg-[#FFBB00]/10 text-[#FFBB00] p-1 rounded-full"><StarIcon className="h-4 w-4" /></span>
-                                <span className="bg-slate-100 px-3 py-1 rounded-full text-[10px] font-bold text-slate-500">2025</span>
-                            </div>
-
-                            {/* Tripadvisor Badge Fake */}
-                            <div className="bg-[#00AF87] rounded-2xl p-4 mb-6 relative overflow-hidden flex flex-col items-center">
-                                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
-                                <svg viewBox="0 0 100 60" className="w-16 h-10 fill-white mb-2">
-                                    <path d="M50 0c-27.6 0-50 22.4-50 50h100c0-27.6-22.4-50-50-50zm0 40c-11 0-20-9-20-20s9-20 20-20 20 9 20 20-9 20-20 20z" />
-                                    <circle cx="35" cy="20" r="5" />
-                                    <circle cx="65" cy="20" r="5" />
-                                </svg>
-                                <span className="text-white text-[10px] font-black uppercase tracking-widest text-center leading-tight">
-                                    Tripadvisor<br />Travelers'<br />Choice Awards<br />2025
-                                </span>
-                            </div>
-
-                            <h4 className="text-[#22455C] font-black uppercase text-sm mb-2">Travelers' Choice Award</h4>
-                            <p className="text-slate-400 text-[10px] mb-4 uppercase font-bold tracking-wider">Top 10% of Experiences Worldwide</p>
-
-                            <div className="flex items-center justify-center gap-4 text-[12px] font-bold">
-                                <div className="flex items-center gap-1">
-                                    <StarIcon className="h-3 w-3 fill-[#FFBB00] text-[#FFBB00]" />
-                                    <span>5.0 Rating</span>
+                        <div className="bg-white rounded-[32px] p-6 text-slate-900 shadow-2xl overflow-hidden">
+                            <div className="relative z-10">
+                                <div className="flex justify-center gap-2 mb-4">
+                                    <span className="bg-[#BC8B22]/10 text-[#BC8B22] px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Contact us</span>
                                 </div>
-                                <div className="flex items-center gap-1">
-                                    <UsersIcon className="h-3 w-3 text-[#00AF87]" />
-                                    <span>1000+ Reviews</span>
+
+                                {/* Contact Details In Card */}
+                                <div className="space-y-3 mb-6 text-left">
+                                    <div className="flex items-start gap-4">
+                                        <div className="mt-1 h-8 w-8 rounded-full bg-[#BC8B22]/10 flex items-center justify-center shrink-0">
+                                            <MapPin className="h-4 w-4 text-[#BC8B22]" />
+                                        </div>
+                                        <span className="text-[13px] text-slate-600 leading-relaxed font-medium">El Nasr Road. El Nasr City, Cairo, Egypt</span>
+                                    </div>
+                                    <div className="flex items-start gap-4">
+                                        <div className="mt-1 h-8 w-8 rounded-full bg-[#BC8B22]/10 flex items-center justify-center shrink-0">
+                                            <Phone className="h-4 w-4 text-[#BC8B22]" />
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <span className="text-[13px] text-slate-600 font-medium">+20 1227722233</span>
+                                            <span className="text-[13px] text-slate-600 font-medium">+20 1005647138</span>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start gap-4">
+                                        <div className="mt-1 h-8 w-8 rounded-full bg-[#BC8B22]/10 flex items-center justify-center shrink-0">
+                                            <Mail className="h-4 w-4 text-[#BC8B22]" />
+                                        </div>
+                                        <span className="text-[13px] text-slate-600 font-medium whitespace-nowrap">info@thebridgetravel.com</span>
+                                    </div>
                                 </div>
+                                <h3 className="text-[#BC8B22] text-lg font-bold mb-4">Follow us</h3>
+                                <div className="flex gap-4">
+                                    <SocialIcon icon={<Facebook className="h-5 w-5" />} />
+                                    <SocialIcon icon={<Twitter className="h-5 w-5" />} />
+                                    <SocialIcon icon={<Instagram className="h-5 w-5" />} />
+                                    <SocialIcon icon={<Youtube className="h-5 w-5" />} />
+                                </div>
+
+
                             </div>
+
                         </div>
                     </div>
                 </div>
 
-                {/* Bottom Bar */}
-                <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-8">
-                    <div className="flex gap-8 text-sm font-medium text-slate-300">
-                        <a href="#" className="hover:text-[#BC8B22] transition-colors">Terms and Conditions</a>
-                        <a href="#" className="hover:text-[#BC8B22] transition-colors">About Us</a>
-                        <a href="#" className="hover:text-[#BC8B22] transition-colors">Contact Us</a>
-                    </div>
-
-                    <div className="flex gap-6">
-                        <SocialIcon icon={<Facebook className="h-5 w-5" />} />
-                        <SocialIcon icon={<Twitter className="h-5 w-5" />} />
-                        <SocialIcon icon={<Instagram className="h-5 w-5" />} />
-                        <SocialIcon icon={<Youtube className="h-5 w-5" />} />
-                    </div>
-                </div>
-
-                <div className="mt-10 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[12px] text-slate-400 font-medium">
-                    <p>© 2025 Copyright to <span className="text-[#BC8B22]">the bridge travel</span></p>
-                    <div className="flex items-center gap-4">
-                        <span>We Accept</span>
-                        <div className="flex gap-2">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-5 opacity-70" />
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" className="h-5 opacity-70" />
-                        </div>
-                    </div>
+                <div className="mt-8 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-center items-center gap-6 text-md text-slate-400 font-medium">
+                    <p>© 2026 Copyright to <span className="text-[#BC8B22]">the bridge travel</span></p>
                 </div>
             </div>
         </footer>
     );
 };
-
-const ContactLink = ({ icon, text }) => (
-    <div className="flex items-start gap-3 group cursor-pointer">
-        <span className="text-[#BC8B22] group-hover:scale-110 transition-transform">{icon}</span>
-        <span className="text-sm text-slate-300 group-hover:text-white transition-colors">{text}</span>
-    </div>
-);
 
 const FooterLink = ({ text }) => (
     <li className="flex items-center gap-2 group cursor-pointer">
@@ -136,7 +109,7 @@ const FooterLink = ({ text }) => (
 );
 
 const SocialIcon = ({ icon }) => (
-    <a href="#" className="h-10 w-10 rounded-full border border-white/10 flex items-center justify-center text-slate-300 hover:bg-[#BC8B22] hover:text-white hover:border-[#BC8B22] transition-all">
+    <a href="#" className="h-10 w-10 rounded-full border border-white/20 flex items-center justify-center text-slate-300 hover:bg-[#BC8B22] hover:text-white hover:border-[#BC8B22] transition-all">
         {icon}
     </a>
 );
