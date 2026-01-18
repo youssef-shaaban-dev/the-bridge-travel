@@ -122,7 +122,7 @@ const Navbar = () => {
                                                 alt="Logo"
                                                 className="h-8 brightness-0 invert"
                                             />
-                                            <span className="text-lg font-bold">the bridge travel</span>
+                                            <span className="text-lg font-bold">The Bridge Travel</span>
                                         </SheetTitle>
                                     </SheetHeader>
 
