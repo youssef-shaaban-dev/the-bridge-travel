@@ -4,10 +4,12 @@ import SocialFloatingButton from './components/shared/SocialFloatingButton'
 import './App.css'
 import { Outlet } from 'react-router-dom'
 import ScrollToTop from './components/shared/ScrollToTop'
+import SiteIntro from './components/shared/SiteIntro'
 
 function App() {
   return (
     <div className="min-h-screen bg-white">
+      <SiteIntro />
       <ScrollToTop />
       <Navbar />
       <SocialFloatingButton />
