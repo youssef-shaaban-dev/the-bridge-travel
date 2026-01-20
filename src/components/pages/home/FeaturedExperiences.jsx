@@ -1,8 +1,7 @@
 import { Clock, Map, Plane } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // eslint-disable-line no-unused-vars
 import { Link } from 'react-router-dom';
-import { slugify } from '@/lib/utils';
 import { toursData } from '../tourDetails/data/tours';
 
 const experiences = toursData;
@@ -40,7 +39,7 @@ const FeaturedExperiences = () => {
                             {/* Image Container */}
                             <div className="relative h-[280px] w-full overflow-hidden">
                                 <Link
-                                    to={`/Egypt-tours-package/${slugify(exp.title)}`}
+                                    to={`/Egypt-tours-package/${exp.slug}`}
                                     className="block h-full w-full"
                                 >
                                     <motion.img
@@ -69,7 +68,7 @@ const FeaturedExperiences = () => {
 
                             {/* Content */}
                             <div className="flex flex-col p-8 flex-1">
-                                <Link to={`/Egypt-tours-package/${slugify(exp.title)}`}>
+                                <Link to={`/Egypt-tours-package/${exp.slug}`}>
                                     <h3 className="text-2xl font-bold text-[#22455C] mb-4 group-hover:text-[#BC8B22] transition-colors line-clamp-2 min-h-[64px]">
                                         {exp.title}
                                     </h3>
@@ -85,7 +84,7 @@ const FeaturedExperiences = () => {
                                 </p>
 
                                 {/* CTA Button */}
-                                <Link to={`/Egypt-tours-package/${slugify(exp.title)}`}>
+                                <Link to={`/Egypt-tours-package/${exp.slug}`}>
                                     <Button variant='link' className="w-full h-12 rounded-xl bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-bold group/btn transition-all cursor-pointer">
                                         View Tour Details
                                     </Button>

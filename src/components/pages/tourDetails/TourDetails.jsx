@@ -10,6 +10,7 @@ import TourItinerary from './components/TourItinerary';
 import BookingSidebar from './components/BookingSidebar';
 import TourAccommodation from './components/TourAccommodation';
 import TourPricing from './components/TourPricing';
+import TourInclusions from './components/TourInclusions';
 import WhyBookWithUs from './components/WhyBookWithUs';
 import NotFound from '@/components/shared/NotFound';
 
@@ -21,7 +22,7 @@ const TourDetails = () => {
     const tour = toursData.find(t => t.slug === slug);
 
     // Rates Data (Normally would come from tour data)
-    const rates = [
+    const rates = tour?.rates || [
         { grade: "4★ Experience", price: tour?.price || 635, description: "Premium Comfort" },
         { grade: "5★ Luxury", price: (tour?.price || 635) + 100, description: "Ultimate Elegance", featured: true }
     ];
@@ -72,6 +73,12 @@ const TourDetails = () => {
                             selectedRateIndex={selectedRateIndex}
                             onRateSelect={setSelectedRateIndex}
                         />
+                        {(tour.inclusions?.length > 0 || tour.exclusions?.length > 0) && (
+                            <TourInclusions
+                                inclusions={tour.inclusions}
+                                exclusions={tour.exclusions}
+                            />
+                        )}
                         <WhyBookWithUs />
                     </div>
 

@@ -43,6 +43,8 @@ const ScrollToTopButton = () => {
 
                     {/* Subtle Brand Glow */}
                     <div className="absolute inset-0 rounded-2xl bg-[#BC8B22]/10 blur-xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {/* Force usage of motion if linter misses JSX */}
+                    <span className="hidden">{motion ? '' : ''}</span>
                 </motion.button>
             )}
         </AnimatePresence>
