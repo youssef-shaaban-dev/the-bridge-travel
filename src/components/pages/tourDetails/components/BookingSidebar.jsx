@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+import { User, Mail, Phone, Globe, Plus, Minus, Check } from 'lucide-react';
+
+const InputField = ({ icon: Icon, placeholder, type = "text" }) => (
+    <div className="relative group">
+        <div className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-[#BC8B22] transition-colors">
+            <Icon size={20} />
+        </div>
+        <input
+            type={type}
+            placeholder={placeholder}
+            className="w-full h-14 pl-14 pr-6 rounded-2xl bg-[#F8FAFC] border border-slate-100 focus:border-[#BC8B22]/30 focus:bg-white focus:ring-4 focus:ring-[#BC8B22]/5 text-[#22455C] font-semibold placeholder:text-slate-400 transition-all outline-none"
+        />
+    </div>
+);
 
 const BookingSidebar = ({ basePrice = 500 }) => {
     const [travellers, setTravellers] = useState(1);
@@ -26,76 +39,101 @@ const BookingSidebar = ({ basePrice = 500 }) => {
     };
 
     return (
-        <div className="bg-white rounded-[32px] border border-slate-200 p-8 shadow-xl shadow-slate-100/50 sticky top-28">
-            <div className="flex items-baseline gap-2 mb-8 pb-6 border-b border-slate-50">
-                <span className="text-slate-400 text-sm font-medium">From</span>
-                <span className="text-3xl font-black text-[#22455C] tracking-tight">${basePrice.toFixed(2)}</span>
-                <span className="text-slate-400 text-sm font-medium">per person</span>
+        <div className="bg-white rounded-[40px] border border-[#BC8B22] p-8 pt-0 shadow-2xl shadow-slate-200/50 sticky top-28 overflow-hidden">
+            {/* Header with Background */}
+            <div className="mx-[-2rem] px-8 py-8 bg-[#22455C] mb-8 text-white relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-3xl opacity-20"></div>
+                <div className="relative">
+                    <div className="flex items-center gap-2 mb-1">
+                        <span className="text-white/60 text-xs font-bold uppercase tracking-[0.2em]">Start From</span>
+                    </div>
+                    <div className="flex items-baseline gap-2">
+                        <span className="text-4xl font-black tracking-tight text-[#BC8B22] drop-shadow-sm">${basePrice.toFixed(2)}</span>
+                        <span className="text-white/60 text-sm font-medium italic">/ per person</span>
+                    </div>
+                </div>
             </div>
 
-            <div className="space-y-6">
-                <h3 className="text-lg font-black text-[#22455C] tracking-tight">Book This Tour</h3>
+            <div className="space-y-7">
+                <div className="flex items-center gap-3">
+                    <div className="h-2 w-2 rounded-full bg-[#BC8B22]"></div>
+                    <h3 className="text-lg font-black text-[#22455C] tracking-tight">Book This Tour</h3>
+                </div>
 
                 <div className="space-y-4">
-                    <input
-                        type="text"
-                        placeholder="Full Name"
-                        className="w-full h-14 px-6 rounded-2xl bg-[#F8FAFC] border-none focus:ring-2 focus:ring-[#BC8B22]/20 text-slate-700 font-medium placeholder:text-slate-400 transition-all"
-                    />
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        className="w-full h-14 px-6 rounded-2xl bg-[#F8FAFC] border-none focus:ring-2 focus:ring-[#BC8B22]/20 text-slate-700 font-medium placeholder:text-slate-400 transition-all"
-                    />
-                    <input
-                        type="tel"
-                        placeholder="Phone"
-                        className="w-full h-14 px-6 rounded-2xl bg-[#F8FAFC] border-none focus:ring-2 focus:ring-[#BC8B22]/20 text-slate-700 font-medium placeholder:text-slate-400 transition-all"
-                    />
-                    <input
-                        type="text"
-                        placeholder="Nationality"
-                        className="w-full h-14 px-6 rounded-2xl bg-[#F8FAFC] border-none focus:ring-2 focus:ring-[#BC8B22]/20 text-slate-700 font-medium placeholder:text-slate-400 transition-all"
-                    />
+                    <InputField icon={User} placeholder="Full Name" />
+                    <InputField icon={Mail} placeholder="Email Address" type="email" />
+                    <InputField icon={Phone} placeholder="Phone Number" type="tel" />
+                    <InputField icon={Globe} placeholder="Nationality" />
                 </div>
 
+                {/* Custom Travellers Stepper */}
                 <div className="space-y-3 pt-2">
-                    <label className="text-sm font-black text-[#22455C] uppercase tracking-wider">No. of Travellers</label>
-                    <input
-                        type="number"
-                        min="1"
-                        value={travellers}
-                        onChange={(e) => setTravellers(Math.max(1, parseInt(e.target.value) || 1))}
-                        className="w-full h-14 px-6 rounded-2xl bg-[#F8FAFC] border-none focus:ring-2 focus:ring-[#BC8B22]/20 text-slate-700 font-black transition-all"
-                    />
+                    <div className="flex items-center justify-between">
+                        <label className="text-xs font-black text-[#22455C]/60 uppercase tracking-widest">No. of Travellers</label>
+                        <span className="text-sm font-bold text-[#BC8B22]">{travellers} {travellers === 1 ? 'Person' : 'People'}</span>
+                    </div>
+                    <div className="flex items-center gap-4 bg-[#F8FAFC] p-2 rounded-2xl border border-slate-100">
+                        <button
+                            onClick={() => setTravellers(Math.max(1, travellers - 1))}
+                            className="h-12 w-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#22455C] hover:bg-[#BC8B22] hover:text-white hover:border-[#BC8B22] transition-all shadow-sm active:scale-95"
+                        >
+                            <Minus size={20} />
+                        </button>
+                        <div className="flex-1 text-center text-lg font-black text-[#22455C]">{travellers}</div>
+                        <button
+                            onClick={() => setTravellers(travellers + 1)}
+                            className="h-12 w-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#22455C] hover:bg-[#BC8B22] hover:text-white hover:border-[#BC8B22] transition-all shadow-sm active:scale-95"
+                        >
+                            <Plus size={20} />
+                        </button>
+                    </div>
                 </div>
 
-                <div className="space-y-4 pt-4">
-                    <label className="text-sm font-black text-[#22455C] uppercase tracking-wider">Extra Options</label>
+                <div className="space-y-4 pt-4 border-t border-slate-50">
+                    <label className="text-xs font-black text-[#22455C]/60 uppercase tracking-widest">Extra Options</label>
 
-                    <div className="space-y-3">
+                    <div className="grid grid-cols-1 gap-3">
                         {Object.entries(extraPrices).map(([key, price]) => (
-                            <div key={key} className="flex items-center justify-between group cursor-pointer" onClick={() => setExtras(prev => ({ ...prev, [key]: !prev[key] }))}>
+                            <div
+                                key={key}
+                                className={`flex items-center justify-between p-4 rounded-2xl border transition-all cursor-pointer group ${extras[key] ? 'bg-[#BC8B22]/5 border-[#BC8B22] translate-x-1' : 'bg-white border-slate-100 hover:border-[#BC8B22]/30'
+                                    }`}
+                                onClick={() => setExtras(prev => ({ ...prev, [key]: !prev[key] }))}
+                            >
                                 <div className="flex items-center gap-3">
-                                    <div className={`h-6 w-6 rounded-md border-2 transition-all flex items-center justify-center ${extras[key] ? 'bg-[#BC8B22] border-[#BC8B22]' : 'border-slate-200 group-hover:border-[#BC8B22]/50'}`}>
-                                        {extras[key] && <div className="w-1.5 h-3 border-r-2 border-b-2 border-white rotate-45 -mt-0.5"></div>}
+                                    <div className={`h-6 w-6 rounded-lg border-2 transition-all flex items-center justify-center ${extras[key] ? 'bg-[#BC8B22] border-[#BC8B22]' : 'bg-white border-slate-200 group-hover:border-[#BC8B22]'
+                                        }`}>
+                                        {extras[key] && <Check size={14} className="text-white stroke-[3px]" />}
                                     </div>
-                                    <span className="text-sm font-bold text-slate-600 capitalize">{key.replace(/([A-Z])/g, ' $1')} Option</span>
+                                    <span className={`text-sm font-bold transition-colors ${extras[key] ? 'text-[#22455C]' : 'text-slate-500'}`}>
+                                        {key.charAt(0).toUpperCase() + key.slice(1)} Option
+                                    </span>
                                 </div>
-                                <span className="text-sm font-black text-[#22455C]">(${price.toFixed(2)})</span>
+                                <span className={`text-sm font-black ${extras[key] ? 'text-[#BC8B22]' : 'text-[#22455C]'}`}>+${price}</span>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                <div className="pt-6 border-t border-slate-50">
-                    <div className="flex items-center justify-between mb-6">
-                        <span className="text-lg font-black text-[#22455C]">Total:</span>
-                        <span className="text-2xl font-black text-[#BC8B22]">${calculateTotal().toFixed(2)}</span>
+                <div className="pt-8 border-t border-slate-100">
+                    <div className="bg-[#22455C] rounded-3xl p-6 relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full -mr-12 -mt-12 blur-2xl opacity-20"></div>
+                        <div className="relative flex items-center justify-between mb-4">
+                            <span className="text-white/60 text-sm font-bold uppercase tracking-wider">Total Amount</span>
+                            <div className="h-px flex-1 bg-white/10 mx-4"></div>
+                        </div>
+                        <div className="relative flex items-end justify-between">
+                            <span className="text-4xl font-black text-[#BC8B22] tracking-tighter">${calculateTotal().toFixed(2)}</span>
+                            <div className="text-right">
+                                <p className="text-white/40 text-[10px] uppercase font-black tracking-widest leading-none mb-1">Tax Included</p>
+                                <p className="text-white/80 text-[10px] font-bold">Secure Booking</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <Button className="w-full h-16 rounded-2xl bg-[#8B6E31] hover:bg-[#745C29] text-white font-black text-lg transition-all shadow-xl shadow-[#8B6E31]/20">
-                        Booking Now
+                    <Button className="w-full h-16 mt-6 rounded-[20px] bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-black text-xl transition-all shadow-2xl shadow-[#BC8B22]/30 hover:shadow-[#BC8B22]/40 hover:-translate-y-1 active:translate-y-0 uppercase tracking-widest">
+                        Book Now
                     </Button>
                 </div>
             </div>

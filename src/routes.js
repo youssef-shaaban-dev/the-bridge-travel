@@ -2,25 +2,26 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import { TourDetails } from "./components/pages/tourDetails";
 import { Home } from "./components/pages";
-// import NotFound from "@/NotFound";
+import NotFound from "./components/shared/NotFound";
 
 export const routes = createBrowserRouter([
     {
         path: "/",
-        Component:  App ,
-        children:[
+        Component: App,
+        children: [
             {
                 path: "/",
                 index: true,
                 Component: Home,
             },
             {
-                path: "/Egypt-tours-package/:tourName",
+                path: "/Egypt-tours-package/:slug",
                 Component: TourDetails,
+            },
+            {
+                path: "*",
+                Component: NotFound,
             },
         ]
     },
-    
-    // {path:"*", Component: <NotFound />},
-    
-])
+]);

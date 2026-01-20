@@ -3,14 +3,16 @@ import Footer from './components/shared/Footer'
 import SocialFloatingButton from './components/shared/SocialFloatingButton'
 import './App.css'
 import { Outlet } from 'react-router-dom'
+import ScrollToTop from './components/shared/ScrollToTop'
 
 function App() {
   return (
-    <div className="min-h-screen bg-white"> 
+    <div className="min-h-screen bg-white">
+      <ScrollToTop />
       <Navbar />
       <SocialFloatingButton />
       <main>
-        <Outlet/>
+        <Outlet />
       </main>
       <Footer />
     </div>
