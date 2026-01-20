@@ -20,6 +20,14 @@ const TourDetails = () => {
     // Find the current tour based on slug
     const tour = toursData.find(t => t.slug === slug);
 
+    // Rates Data (Normally would come from tour data)
+    const rates = [
+        { grade: "4★ Experience", price: tour?.price || 635, description: "Premium Comfort" },
+        { grade: "5★ Luxury", price: (tour?.price || 635) + 100, description: "Ultimate Elegance", featured: true }
+    ];
+
+    const [selectedRateIndex, setSelectedRateIndex] = useState(1); // Default to Luxury as per original featured
+
     const openLightbox = (index) => {
         setSelectedIndex(index);
         document.body.style.overflow = 'hidden';
@@ -59,13 +67,21 @@ const TourDetails = () => {
                         <TourDescription description={tour.description} />
                         <TourItinerary itinerary={tour.itinerary} />
                         <TourAccommodation />
-                        <TourPricing />
+                        <TourPricing
+                            rates={rates}
+                            selectedRateIndex={selectedRateIndex}
+                            onRateSelect={setSelectedRateIndex}
+                        />
                         <WhyBookWithUs />
                     </div>
 
                     {/* Right Column: Booking Sidebar */}
                     <div className="w-full lg:w-[40%] lg:sticky lg:top-28">
-                        <BookingSidebar basePrice={tour.price} />
+                        <BookingSidebar
+                            rates={rates}
+                            selectedRateIndex={selectedRateIndex}
+                            onRateSelect={setSelectedRateIndex}
+                        />
                     </div>
                 </div>
             </div>

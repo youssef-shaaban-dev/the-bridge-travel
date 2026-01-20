@@ -7,10 +7,6 @@ const SocialFloatingButton = () => {
 
     const socialLinks = [
         { icon: <Phone className="h-5 w-5" />, color: "bg-[#25D366]", label: "whatsApp" },
-        { icon: <Facebook className="h-5 w-5" />, color: "bg-[#1877F2]", label: "Facebook" },
-        { icon: <Instagram className="h-5 w-5" />, color: "bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF]", label: "Instagram" },
-        { icon: <Twitter className="h-5 w-5" />, color: "bg-[#1DA1F2]", label: "Twitter" },
-        { icon: <Youtube className="h-5 w-5" />, color: "bg-[#FF0000]", label: "Youtube" },
     ];
 
     return (
@@ -66,7 +62,7 @@ const SocialFloatingButton = () => {
                     onClick={() => setIsOpen(!isOpen)}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`relative h-16 w-16 rounded-full flex items-center justify-center shadow-2xl transition-all duration-500 z-10 ${isOpen ? 'bg-[#22455C]' : 'bg-[#BC8B22] text-white hover:bg-[#A67A1D]'}`}
+                    className={`relative h-16 w-16 rounded-full flex items-center justify-center shadow-2xl transition-all duration-500 z-10 ${isOpen ? 'bg-[#22455C]' : 'bg-green-500 text-white hover:bg-green-600'}`}
                 >
                     {isOpen ? (
                         <X className="h-8 w-8 text-white" />

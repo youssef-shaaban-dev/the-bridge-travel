@@ -43,11 +43,6 @@ const TourHero = ({ tour }) => {
                         </div>
                     </div>
                 </div>
-
-                <Button variant="outline" className="flex items-center gap-2 border-slate-200 text-slate-600 font-bold hover:bg-slate-50 transition-all self-start md:self-end">
-                    <Share2 className="h-4 w-4" />
-                    Share
-                </Button>
             </div>
         </div>
     );

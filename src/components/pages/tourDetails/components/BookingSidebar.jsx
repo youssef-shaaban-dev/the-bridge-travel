@@ -15,27 +15,12 @@ const InputField = ({ icon: Icon, placeholder, type = "text" }) => (
     </div>
 );
 
-const BookingSidebar = ({ basePrice = 500 }) => {
+const BookingSidebar = ({ rates = [], selectedRateIndex = 0, onRateSelect }) => {
     const [travellers, setTravellers] = useState(1);
-    const [extras, setExtras] = useState({
-        sunrise: false,
-        guide: false,
-        transport: false,
-        lunch: false
-    });
-
-    const extraPrices = {
-        sunrise: 25,
-        guide: 45,
-        transport: 60,
-        lunch: 15
-    };
+    const currentRate = rates[selectedRateIndex] || { price: 0 };
 
     const calculateTotal = () => {
-        const extrasTotal = Object.keys(extras).reduce((acc, key) => {
-            return acc + (extras[key] ? extraPrices[key] : 0);
-        }, 0);
-        return (basePrice * travellers) + (extrasTotal * travellers);
+        return currentRate.price * travellers;
     };
 
     return (
@@ -43,12 +28,12 @@ const BookingSidebar = ({ basePrice = 500 }) => {
             {/* Header with Background */}
             <div className="mx-[-2rem] px-8 py-8 bg-[#22455C] mb-8 text-white relative">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-3xl opacity-20"></div>
-                <div className="relative">
-                    <div className="flex items-center gap-2 mb-1">
-                        <span className="text-white/60 text-xs font-bold uppercase tracking-[0.2em]">Start From</span>
+                <div className="relative text-center">
+                    <div className="flex items-center justify-center gap-2 mb-1">
+                        <span className="text-white/60 text-xs font-bold uppercase tracking-[0.2em]">{currentRate.grade}</span>
                     </div>
-                    <div className="flex items-baseline gap-2">
-                        <span className="text-4xl font-black tracking-tight text-[#BC8B22] drop-shadow-sm">${basePrice.toFixed(2)}</span>
+                    <div className="flex items-baseline justify-center gap-2">
+                        <span className="text-4xl font-black tracking-tight text-[#BC8B22] drop-shadow-sm">${currentRate.price.toFixed(0)}</span>
                         <span className="text-white/60 text-sm font-medium italic">/ per person</span>
                     </div>
                 </div>
@@ -91,26 +76,31 @@ const BookingSidebar = ({ basePrice = 500 }) => {
                 </div>
 
                 <div className="space-y-4 pt-4 border-t border-slate-50">
-                    <label className="text-xs font-black text-[#22455C]/60 uppercase tracking-widest">Extra Options</label>
+                    <label className="text-xs font-black text-[#22455C]/60 uppercase tracking-widest">Select Experience Level</label>
 
                     <div className="grid grid-cols-1 gap-3">
-                        {Object.entries(extraPrices).map(([key, price]) => (
+                        {rates.map((rate, idx) => (
                             <div
-                                key={key}
-                                className={`flex items-center justify-between p-4 rounded-2xl border transition-all cursor-pointer group ${extras[key] ? 'bg-[#BC8B22]/5 border-[#BC8B22] translate-x-1' : 'bg-white border-slate-100 hover:border-[#BC8B22]/30'
+                                key={idx}
+                                className={`flex items-center justify-between p-4 rounded-2xl border transition-all cursor-pointer group ${selectedRateIndex === idx ? 'bg-[#BC8B22]/5 border-[#BC8B22] translate-x-1' : 'bg-white border-slate-100 hover:border-[#BC8B22]/30'
                                     }`}
-                                onClick={() => setExtras(prev => ({ ...prev, [key]: !prev[key] }))}
+                                onClick={() => onRateSelect(idx)}
                             >
                                 <div className="flex items-center gap-3">
-                                    <div className={`h-6 w-6 rounded-lg border-2 transition-all flex items-center justify-center ${extras[key] ? 'bg-[#BC8B22] border-[#BC8B22]' : 'bg-white border-slate-200 group-hover:border-[#BC8B22]'
+                                    <div className={`h-6 w-6 rounded-lg border-2 transition-all flex items-center justify-center ${selectedRateIndex === idx ? 'bg-[#BC8B22] border-[#BC8B22]' : 'bg-white border-slate-200 group-hover:border-[#BC8B22]'
                                         }`}>
-                                        {extras[key] && <Check size={14} className="text-white stroke-[3px]" />}
+                                        {selectedRateIndex === idx && <Check size={14} className="text-white stroke-[3px]" />}
                                     </div>
-                                    <span className={`text-sm font-bold transition-colors ${extras[key] ? 'text-[#22455C]' : 'text-slate-500'}`}>
-                                        {key.charAt(0).toUpperCase() + key.slice(1)} Option
-                                    </span>
+                                    <div className="flex flex-col">
+                                        <span className={`text-[10px] font-black uppercase tracking-widest leading-none mb-1 ${selectedRateIndex === idx ? 'text-[#BC8B22]' : 'text-slate-400'}`}>
+                                            {rate.description}
+                                        </span>
+                                        <span className={`text-sm font-bold transition-colors ${selectedRateIndex === idx ? 'text-[#22455C]' : 'text-slate-500'}`}>
+                                            {rate.grade}
+                                        </span>
+                                    </div>
                                 </div>
-                                <span className={`text-sm font-black ${extras[key] ? 'text-[#BC8B22]' : 'text-[#22455C]'}`}>+${price}</span>
+                                <span className={`text-sm font-black ${selectedRateIndex === idx ? 'text-[#BC8B22]' : 'text-[#22455C]'}`}>${rate.price}</span>
                             </div>
                         ))}
                     </div>
@@ -124,7 +114,7 @@ const BookingSidebar = ({ basePrice = 500 }) => {
                             <div className="h-px flex-1 bg-white/10 mx-4"></div>
                         </div>
                         <div className="relative flex items-end justify-between">
-                            <span className="text-4xl font-black text-[#BC8B22] tracking-tighter">${calculateTotal().toFixed(2)}</span>
+                            <span className="text-4xl font-black text-[#BC8B22] tracking-tighter">${calculateTotal().toFixed(0)}</span>
                             <div className="text-right">
                                 <p className="text-white/40 text-[10px] uppercase font-black tracking-widest leading-none mb-1">Tax Included</p>
                                 <p className="text-white/80 text-[10px] font-bold">Secure Booking</p>

@@ -36,7 +36,8 @@ const WhyBookWithUs = () => {
                         "Turn your dream of Egypt into a once-in-a-lifetime journey."
                     </p>
                     <p className="max-w-2xl mx-auto text-slate-500 font-medium text-lg leading-relaxed">
-                        This is not just a tour - it’s your <span className="text-[#BC8B22] font-black">personal gateway</span> to the wonders of Egypt with <span className="text-[#22455C] font-black underline decoration-[#BC8B22] decoration-4 underline-offset-4">The Bridge Travel</span>.
+                        This is not just a tour - it’s your personal gateway to the wonders of Egypt with
+                        <p className="text-[#22455C] font-black decoration-4 underline-offset-4">The Bridge Travel</p>.
                     </p>
                 </div>
             </div>

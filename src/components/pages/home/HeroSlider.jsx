@@ -21,22 +21,18 @@ const slides = [
     {
         image: egyptianMuseum,
         title: "Grand Egyptian Museum",
-        cta1: "Egypt Tours",
     },
     {
         image: pyramids,
         title: "Giza Pyramids",
-        cta1: "Egypt Tours",
     },
     {
         image: temple,
         title: "Luxor Temple",
-        cta1: "Start Planning",
     },
     {
         image: nile,
         title: "Nile Cruises",
-        cta1: "Explore Cruises",
     }
 ];
 
@@ -85,7 +81,7 @@ const HeroSlider = () => {
                                                         initial={{ opacity: 0, y: 40 }}
                                                         animate={{ opacity: 1, y: 0 }}
                                                         transition={{ duration: 1, delay: 0.4 }}
-                                                        className="mb-4 text-5xl font-bold md:text-7xl lg:text-8xl"
+                                                        className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl"
                                                     >
                                                         {slide.title}
                                                     </motion.h1>
@@ -96,8 +92,8 @@ const HeroSlider = () => {
                                                         transition={{ duration: 0.6, delay: 0.8 }}
                                                         className="flex flex-col gap-4 sm:flex-row"
                                                     >
-                                                        <Button className="h-14 rounded-full bg-[#BC8B22] px-10 text-lg font-bold hover:bg-[#A67A1D] shadow-xl shadow-amber-500/20">
-                                                            {slide.cta1}
+                                                        <Button className="h-14 rounded-full bg-[#BC8B22] px-10 text-lg font-bold hover:bg-[#A67A1D] shadow-xl shadow-amber-500/20 mt-4">
+                                                            Egypt Tours
                                                         </Button>
                                                     </motion.div>
                                                 </div>

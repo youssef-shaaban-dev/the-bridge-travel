@@ -4,6 +4,7 @@ import SocialFloatingButton from './components/shared/SocialFloatingButton'
 import './App.css'
 import { Outlet } from 'react-router-dom'
 import ScrollToTop from './components/shared/ScrollToTop'
+import ScrollToTopButton from './components/shared/ScrollToTopButton'
 import SiteIntro from './components/shared/SiteIntro'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <div className="min-h-screen bg-white">
       <SiteIntro />
       <ScrollToTop />
+      <ScrollToTopButton />
       <Navbar />
       <SocialFloatingButton />
       <main>

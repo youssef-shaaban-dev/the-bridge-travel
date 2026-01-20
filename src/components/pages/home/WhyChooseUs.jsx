@@ -1,28 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, ShieldCheck, Star, Headset } from 'lucide-react';
+import { Landmark, Gem, Tag, Heart } from 'lucide-react';
 
 const reasons = [
     {
-        icon: <GraduationCap className="h-8 w-8" />,
+        icon: <Landmark className="h-8 w-8" />,
         title: "Iconic Sights, Up Close",
         description: "See the Pyramids, Nile, and ancient temples in real life, timeless wonders you’ve only dreamed of.",
         color: "bg-[#22455C]"
     },
     {
-        icon: <ShieldCheck className="h-8 w-8" />,
+        icon: <Gem className="h-8 w-8" />,
         title: "Effortless Luxury",
         description: "Enjoy five-star hotels, private guides, and smooth VIP service from arrival to departure.",
         color: "bg-[#BC8B22]"
     },
     {
-        icon: <Star className="h-8 w-8" />,
+        icon: <Tag className="h-8 w-8" />,
         title: "Exceptional Value",
         description: "World-class experiences and premium comfort at a surprisingly great value.",
         color: "bg-[#6B8E23]" // Olive Green variant
     },
     {
-        icon: <Headset className="h-8 w-8" />,
+        icon: <Heart className="h-8 w-8" />,
         title: "Warm Egyptian Hospitality",
         description: "Feel truly welcomed with personal, attentive service that makes every moment special.",
         color: "bg-[#22455C]"

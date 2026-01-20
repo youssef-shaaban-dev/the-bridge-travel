@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import { cn } from "@/lib/utils";
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +30,7 @@ const Navbar = () => {
                 <div className="flex h-20 items-center justify-between">
 
                     {/* Logo Area */}
-                    <div className="flex items-center gap-4">
+                    <Link to="/" className="flex items-center gap-4">
                         <div className="w-40 h-18 relative flex items-center justify-center">
                             <img
                                 src={logo}
@@ -38,7 +38,7 @@ const Navbar = () => {
                                 className="h-full object-contain brightness-0 invert"
                             />
                         </div>
-                    </div>
+                    </Link>
 
                     {/* Desktop Navigation */}
                     <nav className="hidden xl:flex items-center space-x-1">

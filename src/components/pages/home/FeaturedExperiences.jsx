@@ -39,11 +39,18 @@ const FeaturedExperiences = () => {
                         >
                             {/* Image Container */}
                             <div className="relative h-[280px] w-full overflow-hidden">
-                                <motion.img
-                                    src={exp.images[0]}
-                                    alt={exp.title}
-                                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
+                                <Link
+                                    to={`/Egypt-tours-package/${slugify(exp.title)}`}
+                                    className="block h-full w-full"
+                                >
+                                    <motion.img
+                                        src={exp.images[0]}
+                                        alt={exp.title}
+                                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer"
+                                    />
+                                    {/* Overlay on hover */}
+                                    <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                                </Link>
 
                                 {/* Badges */}
                                 <div className="absolute top-4 left-4 flex gap-2">
@@ -53,27 +60,24 @@ const FeaturedExperiences = () => {
                                         </span>
                                     )}
                                 </div>
-                                <div className="absolute top-4 right-4">
-                                    <span className="rounded-full bg-[#BC8B22] px-4 py-1.5 text-xs font-bold text-white shadow-lg">
+                                <div className="absolute top-4 right-4 pointer-events-none">
+                                    <span className="rounded-full bg-[#BC8B22] px-4 py-1.5 text-base lg:text-xl font-bold text-white shadow-lg">
                                         From ${exp.price}
                                     </span>
                                 </div>
-
-                                {/* Overlay on hover */}
-                                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             </div>
 
                             {/* Content */}
                             <div className="flex flex-col p-8 flex-1">
-                                <h3 className="text-2xl font-bold text-[#22455C] mb-4 group-hover:text-[#BC8B22] transition-colors line-clamp-2 min-h-[64px]">
-                                    {exp.title}
-                                </h3>
+                                <Link to={`/Egypt-tours-package/${slugify(exp.title)}`}>
+                                    <h3 className="text-2xl font-bold text-[#22455C] mb-4 group-hover:text-[#BC8B22] transition-colors line-clamp-2 min-h-[64px]">
+                                        {exp.title}
+                                    </h3>
+                                </Link>
 
-                                {/* Metadata Row */}
+                                {/* Journey Duration */}
                                 <div className="flex flex-wrap gap-2 mb-6">
                                     <MetaTag icon={<Clock className="h-3.5 w-3.5" />} text={exp.duration} />
-                                    <MetaTag icon={<Map className="h-3.5 w-3.5" />} text={exp.type} />
-                                    <MetaTag icon={<Plane className="h-3.5 w-3.5" />} text={exp.includes} />
                                 </div>
 
                                 <p className="text-sm text-slate-500 leading-relaxed mb-8 line-clamp-3">
