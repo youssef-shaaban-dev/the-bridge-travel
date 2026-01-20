@@ -11,8 +11,6 @@ const TourHero = ({ tour }) => {
             <nav className="flex items-center gap-2 text-md text-slate-500 mb-8 border-b border-slate-200 pb-4 py-5 md:py-10 rounded-md px-4">
                 <Link to="/" className="hover:text-[#22455C] cursor-pointer">Home</Link>
                 <ChevronRight className="h-4 w-4 opacity-50" />
-                <span className="hover:text-[#22455C]">Tours</span>
-                <ChevronRight className="h-4 w-4 opacity-50" />
                 <span className="text-[#22455C] font-semibold">Tour Egypt Packages</span>
             </nav>
 

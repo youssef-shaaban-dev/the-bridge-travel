@@ -123,7 +123,7 @@ const BookingSidebar = ({ rates = [], selectedRateIndex = 0, onRateSelect }) => 
                     </div>
 
                     <Button className="w-full h-16 mt-6 rounded-[20px] bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-black text-xl transition-all shadow-2xl shadow-[#BC8B22]/30 hover:shadow-[#BC8B22]/40 hover:-translate-y-1 active:translate-y-0 uppercase tracking-widest">
-                        Book Now
+                        Enquire Now
                     </Button>
                 </div>
             </div>
