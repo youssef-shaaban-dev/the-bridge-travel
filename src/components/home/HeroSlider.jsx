@@ -12,28 +12,31 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
 // Import images
-import pyramids from "@/assets/hero/pyramids.png";
-import nile from "@/assets/hero/nile.png";
-import temple from "@/assets/hero/temple.png";
+import egyptianMuseum from "@/assets/hero/egyptian-Museum.webp";
+import pyramids from "@/assets/hero/pyramids.webp";
+import nile from "@/assets/hero/nile.webp";
+import temple from "@/assets/hero/temple.webp";
 
 const slides = [
     {
-        image: pyramids,
-        title: "Luxor and Aswan Travel",
-        subtitle: "Egypt's Premier Luxury Travel Experience",
+        image: egyptianMuseum,
+        title: "Grand Egyptian Museum",
         cta1: "Egypt Tours",
     },
     {
-        image: nile,
-        title: "Sail the Majestic Nile",
-        subtitle: "Experience ancient wonders from a luxury Dahabiya",
-        cta1: "Explore Cruises",
+        image: pyramids,
+        title: "Giza Pyramids",
+        cta1: "Egypt Tours",
     },
     {
         image: temple,
-        title: "Unveil Ancient Mysteries",
-        subtitle: "Private guided tours to the world's greatest temples",
+        title: "Luxor Temple",
         cta1: "Start Planning",
+    },
+    {
+        image: nile,
+        title: "Nile Cruises",
+        cta1: "Explore Cruises",
     }
 ];
 
@@ -86,15 +89,6 @@ const HeroSlider = () => {
                                                     >
                                                         {slide.title}
                                                     </motion.h1>
-
-                                                    <motion.p
-                                                        initial={{ opacity: 0, y: 30 }}
-                                                        animate={{ opacity: 1, y: 0 }}
-                                                        transition={{ duration: 0.8, delay: 0.6 }}
-                                                        className="mb-10 max-w-2xl text-lg opacity-90 md:text-xl lg:text-2xl font-light italic"
-                                                    >
-                                                        {slide.subtitle}
-                                                    </motion.p>
 
                                                     <motion.div
                                                         initial={{ opacity: 0, scale: 0.9 }}

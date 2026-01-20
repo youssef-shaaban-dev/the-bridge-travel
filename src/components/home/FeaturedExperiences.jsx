@@ -4,9 +4,9 @@ import { Clock, Map, Plane, ChevronRight, Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 // Images from previous sections and new ones
-import pyramids from "@/assets/hero/pyramids.png";
-import nile from "@/assets/hero/nile.png";
-import temple from "@/assets/hero/temple.png";
+import pyramids from "@/assets/hero/pyramids.webp";
+import nile from "@/assets/hero/nile.webp";
+import temple from "@/assets/hero/temple.webp";
 import sharm from "@/assets/experiences/sharm.png";
 import cairo from "@/assets/experiences/old_cairo.png";
 import desert from "@/assets/experiences/desert.png";
