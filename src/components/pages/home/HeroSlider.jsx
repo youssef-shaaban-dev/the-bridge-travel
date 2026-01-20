@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Plane, Calendar } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -98,7 +98,6 @@ const HeroSlider = () => {
                                                     >
                                                         <Button className="h-14 rounded-full bg-[#BC8B22] px-10 text-lg font-bold hover:bg-[#A67A1D] shadow-xl shadow-amber-500/20">
                                                             {slide.cta1}
-                                                            <ChevronRight className="ml-2 h-5 w-5" />
                                                         </Button>
                                                     </motion.div>
                                                 </div>

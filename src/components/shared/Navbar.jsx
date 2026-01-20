@@ -12,19 +12,12 @@ import {
 } from "@/components/ui/sheet";
 import {
     NavigationMenu,
-    NavigationMenuContent,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
-    NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
@@ -51,7 +44,7 @@ const Navbar = () => {
                         <NavigationMenu>
                             <NavigationMenuList className="gap-1">
                                 <NavigationMenuItem>
-                                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
+                                    <NavigationMenuLink to="/" className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
                                         Home
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
@@ -64,7 +57,7 @@ const Navbar = () => {
 
                                 <NavigationMenuItem>
                                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
-                                        Nile River Cruises
+                                        Nile Cruises
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
 
@@ -75,7 +68,7 @@ const Navbar = () => {
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
-                                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4 text-[#BC8B22]")}>
+                                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4 ")}>
                                         Custom Egypt Tours
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
@@ -122,7 +115,10 @@ const Navbar = () => {
                                                 alt="Logo"
                                                 className="h-8 brightness-0 invert"
                                             />
-                                            <span className="text-lg font-bold">The Bridge Travel</span>
+                                            <span
+                                                className="text-lg font-bold">
+                                                The Bridge Travel
+                                            </span>
                                         </SheetTitle>
                                     </SheetHeader>
 

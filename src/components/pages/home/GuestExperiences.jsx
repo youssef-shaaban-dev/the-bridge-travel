@@ -9,7 +9,6 @@ const testimonials = [
         initials: "SM",
         text: "An incredible experience. Everything was seamless, the service was top-notch, and seeing the Pyramids in person was a bucket-list moment. Truly unforgettable.",
         rating: 5,
-        verified: true
     },
     {
         name: "James R.",
@@ -17,7 +16,6 @@ const testimonials = [
         initials: "JR",
         text: "Absolutely brilliant from start to finish. The organisation was spot on, the guides were first-class, and the Nile cruise was simply marvellous. Egypt exceeded all expectations.",
         rating: 5,
-        verified: true
     },
     {
         name: "Daniel T",
@@ -25,7 +23,6 @@ const testimonials = [
         initials: "DT",
         text: "Such a fantastic trip! The team was super friendly, the sights were mind-blowing, and the whole journey felt easy and relaxed. Egypt was an absolute ripper.",
         rating: 5,
-        verified: true
     },
 ];
 
@@ -72,11 +69,6 @@ const GuestExperiences = () => {
                                         <Star key={i} className="h-4 w-4 fill-[#FFBB00] text-[#FFBB00]" />
                                     ))}
                                 </div>
-                                {item.verified && (
-                                    <span className="rounded-full bg-[#00AF87] px-3 py-1 text-[10px] font-bold text-white shadow-sm flex items-center gap-1">
-                                        Verified
-                                    </span>
-                                )}
                             </div>
 
                             {/* Testimonial Text */}

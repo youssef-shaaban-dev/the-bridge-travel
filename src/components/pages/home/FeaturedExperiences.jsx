@@ -1,8 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Clock, Map, Plane, ChevronRight, Star } from 'lucide-react';
+import { Clock, Map, Plane } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-
 // Images from previous sections and new ones
 import pyramids from "@/assets/hero/pyramids.webp";
 import nile from "@/assets/hero/nile.webp";
@@ -10,7 +7,9 @@ import temple from "@/assets/hero/temple.webp";
 import sharm from "@/assets/experiences/sharm.png";
 import cairo from "@/assets/experiences/old_cairo.png";
 import desert from "@/assets/experiences/desert.png";
-
+import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
+import { slugify } from '@/lib/utils';
 const experiences = [
     {
         image: nile,
@@ -21,7 +20,6 @@ const experiences = [
         type: "Private Tour",
         includes: "Flights Included",
         description: "Experience the magic of ancient Egypt on this luxurious Nile cruise from Luxor to Aswan, featuring expert guides and premium accommodations.",
-        tags: ["Luxury Cruise", "All Meals", "Expert Guide"]
     },
     {
         image: pyramids,
@@ -32,7 +30,6 @@ const experiences = [
         type: "Private Tour",
         includes: "Cairo + Cruise",
         description: "Discover the wonders of Cairo including the Pyramids and Egyptian Museum, then embark on a luxury Nile cruise experience.",
-        tags: ["Pyramids Tour", "Museum Visit", "Nile Cruise"]
     },
     {
         image: temple,
@@ -54,7 +51,6 @@ const experiences = [
         type: "Resort Stay",
         includes: "All Inclusive",
         description: "Unwind at a premium resort in Sharm El Sheikh with private beach access and world-class snorkeling in the Red Sea.",
-        tags: ["Private Beach", "Snorkeling", "Spa Center"]
     },
     {
         image: cairo,
@@ -65,7 +61,6 @@ const experiences = [
         type: "Group Tour",
         includes: "Dinner Included",
         description: "Walk through the historic Al-Muizz street and Khan el-Khalili bazaar, experiencing the vibrant soul of Islamic Cairo.",
-        tags: ["Traditional Food", "History", "Night Walk"]
     },
     {
         image: desert,
@@ -76,7 +71,6 @@ const experiences = [
         type: "Private 4x4",
         includes: "Camping Under Stars",
         description: "Venture into the White Desert and Siwa Oasis for a unique luxury camping experience among surreal geological formations.",
-        tags: ["Star Gazing", "4x4 Adventure", "Unique Stay"]
     }
 ];
 
@@ -153,20 +147,12 @@ const FeaturedExperiences = () => {
                                     {exp.description}
                                 </p>
 
-                                {/* Tags */}
-                                <div className="flex flex-wrap gap-2 mb-8 mt-auto">
-                                    {exp.tags.map((tag, i) => (
-                                        <span key={i} className="rounded-full bg-slate-50 px-3 py-1 text-[10px] font-bold text-slate-400 border border-slate-100">
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
-
                                 {/* CTA Button */}
-                                <Button className="w-full h-12 rounded-xl bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-bold group/btn transition-all">
-                                    Explore Journey
-                                    <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                                </Button>
+                                <Link to={`Egypt-tours-package/${slugify(exp.title)}`}>
+                                    <Button variant='link' className="w-full h-12 rounded-xl bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-bold group/btn transition-all cursor-pointer">
+                                        View Tour Details
+                                    </Button>
+                                </Link>
                             </div>
                         </motion.div>
                     ))}

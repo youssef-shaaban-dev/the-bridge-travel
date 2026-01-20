@@ -2,11 +2,9 @@
   RewriteEngine On
   RewriteBase /
 
-  # لو الملف أو الفولدر موجود سيبه يشتغل عادي
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # أي Route تاني يروح على index.html
   RewriteRule . /index.html [L]
 </IfModule>
