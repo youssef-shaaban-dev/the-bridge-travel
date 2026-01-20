@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import { cn } from "@/lib/utils";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,50 +46,50 @@ const Navbar = () => {
                             <NavigationMenuList className="gap-1">
                                 <NavigationMenuItem>
                                     <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
-                                        <Link to="/">Home</Link>
+                                        <NavLink to="/">Home</NavLink>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
                                     <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
-                                        <Link to="/egypt-tour-packages">Egypt Tour Packages</Link>
+                                        <NavLink to="/egypt-tour-packages">Egypt Tour Packages</NavLink>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
                                     <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
-                                        <Link to="/nile-cruises">Nile Cruises</Link>
+                                        <NavLink to="/nile-cruises">Nile Cruises</NavLink>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
                                     <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
-                                        <Link to="/day-excursions">Day Excursions</Link>
+                                        <NavLink to="/day-excursions">Day Excursions</NavLink>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
                                     <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4 ")}>
-                                        <Link to="/custom-egypt-tours">Custom Egypt Tours</Link>
+                                        <NavLink to="/custom-egypt-tours">Custom Egypt Tours</NavLink>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
 
 
                                 <NavigationMenuItem>
                                     <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
-                                        <Link to="/travel-guide">Travel Guide</Link>
+                                        <NavLink to="/travel-guide">Travel Guide</NavLink>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
                                     <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
-                                        <Link to="/about-us">About Us</Link>
+                                        <NavLink to="/about-us">About Us</NavLink>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
 
                                     <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4")}>
-                                        <Link to="/contact-us">Contact Us</Link>
+                                        <NavLink to="/contact-us">Contact Us</NavLink>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
                             </NavigationMenuList>
@@ -149,13 +149,13 @@ const Navbar = () => {
 };
 
 const MobileNavItem = ({ icon, label, hasChildren = false ,to}) => (
-    <Link to={to} className="flex items-center w-full px-4 py-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors text-lg font-medium group text-left">
+    <NavLink to={to} className="flex items-center w-full px-4 py-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors text-lg font-medium group text-left">
         <span className="mr-4 text-[#BC8B22] transition-transform group-hover:scale-110">
             {icon}
         </span>
         {label}
         {hasChildren && <ChevronDown className="ml-auto h-4 w-4 opacity-50" />}
-    </Link>
+    </NavLink>
 );
 
 const AnimatedHamburger = ({ isOpen }) => (

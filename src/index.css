@@ -70,3 +70,7 @@
 .button-secondary {
   @apply bg-secondary-brand text-white hover:bg-secondary-brand/90;
 }
+
+nav a.active {
+  @apply bg-primary-brand  text-white border-b border-white ;
+}
