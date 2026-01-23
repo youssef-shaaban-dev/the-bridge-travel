@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { toursData } from './data/tours';
+import { excursionsData } from '../dayExcursions/data/excursions';
+import { cruisesData } from '../nileCruises/data/cruises';
 import TourHero from './components/TourHero';
 import TourGallery from './components/TourGallery';
 import TourGallerySlider from './components/TourGallerySlider';
@@ -18,8 +20,11 @@ const TourDetails = () => {
     const { slug } = useParams();
     const [selectedIndex, setSelectedIndex] = useState(null);
 
+    // Combine all data for lookup
+    const allTours = [...toursData, ...excursionsData, ...cruisesData];
+
     // Find the current tour based on slug
-    const tour = toursData.find(t => t.slug === slug);
+    const tour = allTours.find(t => t.slug === slug);
 
     // Rates Data (Normally would come from tour data)
     const rates = tour?.rates || [
@@ -48,6 +53,17 @@ const TourDetails = () => {
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [selectedIndex]);
+
+    useEffect(() => {
+        if (location.hash === '#booking-section') {
+            const element = document.getElementById('booking-section');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            window.scrollTo(0, 0);
+        }
+    }, [location.pathname, location.hash, tour]);
 
     if (!tour) return <NotFound />;
 
@@ -83,7 +99,7 @@ const TourDetails = () => {
                     </div>
 
                     {/* Right Column: Booking Sidebar */}
-                    <div className="w-full lg:w-[40%] lg:sticky lg:top-28">
+                    <div id="booking-section" className="w-full lg:w-[40%] lg:sticky lg:top-28">
                         <BookingSidebar
                             rates={rates}
                             selectedRateIndex={selectedRateIndex}

@@ -72,10 +72,15 @@ const TourPackageCard = ({ tour, index }) => (
                 {tour.description}
             </p>
 
-            <div className="mt-auto">
+            <div className="mt-auto flex flex-col gap-3">
                 <Link to={`/Egypt-tours-package/${tour.slug}`}>
-                    <Button variant='link' className="w-full h-12 rounded-xl bg-[#22455C] hover:bg-[#2c5774] text-white font-bold group/btn transition-all">
+                    <Button variant='link' className="w-full h-12 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#22455C] font-bold group/btn transition-all">
                         View Tour Details
+                    </Button>
+                </Link>
+                <Link to={`/Egypt-tours-package/${tour.slug}#booking-section`}>
+                    <Button className="w-full h-12 rounded-xl bg-[#22455C] hover:bg-[#BC8B22] text-white font-bold group/btn transition-all">
+                        Book Now
                     </Button>
                 </Link>
             </div>

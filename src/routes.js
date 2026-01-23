@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import { TourDetails } from "./components/pages/tourDetails";
-import { Home, AboutUs, ContactUs, TravelGuide, DayExcursions, NileCruises, EgyptTourPackages } from "./components/pages";
+import { Home, AboutUs, ContactUs, TravelGuide, DayExcursions, NileCruises, EgyptTourPackages, CustomEgyptTours } from "./components/pages";
 import NotFound from "./components/shared/NotFound";
 
 export const routes = createBrowserRouter([
@@ -21,6 +21,18 @@ export const routes = createBrowserRouter([
             {
                 path: "/Egypt-tours-package/:slug",
                 Component: TourDetails,
+            },
+            {
+                path: "/day-excursion/:slug",
+                Component: TourDetails,
+            },
+            {
+                path: "/nile-cruise/:slug",
+                Component: TourDetails,
+            },
+            {
+                path: "/custom-egypt-tours",
+                Component: CustomEgyptTours,
             },
             {
                 path: "/nile-cruises",

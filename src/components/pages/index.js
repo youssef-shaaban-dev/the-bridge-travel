@@ -6,3 +6,4 @@ export * from "./travelGuide";
 export * from "./dayExcursions";
 export * from "./nileCruises";
 export * from "./egyptTourPackages";
+export * from "./customTours";

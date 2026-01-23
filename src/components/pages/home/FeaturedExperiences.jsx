@@ -83,12 +83,19 @@ const FeaturedExperiences = () => {
                                     {exp.description}
                                 </p>
 
-                                {/* CTA Button */}
-                                <Link to={`/Egypt-tours-package/${exp.slug}`}>
-                                    <Button variant='link' className="w-full h-12 rounded-xl bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-bold group/btn transition-all cursor-pointer">
-                                        View Tour Details
-                                    </Button>
-                                </Link>
+                                {/* CTA Buttons */}
+                                <div className="mt-auto flex flex-col gap-3">
+                                    <Link to={`/Egypt-tours-package/${exp.slug}`}>
+                                        <Button variant='link' className="w-full h-12 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#22455C] font-bold group/btn transition-all">
+                                            View Tour Details
+                                        </Button>
+                                    </Link>
+                                    <Link to={`/Egypt-tours-package/${exp.slug}#booking-section`}>
+                                        <Button className="w-full h-12 rounded-xl bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-bold group/btn transition-all">
+                                            Book Now
+                                        </Button>
+                                    </Link>
+                                </div>
                             </div>
                         </motion.div>
                     ))}

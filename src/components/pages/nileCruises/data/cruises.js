@@ -1,10 +1,11 @@
 export const cruisesData = [
     {
         id: 1,
+        slug: "4-days-aswan-to-luxor-cruise",
         title: "4 Days / 3 Nights - Aswan to Luxor",
         subtitle: "5★ Deluxe Nile Cruise",
         description: "Experience the magic of the Nile on a luxury cruise between Aswan and Luxor, discovering Egypt’s most famous temples with full-board comfort.",
-        image: "https://images.unsplash.com/photo-1568322422627-020bc1588148?q=80&w=2070",
+        images: ["https://images.unsplash.com/photo-1568322422627-020bc1588148?q=80&w=2070"],
         duration: "4 Days / 3 Nights",
         location: "Aswan to Luxor",
         price: 570,
@@ -38,7 +39,7 @@ export const cruisesData = [
             "All entrance fees",
             "All taxes and service charges"
         ],
-        notIncludes: [
+        exclusions: [
             "Personal expenses",
             "Tipping",
             "Optional tours (Abu Simbel, Hot Air Balloon, etc.)"
@@ -52,14 +53,16 @@ export const cruisesData = [
             "Philae Temple & Aswan High Dam",
             "Felucca Sailing on the Nile"
         ],
-        tags: ["Deluxe", "Aswan-Luxor", "Bestseller"]
+        tags: ["Deluxe", "Aswan-Luxor", "Bestseller"],
+        category: "Nile Cruises",
     },
     {
         id: 2,
+        slug: "8-days-cairo-nile-cruise",
         title: "8 Days / 7 Nights - Cairo + Nile Cruise",
         subtitle: "4 Nights Cairo + 3 Nights Cruise",
         description: "Experience the best of Egypt with a perfect combination of Cairo’s ancient wonders and a luxury Nile Cruise between Aswan and Luxor.",
-        image: "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=2070",
+        images: ["https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=2070"],
         duration: "8 Days / 7 Nights",
         location: "Cairo, Aswan & Luxor",
         price: 1370,
@@ -83,20 +86,22 @@ export const cruisesData = [
             "Professional Egyptologist guide",
             "All entrance fees and taxes"
         ],
-        notIncludes: [
+        exclusions: [
             "International flights",
-            "Egypt entry visa",
+            "Egypt visa",
             "Personal expenses & tipping",
             "Optional tours"
         ],
-        tags: ["Grand Tour", "Cairo+Nile", "Luxury"]
+        tags: ["Grand Tour", "Cairo+Nile", "Luxury"],
+        category: "Nile Cruises",
     },
     {
         id: 3,
+        slug: "5-days-luxor-to-aswan-cruise",
         title: "5 Days / 4 Nights - Luxor to Aswan",
         subtitle: "5★ Deluxe Nile Cruise | Full Board",
         description: "Sail through history on a luxury Nile Cruise and discover the timeless wonders of Ancient Egypt between Luxor and Aswan.",
-        image: "https://images.unsplash.com/photo-1544671261-2675979ad225?q=80&w=2070",
+        images: ["https://images.unsplash.com/photo-1544671261-2675979ad225?q=80&w=2070"],
         duration: "5 Days / 4 Nights",
         location: "Luxor to Aswan",
         price: 760,
@@ -115,11 +120,12 @@ export const cruisesData = [
             "All entrance fees",
             "All taxes and service charges"
         ],
-        notIncludes: [
+        exclusions: [
             "Personal expenses",
             "Tipping",
             "Optional excursions"
         ],
-        tags: ["In-Depth", "Luxor-Aswan", "Culture"]
+        tags: ["In-Depth", "Luxor-Aswan", "Culture"],
+        category: "Nile Cruises",
     }
 ];
