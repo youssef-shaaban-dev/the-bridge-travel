@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import { TourDetails } from "./components/pages/tourDetails";
-import { Home } from "./components/pages";
+import { Home, AboutUs } from "./components/pages";
 import NotFound from "./components/shared/NotFound";
 
 export const routes = createBrowserRouter([
@@ -17,6 +17,10 @@ export const routes = createBrowserRouter([
             {
                 path: "/Egypt-tours-package/:slug",
                 Component: TourDetails,
+            },
+            {
+                path: "/about-us",
+                Component: AboutUs,
             },
             {
                 path: "*",

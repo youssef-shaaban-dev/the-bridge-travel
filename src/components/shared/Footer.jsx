@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Facebook, Twitter, ChevronRight } from 'lucide-react';
 import logo from "@/assets/logo.png";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -21,10 +22,10 @@ const Footer = () => {
                     <div>
                         <h3 className="text-[#BC8B22] text-xl font-bold mb-5">Egypt Tours</h3>
                         <ul className="space-y-2.5">
-                            <FooterLink text="Egypt Tour Packages" />
-                            <FooterLink text="Nile Cruises" />
-                            <FooterLink text="Day Excursions" />
-                            <FooterLink text="Custom Egypt Tours" />
+                            <FooterLink text="Egypt Tour Packages" to="/egypt-tour-packages" />
+                            <FooterLink text="Nile Cruises" to="/nile-cruises" />
+                            <FooterLink text="Day Excursions" to="/day-excursions" />
+                            <FooterLink text="Custom Egypt Tours" to="/custom-egypt-tours" />
                         </ul>
                     </div>
 
@@ -32,9 +33,9 @@ const Footer = () => {
                     <div>
                         <h3 className="text-[#BC8B22] text-xl font-bold mb-5">Quick Links</h3>
                         <ul className="space-y-2.5">
-                            <FooterLink text="Travel Guide" />
-                            <FooterLink text="About Us" />
-                            <FooterLink text="Contact Us" />
+                            <FooterLink text="Travel Guide" to="/travel-guide" />
+                            <FooterLink text="About Us" to="/about-us" />
+                            <FooterLink text="Contact Us" to="/contact-us" />
                             <FooterLink text="Terms & Conditions" />
                             <FooterLink text="Privacy Policy" />
                         </ul>
@@ -53,10 +54,12 @@ const Footer = () => {
     );
 };
 
-const FooterLink = ({ text }) => (
-    <li className="flex items-center gap-2 group cursor-pointer">
-        <ChevronRight className="h-3 w-3 text-[#BC8B22] opacity-0 group-hover:opacity-100 transition-all -ml-2 group-hover:ml-0" />
-        <span className="text-slate-300 group-hover:text-[#BC8B22] transition-colors text-sm">{text}</span>
+const FooterLink = ({ text, to = "#" }) => (
+    <li>
+        <Link to={to} className="flex items-center gap-2 group cursor-pointer">
+            <ChevronRight className="h-3 w-3 text-[#BC8B22] opacity-0 group-hover:opacity-100 transition-all -ml-2 group-hover:ml-0" />
+            <span className="text-slate-300 group-hover:text-[#BC8B22] transition-colors text-sm">{text}</span>
+        </Link>
     </li>
 );
 
