@@ -105,7 +105,7 @@ const ContactMain = () => {
                         className="bg-white rounded-[40px] p-10 shadow-2xl shadow-slate-200 border border-slate-100"
                     >
                         <div className="mb-8">
-                            <h3 className="text-2xl font-bold text-[#22455C] mb-2 font-playfair">Inquiry Form</h3>
+                            <h3 className="text-2xl font-bold text-[#22455C] mb-2 font-playfair">Contact Us</h3>
                             <p className="text-slate-500 font-medium">Complete the form and we'll contact you shortly.</p>
                         </div>
 
