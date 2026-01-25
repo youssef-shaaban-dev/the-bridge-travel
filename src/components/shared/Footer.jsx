@@ -14,7 +14,7 @@ const Footer = () => {
                             <img src={logo} alt="Logo" className="h-24 md:h-32 brightness-0 invert" />
                         </div>
                         <p className="text-slate-300 text-sm leading-relaxed">
-                            The Bridge Travel is a tour operator and travel agency providing services for groups and individuals traveling to Egypt.
+                        Explore Egypt with The Bridge Travel with luxury Egypt tours, Nile cruises, Red Sea holidays, and unforgettable experiences in Cairo, Luxor, Aswan, and the Red Sea.
                         </p>
                     </div>
 
