@@ -56,7 +56,7 @@ const NileCruises = () => {
                         <FeatureItem
                             icon={<Compass className="h-8 w-8 text-[#BC8B22]" />}
                             title="Expert Guidance"
-                            text="Professional Egyptologist guides to bring 5,000 years of history to life."
+                            text="Professional Egyptologist guides to bring 5000 years of history to life."
                         />
                         <FeatureItem
                             icon={<Ship className="h-8 w-8 text-[#BC8B22]" />}
