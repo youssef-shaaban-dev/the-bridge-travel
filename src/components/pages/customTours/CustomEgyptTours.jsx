@@ -122,7 +122,7 @@ const CustomEgyptTours = () => {
                                 <div className="lg:col-span-3 p-10">
                                     <div className="flex items-center gap-3 mb-10">
                                         <div className="h-2 w-2 rounded-full bg-[#BC8B22]"></div>
-                                        <h3 className="text-xl font-black text-[#22455C] tracking-tight uppercase">Plan Your Trip</h3>
+                                        <h3 className="text-xl font-black text-[#22455C] tracking-tight uppercase">Plan Your Custom Egypt Tour</h3>
                                     </div>
 
                                     <form className="space-y-6">
