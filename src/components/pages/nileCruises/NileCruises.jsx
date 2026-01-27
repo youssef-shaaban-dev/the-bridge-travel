@@ -79,10 +79,7 @@ const NileCruises = () => {
                         <img src={logo} alt="Logo" className="h-20 mx-auto mb-8 opacity-20 grayscale brightness-0" />
                         <h3 className="text-3xl font-bold text-[#22455C] font-playfair mb-6">Sail Through 5000 Years Of History</h3>
                         <p className="text-slate-500 italic mb-10">"The Bridge Travel - The Bridge to Luxury Egypt Tours"</p>
-                        <button className="px-12 py-5 bg-[#BC8B22] hover:bg-[#22455C] text-white rounded-2xl font-bold shadow-xl shadow-[#BC8B22]/20 transition-all text-lg">
-                            Request A Quote
-                        </button>
-                    </motion.div>
+                                           </motion.div>
                 </div>
             </section>
         </div>
