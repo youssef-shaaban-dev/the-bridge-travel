@@ -17,7 +17,7 @@ const AboutIntro = ({ image }) => {
                             Crafting Exceptional Journeys That Connect You With The True Spirit of Egypt.
                         </h2>
                         <p className="mb-6 text-lg text-slate-600 leading-relaxed font-medium">
-                            At The Bridge Travel, we don’t simply arrange trips — we craft exceptional journeys that connect you with the true spirit and grandeur of Egypt.
+                            At The Bridge Travel, we don’t simply arrange trips - we craft exceptional journeys that connect you with the true spirit and grandeur of Egypt.
                         </p>
                         <p className="text-slate-600 leading-relaxed">
                             Based in Egypt and specializing in luxury and cultural travel, we proudly welcome travelers from the USA, the UK, Australia, and around the world to discover Egypt in comfort, safety, and refined style.
