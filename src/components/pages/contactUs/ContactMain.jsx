@@ -57,11 +57,10 @@ const ContactMain = () => {
                     >
                         <span className="text-sm font-bold tracking-widest text-[#BC8B22] uppercase">Get In Touch</span>
                         <h2 className="mt-4 mb-8 text-4xl font-bold text-[#22455C] md:text-5xl leading-tight">
-                            We Are Here To Guide You Every Step Of The Way.
+                            We are here to guide you every step of the way.
                         </h2>
                         <p className="mb-12 text-slate-600 leading-relaxed text-lg">
-                            Whether you are dreaming of a private Nile Cruise, a relaxing Red Sea holiday, or a tailor-made cultural tour, our experienced travel specialists are here to assist with your travel plans.
-                        </p>
+                           Whether you are dreaming of a private Nile cruise, a relaxing Red Sea holiday, or a tailor-made cultural tour, our experienced travel specialists are here to assist you with your travel plans.</p>
 
                         <div className="space-y-8">
                             {contactInfo.map((info, index) => (
@@ -105,7 +104,7 @@ const ContactMain = () => {
                         className="bg-white rounded-[40px] p-10 shadow-2xl shadow-slate-200 border border-slate-100"
                     >
                         <div className="mb-8">
-                            <h3 className="text-2xl font-bold text-[#22455C] mb-2 font-playfair">Inquiry Form</h3>
+                            <h3 className="text-2xl font-bold text-[#22455C] mb-2 font-playfair">Contact Us</h3>
                             <p className="text-slate-500 font-medium">Complete the form and we'll contact you shortly.</p>
                         </div>
 
