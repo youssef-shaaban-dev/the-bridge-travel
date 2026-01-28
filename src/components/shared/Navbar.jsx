@@ -134,6 +134,24 @@ const Navbar = () => {
                                         <NavLink to="/contact-us">Contact Us</NavLink>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <NavigationMenuLink asChild className={cn(
+                                        navigationMenuTriggerStyle(),
+                                        "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4",
+                                        checkActive("/privacy-policy") && "bg-white/10 text-white"
+                                    )}>
+                                        <NavLink to="/privacy-policy">Privacy Policy</NavLink>
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <NavigationMenuLink asChild className={cn(
+                                        navigationMenuTriggerStyle(),
+                                        "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4",
+                                        checkActive("/terms-and-conditions") && "bg-white/10 text-white"
+                                    )}>
+                                        <NavLink to="/terms-and-conditions">Terms & Conditions</NavLink>
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
                             </NavigationMenuList>
                         </NavigationMenu>
                     </nav>
@@ -174,6 +192,9 @@ const Navbar = () => {
                                         <MobileNavItem to="/travel-guide" icon={<Globe className="h-5 w-5" />} label="Travel Guide" onClick={() => setIsMenuOpen(false)} />
                                         <MobileNavItem to="/about-us" icon={<Home className="h-5 w-5" />} label="About Us" onClick={() => setIsMenuOpen(false)} />
                                         <MobileNavItem to="/contact-us" icon={<Mail className="h-5 w-5" />} label="Contact Us" onClick={() => setIsMenuOpen(false)} />
+                                        <MobileNavItem to="/terms-and-conditions" label="Terms & Conditions" onClick={() => setIsMenuOpen(false)} />
+                                        <MobileNavItem to="/privacy-policy" label="Privacy Policy" onClick={() => setIsMenuOpen(false)} />
+                                        
                                     </nav>
 
                                     <div className="p-6 border-t border-white/10 text-[#67e8f9]">
@@ -199,15 +220,18 @@ const MobileNavItem = ({ icon, label, hasChildren = false, to, onClick }) => {
 
     return (
         <NavLink to={to} onClick={onClick} className={cn(
-            "flex items-center w-full px-4 py-4 rounded-xl transition-colors text-lg font-medium group text-left",
+            "flex items-center w-full px-4 py-4 rounded-xl transition-colors font-medium group text-left",
+            icon ? "text-lg" : "text-sm py-2 opacity-80",
             isActive ? "bg-white/15 text-[#BC8B22]" : "bg-white/5 hover:bg-white/10 text-white/70 hover:text-white"
         )}>
-            <span className={cn(
-                "mr-4 transition-transform group-hover:scale-110",
-                isActive ? "text-[#BC8B22]" : "text-[#BC8B22]"
-            )}>
-                {icon}
-            </span>
+            {icon && (
+                <span className={cn(
+                    "mr-4 transition-transform group-hover:scale-110",
+                    isActive ? "text-[#BC8B22]" : "text-[#BC8B22]"
+                )}>
+                    {icon}
+                </span>
+            )}
             {label}
             {hasChildren && <ChevronDown className="ml-auto h-4 w-4 opacity-50" />}
         </NavLink>

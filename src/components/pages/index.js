@@ -7,3 +7,4 @@ export * from "./dayExcursions";
 export * from "./nileCruises";
 export * from "./egyptTourPackages";
 export * from "./customTours";
+export * from "./terms&condition";

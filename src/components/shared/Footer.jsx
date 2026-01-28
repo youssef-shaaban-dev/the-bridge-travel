@@ -36,8 +36,8 @@ const Footer = () => {
                             <FooterLink text="Travel Guide" to="/travel-guide" />
                             <FooterLink text="About Us" to="/about-us" />
                             <FooterLink text="Contact Us" to="/contact-us" />
-                            <FooterLink text="Terms & Conditions" />
-                            <FooterLink text="Privacy Policy" />
+                            <FooterLink text="Terms & Conditions" to="/terms-and-conditions" />
+                            <FooterLink text="Privacy Policy" to="/privacy-policy" />
                         </ul>
                     </div>
                     <TripAdvisorCard />
