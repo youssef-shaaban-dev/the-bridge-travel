@@ -1,6 +1,6 @@
 import React from 'react';
 import { History, Sparkles, Waves, Globe, Zap, Camera, MapPin } from 'lucide-react';
-import heroImage from "@/assets/hero/egyptian-Museum.webp";
+import heroImage from "@/assets/images/Luxor-07.webp";
 import logo from "@/assets/logo.png";
 
 // Sub-components

@@ -12,10 +12,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
 // Import images
-import egyptianMuseum from "@/assets/hero/egyptian-Museum.webp";
-import pyramids from "@/assets/hero/pyramids.webp";
-import nile from "@/assets/hero/nile.webp";
-import temple from "@/assets/hero/temple.webp";
+import egyptianMuseum from "@/assets/images/Egyptian-Museum-01.webp";
+import pyramids from "@/assets/images/Sphinx.webp";
+import nile from "@/assets/images/Nile-Cruise.webp";
+import temple from "@/assets/images/Luxor-05.webp";
 
 const slides = [
     {

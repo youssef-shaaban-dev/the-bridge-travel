@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImage from "@/assets/hero/temple.webp";
+import heroImage from "@/assets/images/Jordan-02.webp";
 import logo from "@/assets/logo.png";
 
 // Sub-components

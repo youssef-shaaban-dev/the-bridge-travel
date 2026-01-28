@@ -60,32 +60,6 @@ const EgyptTourPackages = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Branded Closing */}
-            <section className="py-24 bg-[#FCF9F4] text-center overflow-hidden relative">
-                <div className="container-custom relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="max-w-2xl mx-auto"
-                    >
-                        <img src={logo} alt="Logo" className="h-20 mx-auto mb-8 opacity-20 grayscale brightness-0" />
-                        <h3 className="text-3xl font-bold text-[#22455C] font-playfair mb-6">Your Bridge To Luxury Egypt Tours</h3>
-                        <p className="text-slate-500 italic mb-10 leading-relaxed font-medium">
-                            "With professional Egyptologist guides and selected luxury accommodations,
-                            The Bridge Travel ensures your journey is safe, comfortable, and unforgettable."
-                        </p>
-                        <button className="px-12 py-5 bg-[#BC8B22] hover:bg-[#22455C] text-white rounded-2xl font-bold shadow-xl shadow-[#BC8B22]/20 transition-all text-lg">
-                            Customize Your Package
-                        </button>
-                    </motion.div>
-                </div>
-                {/* Decorative Elements */}
-                <div className="absolute top-0 right-0 opacity-[0.03] pointer-events-none">
-                    <Compass className="h-[300px] w-[300px] translate-x-1/2 -translate-y-1/2" />
-                </div>
-            </section>
         </div>
     );
 };

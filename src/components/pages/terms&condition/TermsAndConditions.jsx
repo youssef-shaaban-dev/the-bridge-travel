@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FileText, Scale, Globe, AlertCircle, ClipboardCheck, Lock, ChevronRight, Menu, X } from 'lucide-react';
-import heroImage from "@/assets/hero/temple.webp";
+import heroImage from "@/assets/images/Jordan-03.webp";
 import { cn } from "@/lib/utils";
 
 const sections = [
@@ -53,7 +53,7 @@ const TermsAndConditions = () => {
     return (
         <div className="bg-white min-h-screen">
             {/* Hero Section */}
-            <section className="relative h-[40vh] min-h-[300px] w-full overflow-hidden">
+            <section className="relative h-[40vh] min-h-[70vh] w-full overflow-hidden">
                 <div className="absolute inset-0">
                     <img src={heroImage} alt="The Bridge Travel Terms" className="h-full w-full object-cover" />
                     <div className="absolute inset-0 bg-linear-to-b from-[#22455C]/80 to-white/10" />

@@ -1,15 +1,13 @@
 import React from 'react';
 import { ShieldCheck, Clock, Globe2, MapPin } from 'lucide-react';
-import heroImage from "@/assets/hero/nile.webp";
-import pyramidsImage from "@/assets/hero/pyramids.webp";
-import logo from "@/assets/logo.png";
+import heroImage from "@/assets/images/Sharm-El-Sheikh-01.webp";
+import pyramidsImage from "@/assets/images/Jordan-03.webp";
 
 // Sub-components
 import AboutHero from './AboutHero';
 import AboutIntro from './AboutIntro';
 import AboutFeatures from './AboutFeatures';
 import AboutDeepDive from './AboutDeepDive';
-import AboutClosing from './AboutClosing';
 
 const stats = [
     {
@@ -45,7 +43,6 @@ const AboutUs = () => {
             <AboutIntro image={heroImage} />
             <AboutFeatures stats={stats} />
             <AboutDeepDive pyramidsImage={pyramidsImage} />
-            <AboutClosing logo={logo} />
         </div>
     );
 };

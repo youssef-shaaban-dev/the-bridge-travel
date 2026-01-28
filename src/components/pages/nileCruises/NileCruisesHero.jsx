@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImage from "@/assets/hero/nile.webp";
+import heroImage from "@/assets/images/Nile-Cruise.webp";
 import { motion } from "framer-motion";
 
 const NileCruisesHero = () => {

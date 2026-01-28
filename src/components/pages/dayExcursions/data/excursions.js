@@ -1,3 +1,47 @@
+import Cairo_1 from "@/assets/images/Cairo-01.webp"
+import Cairo_2 from "@/assets/images/Cairo-02.webp"
+import Cairo_3 from "@/assets/images/Cairo-Cruise.webp"
+import Cairo_4 from "@/assets/images/Cairo-Coptic.webp"
+import Cairo_5 from "@/assets/images/Khan-El-Khalil.webp"
+
+import Sphinx from "@/assets/images/Sphinx.webp"
+import Sakkara_Pyramids from "@/assets/images/Sakkara-Pyramids.webp"
+import Saladin_Citadel from "@/assets/images/Saladin-Citadel.webp"
+
+import Egyptian_Museum_1 from "@/assets/images/Egyptian-Museum-01.webp"
+import Egyptian_Museum_2 from "@/assets/images/Egyptian-Museum-02.webp"
+
+import Abu_Simbel_1 from "@/assets/images/Abu-Simble-01.webp"
+import Abu_Simbel_2 from "@/assets/images/Abu-Simble-02.webp"
+
+import Alexandria_1 from "@/assets/images/Alexandria-01.webp"
+import Alexandria_2 from "@/assets/images/Alexandria-02.webp"
+
+import NileCruise from "@/assets/images/Nile-Cruise.webp"
+
+import Aswan_1 from "@/assets/images/Aswan-01.webp"
+import Aswan_3 from "@/assets/images/Aswan-03.webp"
+import Aswan_7 from "@/assets/images/Aswan-07.webp"
+
+import Luxor_1 from "@/assets/images/Luxor.webp"
+import Luxor_2 from "@/assets/images/Luxor-02.webp"
+import Luxor_3 from "@/assets/images/Luxor-03.webp"
+import Luxor_4 from "@/assets/images/Luxor-04.webp"
+import Luxor_5 from "@/assets/images/Luxor-05.webp"
+import Luxor_6 from "@/assets/images/Luxor-06.webp"
+
+import SharmElShik_1 from "@/assets/images/Sharm-El-Sheikh-01.webp"
+import SharmElShik_2 from "@/assets/images/Sharm-El-Sheikh-02.webp"
+import SharmElShik_3 from "@/assets/images/Sharm-El-Sheikh-03.webp"
+import SharmElShik_4 from "@/assets/images/Sharm-El-Sheikh-04.webp"
+
+import Jordan_1 from "@/assets/images/Jordan-01.webp"
+import Jordan_2 from "@/assets/images/Jordan-02.webp"
+import Jordan_3 from "@/assets/images/Jordan-03.webp"
+
+
+
+
 export const excursionsData = [
     {
         id: 1,
@@ -6,7 +50,7 @@ export const excursionsData = [
         subtitle: "Private Evening Tour",
         description: "Enjoy a magical evening on the Nile with a relaxing dinner cruise and live entertainment.",
         longDescription: "Around 6:30 PM, our representative will pick you up from your hotel in Cairo or Giza and transfer you by private air-conditioned vehicle to your Nile cruise boat. Board the ship and enjoy a two-hour sailing along the Nile while watching an exciting Belly Dancing Show and the traditional Tanoura (Whirling Dervish) Show. During the cruise, you will enjoy a delicious open buffet dinner with a beautiful view of Cairo by night reflected on the waters of the Nile. After the cruise, you will be transferred back to your hotel around 10:30 PM.",
-        images: ["https://images.unsplash.com/photo-1572252009286-268acec5ca0a?q=80&w=2070"],
+        images: [NileCruise,   Cairo_1, Cairo_3, Cairo_2 ],
         duration: "4 Hours",
         location: "Cairo / Giza",
         price: 70,
@@ -38,7 +82,7 @@ export const excursionsData = [
         subtitle: "Private Tour",
         description: "Discover the spiritual heart of Cairo on a full-day private tour through its most important Christian and Islamic landmarks.",
         longDescription: "Your day begins at around 8:00 AM with pickup from your hotel in Cairo or Giza by your professional tour guide in a private air-conditioned vehicle. You will start with Coptic Cairo, one of the most sacred areas in Egypt, where the Holy Family once stayed. Visit Abu Serga Church, St. Barbara Church, The Hanging Church, and Ben Ezra Synagogue. Continue to Islamic Cairo to explore Amr Ibn El-As Mosque, Sultan Hassan Mosque & Madrasa, Al-Rifa’i Mosque, and Cairo Citadel (Mohamed Ali Mosque). End your day at Khan El Khalili Bazaar.",
-        images: ["https://images.unsplash.com/photo-1566192091743-5966a6079984?q=80&w=2070"],
+        images: [Alexandria_1,  Cairo_3, Alexandria_2, Cairo_4, Cairo_5],
         duration: "Full Day",
         location: "Cairo",
         price: 85,
@@ -70,7 +114,7 @@ export const excursionsData = [
         subtitle: "Duration: 6 - 8 Hours",
         description: "Explore the Seven Wonders of the Ancient World along with the treasures of Tutankhamun.",
         longDescription: "Your private tour begins with pickup from your hotel in Cairo by your professional Egyptologist guide. Drive to the Giza Plateau to explore the Great Pyramid of King Cheops, Chephren, and Mykerinos. Experience the panoramic viewpoint and the Great Sphinx. Next, visit the world-famous Egyptian Museum, home to thousands of authentic statues and artifacts. Finally, stroll through the vibrant Khan El Khalili Bazaar for a traditional shopping experience.",
-        images: ["https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=2070"],
+        images: [Cairo_5,Cairo_4,Sphinx,Sakkara_Pyramids],
         duration: "6 - 8 Hours",
         location: "Cairo / Giza",
         price: 95,
@@ -104,7 +148,7 @@ export const excursionsData = [
         subtitle: "Private Full-Day Tour",
         description: "Visit the legendary Giza Pyramids and explore two major museums, including the Royal Mummies Hall.",
         longDescription: "Start your day with pickup from your hotel in Cairo or Giza. Your first stop is the legendary Giza Pyramids, including Great Pyramid of Cheops and the Sphinx. Then visit the world-famous Egyptian Museum. Proceed to the National Museum of Egyptian Civilization (NMEC) to explore the Royal Mummies Hall and unique artifacts. Enjoy lunch at a local restaurant before returning to your hotel.",
-        images: ["https://images.unsplash.com/photo-1553913861-c0fddf2619ee?q=80&w=2070"],
+        images: [Egyptian_Museum_1,Egyptian_Museum_2,Sakkara_Pyramids,Sphinx],
         duration: "Full Day",
         location: "Cairo / Giza",
         price: 120,
@@ -138,7 +182,7 @@ export const excursionsData = [
         subtitle: "Private Tour",
         description: "Begin your journey into the heart of ancient Egypt, from the Step Pyramid of Djoser to Memphis, the first capital.",
         longDescription: "Your tour starts at the Giza Plateau to explore the pyramids and the Sphinx. Continue to Sakkara, home of the world's first pyramid: The Step Pyramid of King Djoser. Then drive to Memphis, the first capital of unified Egypt, to see the colossal Statue of Ramses II and the Alabaster Sphinx. At the end, you'll be transferred back to your hotel.",
-        images: ["https://images.unsplash.com/photo-1544671261-2675979ad225?q=80&w=2070"],
+        images: [Sphinx,Sakkara_Pyramids,Abu_Simbel_1,Abu_Simbel_2],
         duration: "Full Day",
         location: "Cairo / Giza",
         price: 110,
@@ -172,7 +216,7 @@ export const excursionsData = [
         subtitle: "Private Tour",
         description: "Explore the legendary Giza Pyramids and the spectacular Grand Egyptian Museum (GEM), the largest archaeological museum in the world.",
         longDescription: "Explore the iconic Giza Pyramids, the Sphinx, and the Valley Temple. Then, head to the Grand Egyptian Museum (GEM) for a guided tour through its impressive galleries, including Tutankhamun’s treasures. Enjoy lunch at a local restaurant before returning comfortably to your hotel.",
-        images: ["https://images.unsplash.com/photo-1632349129532-613d5a49856f?q=80&w=2071"],
+        images: [Egyptian_Museum_2,Egyptian_Museum_1,Sphinx,Sakkara_Pyramids,Saladin_Citadel],
         duration: "Full Day",
         location: "Cairo / Giza",
         price: 105,
@@ -205,7 +249,7 @@ export const excursionsData = [
         subtitle: "Private Tour",
         description: "Discover the highlights of ancient Thebes on a full-day private tour to Luxor’s East and West Banks.",
         longDescription: "Start with a visit to the Valley of the Kings, the Temple of Queen Hatshepsut, and the Colossi of Memnon. Enjoy lunch at a local restaurant. Then cross to the East Bank to explore the vast Karnak Temple Complex and the elegant Luxor Temple. After the tour, you will be transferred back to your hotel, Nile Cruise, or airport in Luxor.",
-        images: ["https://images.unsplash.com/photo-1590510326441-d98c7ea46211?q=80&w=2070"],
+        images: [Luxor_1,Luxor_2,Luxor_3,Luxor_4,Luxor_5,Luxor_6],
         duration: "Full Day",
         location: "Luxor",
         price: 155,
@@ -240,7 +284,7 @@ export const excursionsData = [
         subtitle: "Private by A/C Car",
         description: "Travel through the desert to Abu Simbel, one of Egypt’s most impressive archaeological treasures.",
         longDescription: "The two magnificent rock temples of Abu Simbel are masterpieces of ancient Egyptian architecture and a symbol of power. Carved during the reign of Pharaoh Ramses II, the Great Temple is dedicated to the gods Amun-Re, Re-Harakhty, Ptah, and Ramses II himself. Nearby stands the Temple of Queen Nefertari, dedicated to the goddess Hathor. After your guided visit, you will be transferred back to your hotel in Aswan.",
-        images: ["https://images.unsplash.com/photo-1599388305048-3c66f68c3746?q=80&w=2070"],
+        images: [Abu_Simbel_1, Abu_Simbel_2,Aswan_1,Aswan_3,Aswan_7],
         duration: "Approx. 8 Hours",
         location: "Aswan",
         price: 99,
@@ -273,7 +317,7 @@ export const excursionsData = [
         subtitle: "Private Tour",
         description: "Discover the charm of Egypt’s Mediterranean city, from the Roman Theater to the Catacombs of Kom El-Shoqafa.",
         longDescription: "Drive from Cairo to Alexandria to visit the Roman Theater, Catacombs of Kom El-Shoqafa, and Pompey’s Pillar. See the Alexandria Library and Qaitbay Citadel from outside. Walk along the Corniche by the Mediterranean Sea. Enjoy lunch at a local restaurant before returning to Cairo.",
-        images: ["https://images.unsplash.com/photo-1543160731-64d88e0b6ec8?q=80&w=2070"],
+        images: [Alexandria_1,Alexandria_2,Cairo_1,Cairo_2,Cairo_3],
         duration: "Full Day",
         location: "Alexandria",
         price: 115,
@@ -305,7 +349,7 @@ export const excursionsData = [
         subtitle: "Evening Tour",
         description: "Experience the magic of ancient Egypt as the Great Pyramids and the Sphinx come alive with lights and storytelling.",
         longDescription: "Enjoy one of the world’s most spectacular night shows, where history is narrated through dramatic sound and light effects at the Giza Plateau. After the show, you will be transferred back to your hotel in Cairo or Giza. A perfect evening experience under the stars.",
-        images: ["https://images.unsplash.com/photo-1572252009286-268acec5ca0a?q=80&w=2070"],
+        images: [Sakkara_Pyramids,Sphinx,Abu_Simbel_1,Abu_Simbel_2],
         duration: "Evening",
         location: "Cairo / Giza",
         price: 65,

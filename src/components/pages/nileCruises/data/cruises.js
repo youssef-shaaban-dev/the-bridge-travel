@@ -1,3 +1,19 @@
+import Cairo_3 from "@/assets/images/Cairo-Cruise.webp"
+import Cairo_4 from "@/assets/images/Cairo-Coptic.webp"
+
+import Sakkara_Pyramids from "@/assets/images/Sakkara-Pyramids.webp"
+
+import NileCruise from "@/assets/images/Nile-Cruise.webp"
+
+import Aswan_1 from "@/assets/images/Aswan-01.webp"
+import Aswan_7 from "@/assets/images/Aswan-07.webp"
+
+import Luxor_1 from "@/assets/images/Luxor.webp"
+import Luxor_2 from "@/assets/images/Luxor-02.webp"
+
+
+
+
 export const cruisesData = [
     {
         id: 1,
@@ -5,7 +21,7 @@ export const cruisesData = [
         title: "4 Days / 3 Nights - Aswan to Luxor",
         subtitle: "5★ Deluxe Nile Cruise",
         description: "Experience the magic of the Nile on a luxury cruise between Aswan and Luxor, discovering Egypt’s most famous temples with full-board comfort.",
-        images: ["https://images.unsplash.com/photo-1568322422627-020bc1588148?q=80&w=2070"],
+        images: [Aswan_1,Luxor_1,Luxor_2,Aswan_7],
         duration: "4 Days / 3 Nights",
         location: "Aswan to Luxor",
         price: 570,
@@ -62,7 +78,7 @@ export const cruisesData = [
         title: "8 Days / 7 Nights - Cairo + Nile Cruise",
         subtitle: "4 Nights Cairo + 3 Nights Cruise",
         description: "Experience the best of Egypt with a perfect combination of Cairo’s ancient wonders and a luxury Nile Cruise between Aswan and Luxor.",
-        images: ["https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=2070"],
+        images: [Sakkara_Pyramids,NileCruise,Cairo_3,Cairo_4],
         duration: "8 Days / 7 Nights",
         location: "Cairo, Aswan & Luxor",
         price: 1370,
@@ -101,7 +117,7 @@ export const cruisesData = [
         title: "5 Days / 4 Nights - Luxor to Aswan",
         subtitle: "5★ Deluxe Nile Cruise | Full Board",
         description: "Sail through history on a luxury Nile Cruise and discover the timeless wonders of Ancient Egypt between Luxor and Aswan.",
-        images: ["https://images.unsplash.com/photo-1544671261-2675979ad225?q=80&w=2070"],
+        images: [Luxor_1,Luxor_2,Aswan_7,Aswan_1],
         duration: "5 Days / 4 Nights",
         location: "Luxor to Aswan",
         price: 760,

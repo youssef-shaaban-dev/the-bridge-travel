@@ -1,3 +1,35 @@
+import Cairo_1 from "@/assets/images/Cairo-01.webp"
+import Cairo_2 from "@/assets/images/Cairo-02.webp"
+import Cairo_3 from "@/assets/images/Cairo-Cruise.webp"
+import Cairo_4 from "@/assets/images/Cairo-Coptic.webp"
+import Cairo_5 from "@/assets/images/Khan-El-Khalil.webp"
+
+import Sphinx from "@/assets/images/Sphinx.webp"
+import Sakkara_Pyramids from "@/assets/images/Sakkara-Pyramids.webp"
+import Saladin_Citadel from "@/assets/images/Saladin-Citadel.webp"
+
+import Alexandria_1 from "@/assets/images/Alexandria-01.webp"
+import Alexandria_2 from "@/assets/images/Alexandria-02.webp"
+
+import NileCruise from "@/assets/images/Nile-Cruise.webp"
+
+import Aswan_1 from "@/assets/images/Aswan-01.webp"
+import Aswan_3 from "@/assets/images/Aswan-03.webp"
+import Aswan_7 from "@/assets/images/Aswan-07.webp"
+
+import Luxor_1 from "@/assets/images/Luxor.webp"
+import Luxor_2 from "@/assets/images/Luxor-02.webp"
+
+import SharmElShik_1 from "@/assets/images/Sharm-El-Sheikh-01.webp"
+import SharmElShik_2 from "@/assets/images/Sharm-El-Sheikh-02.webp"
+import SharmElShik_3 from "@/assets/images/Sharm-El-Sheikh-03.webp"
+import SharmElShik_4 from "@/assets/images/Sharm-El-Sheikh-04.webp"
+
+import Jordan_1 from "@/assets/images/Jordan-01.webp"
+import Jordan_2 from "@/assets/images/Jordan-02.webp"
+import Jordan_3 from "@/assets/images/Jordan-03.webp"
+
+
 export const toursData = [
     {
         id: 1,
@@ -18,10 +50,10 @@ export const toursData = [
         type: "Private Tour",
         includes: "VIP Fast Track",
         images: [
-            "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=1200", 
-            "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&q=80&w=800", 
-            "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?auto=format&fit=crop&q=80&w=800", 
-            "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&q=80&w=600",
+            Cairo_1, 
+            Cairo_2,
+            Cairo_3,
+            Cairo_4,
         ],
         description: "Step into the heart of ancient civilization with a perfectly curated Egypt experience that blends iconic sights, five-star comfort, and personal service from the moment you land. From the Great Pyramids and the Sphinx to the treasures of King Tut, from the spiritual beauty of Old Cairo to the Mediterranean charm of Alexandria - this journey is crafted to turn your dream of Egypt into a seamless, unforgettable reality.",
         itinerary: [
@@ -53,10 +85,10 @@ export const toursData = [
         type: "Private Tour",
         includes: "Cairo | Alexandria",
         images: [
-            "https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1506461882194-59c2ef844a49?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&q=80&w=800",
+            Alexandria_1,
+            Alexandria_2,
+            Cairo_1,
+            Cairo_2
         ],
         description: "Discover the magic of Egypt with a perfectly balanced itinerary combining ancient wonders, Mediterranean charm, and five-star comfort. This private tour is designed for travelers who seek culture, history, and seamless service.",
         itinerary: [
@@ -102,10 +134,11 @@ export const toursData = [
         type: "Private Tour",
         includes: "Detailed Cairo",
         images: [
-            "https://images.unsplash.com/photo-1551047711-b4ec37096e22?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?auto=format&fit=crop&q=80&w=800",
+            Cairo_5,
+            Cairo_2,
+            Cairo_1,
+            Cairo_3,
+            Cairo_4,
         ],
         description: "Discover the timeless beauty of Egypt with a carefully crafted itinerary that combines iconic history, cultural depth, and seamless five-star service - all in the heart of Cairo.",
         itinerary: [
@@ -150,10 +183,11 @@ export const toursData = [
         type: "Private Tour",
         includes: "Cairo | Nile Cruise",
         images: [
-            "https://images.unsplash.com/photo-1568503504914-239fd23c6dae?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1549419142-263884849ecb?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1539743513337-97594d2f3473?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1510014801111-9257e8417537?auto=format&fit=crop&q=80&w=800",
+            NileCruise,
+            Aswan_1,
+            Aswan_3,
+            Cairo_1,
+            Cairo_5
         ],
         description: "Experience the very best of Egypt with a perfect combination of iconic Cairo, a relaxing Nile Cruise, and the legendary temples of Upper Egypt — all with private guiding and five-star comfort.",
         itinerary: [
@@ -201,10 +235,10 @@ export const toursData = [
         type: "Private Tour",
         includes: "Sleeper Train | Red Sea",
         images: [
-            "https://images.unsplash.com/photo-1510014801111-9257e8417537?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1506929514798-2396e9538350?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1544604196-8ac433bd95d9?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=800",
+            Luxor_1,
+            Luxor_2,
+            Aswan_7,
+            Cairo_5,
         ],
         description: "A perfectly balanced journey combining Egypt’s ancient wonders, a romantic sleeper train experience, the magic of Upper Egypt, and pure relaxation on the Red Sea.",
         itinerary: [
@@ -255,10 +289,10 @@ export const toursData = [
         type: "Private Tour",
         includes: "Nile Cruise | Sharm",
         images: [
-            "https://images.unsplash.com/photo-1506461882194-59c2ef844a49?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1541410945376-a7973bb9e88a?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1549419142-263884849ecb?auto=format&fit=crop&q=80&w=800",
+            SharmElShik_1,
+            SharmElShik_2,
+            SharmElShik_3,
+            SharmElShik_4,
         ],
         description: "A perfect blend of ancient wonders, luxury Nile cruising, and relaxing beach time on the Red Sea — designed for travelers who want culture and comfort.",
         itinerary: [
@@ -308,10 +342,11 @@ export const toursData = [
         type: "Private Tour",
         includes: "Nile Cruise | Hurghada",
         images: [
-            "https://images.unsplash.com/photo-1544604196-8ac433bd95d9?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1510014801111-9257e8417537?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1544971587-b842c27f8e14?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?auto=format&fit=crop&q=80&w=800",
+            Sakkara_Pyramids,
+            Saladin_Citadel,
+            NileCruise,
+            Aswan_1
+            
         ],
         description: "A perfect blend of ancient wonders, luxury Nile cruising, and pure relaxation on the Red Sea's Hurghada coast.",
         itinerary: [
@@ -361,10 +396,10 @@ export const toursData = [
         type: "Private Tour",
         includes: "Egypt + Jordan",
         images: [
-            "https://images.unsplash.com/photo-1501232060322-aa87215ab531?auto=format&fit=crop&q=80&w=1200",
-            "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1550184658-ff6132a71714?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1544085311-11a028465b03?auto=format&fit=crop&q=80&w=800",
+            Jordan_1,
+            Jordan_2,
+            Jordan_3,
+            Sphinx
         ],
         description: "An extraordinary journey that connects the wonders of Ancient Egypt with the timeless beauty of Jordan - from the Pyramids and the Nile to Petra, Wadi Rum, and the Dead Sea.",
         itinerary: [

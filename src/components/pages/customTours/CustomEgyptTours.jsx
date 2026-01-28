@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { User, Mail, Phone, Globe, Plus, Minus, MessageSquare, Check, Sparkles, Send } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero/temple.webp";
+import heroImage from "@/assets/images/Egyptian-Museum-01.webp";
 import logo from "@/assets/logo.png";
 import AboutClosing from "../aboutUs/AboutClosing";
 
@@ -23,7 +23,7 @@ const InputField = ({ icon: Icon, placeholder, type = "text", value, onChange, n
 );
 
 const CustomEgyptTours = () => {
-    const [travellers, setTravellers] = useState(2);
+    const [travellers, setTravellers] = useState(1);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -126,7 +126,7 @@ const CustomEgyptTours = () => {
                                     </div>
 
                                     <form className="space-y-6">
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div className="flex flex-col  gap-6">
                                             <InputField
                                                 icon={User}
                                                 placeholder="Full Name"
@@ -144,7 +144,7 @@ const CustomEgyptTours = () => {
                                             />
                                         </div>
 
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div className="flex flex-col flex-wrap gap-6">
                                             <InputField
                                                 icon={Phone}
                                                 placeholder="Phone Number"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import heroImage from "@/assets/hero/pyramids.webp";
+import heroImage from "@/assets/images/Sphinx.webp";
 
 const EgyptTourPackagesHero = () => {
     return (

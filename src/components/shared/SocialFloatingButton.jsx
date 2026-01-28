@@ -23,7 +23,8 @@ const SocialFloatingButton = () => {
                         {socialLinks.map((link, index) => (
                             <motion.a
                                 key={index}
-                                href="#"
+                                href="https://wa.me/201005647138"
+                                target="_blank"
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: index * 0.05 }}
