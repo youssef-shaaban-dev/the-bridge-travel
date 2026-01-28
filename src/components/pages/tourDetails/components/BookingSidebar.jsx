@@ -1,29 +1,77 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { User, Mail, Phone, Globe, Plus, Minus, Check } from 'lucide-react';
+import emailjs from "@emailjs/browser";
 
-const InputField = ({ icon: Icon, placeholder, type = "text" }) => (
+const InputField = ({ icon: Icon, placeholder, type = "text", name, value, onChange }) => (
     <div className="relative group">
         <div className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-[#BC8B22] transition-colors">
             <Icon size={20} />
         </div>
         <input
+            name={name}
+            value={value}
+            onChange={onChange}
             type={type}
             placeholder={placeholder}
             className="w-full h-14 pl-14 pr-6 rounded-2xl bg-[#F8FAFC] border border-slate-100 focus:border-[#BC8B22]/30 focus:bg-white focus:ring-4 focus:ring-[#BC8B22]/5 text-[#22455C] font-semibold placeholder:text-slate-400 transition-all outline-none"
+            required
         />
         {/* Force usage of Icon if linter misses JSX */}
         <span className="hidden">{Icon ? '' : ''}</span>
     </div>
 );
 
+
+
 const BookingSidebar = ({ rates = [], selectedRateIndex = 0, onRateSelect }) => {
     const [travellers, setTravellers] = useState(1);
     const currentRate = rates[selectedRateIndex] || { price: 0 };
 
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        nationality: "",
+    });
+
+    const handleChange = (e) => {
+        setFormData(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value,
+        }));
+    };
+
     const calculateTotal = () => {
         return currentRate.price * travellers;
     };
+
+    const sendEmail = async () => {
+        const templateParams = {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            nationality: formData.nationality,
+            travellers,
+            experience: currentRate.grade,
+            price: `$${calculateTotal().toFixed(0)}`
+        };
+
+        try {
+            await emailjs.send(
+                "service_vqtmjhf",
+                "template_u8n02kr",
+                templateParams,
+                "BUWrGakUx8QQaoqOG"
+            );
+
+            alert("Booking details sent successfully ✅");
+        } catch (error) {
+            console.error(error);
+            alert("Failed to send booking ❌");
+        }
+    };
+
 
     return (
         <div className="bg-white rounded-[40px] border border-[#BC8B22] p-8 pt-0 shadow-2xl shadow-slate-200/50 sticky top-28 overflow-hidden">
@@ -48,10 +96,10 @@ const BookingSidebar = ({ rates = [], selectedRateIndex = 0, onRateSelect }) => 
                 </div>
 
                 <div className="space-y-4">
-                    <InputField icon={User} placeholder="Full Name" />
-                    <InputField icon={Mail} placeholder="Email Address" type="email" />
-                    <InputField icon={Phone} placeholder="Phone Number" type="tel" />
-                    <InputField icon={Globe} placeholder="Nationality" />
+                    <InputField icon={User} placeholder="Full Name" name="name" value={formData.name} onChange={handleChange} />
+                    <InputField icon={Mail} placeholder="Email Address" type="email" name="email" value={formData.email} onChange={handleChange} />
+                    <InputField icon={Phone} placeholder="Phone Number" type="tel" name="phone" value={formData.phone} onChange={handleChange} />
+                    <InputField icon={Globe} placeholder="Nationality" name="nationality" value={formData.nationality} onChange={handleChange} />
                 </div>
 
                 {/* Custom Travellers Stepper */}
@@ -124,7 +172,7 @@ const BookingSidebar = ({ rates = [], selectedRateIndex = 0, onRateSelect }) => 
                         </div>
                     </div>
 
-                    <Button className="w-full h-16 mt-6 rounded-[20px] bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-black text-xl transition-all shadow-2xl shadow-[#BC8B22]/30 hover:shadow-[#BC8B22]/40 hover:-translate-y-1 active:translate-y-0 uppercase tracking-widest">
+                    <Button onClick={sendEmail} className="w-full h-16 mt-6 rounded-[20px] bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-black text-xl transition-all shadow-2xl shadow-[#BC8B22]/30 hover:shadow-[#BC8B22]/40 hover:-translate-y-1 active:translate-y-0 uppercase tracking-widest">
                         Enquire Now
                     </Button>
                 </div>

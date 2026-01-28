@@ -134,24 +134,6 @@ const Navbar = () => {
                                         <NavLink to="/contact-us">Contact Us</NavLink>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
-                                <NavigationMenuItem>
-                                    <NavigationMenuLink asChild className={cn(
-                                        navigationMenuTriggerStyle(),
-                                        "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4",
-                                        checkActive("/privacy-policy") && "bg-white/10 text-white"
-                                    )}>
-                                        <NavLink to="/privacy-policy">Privacy Policy</NavLink>
-                                    </NavigationMenuLink>
-                                </NavigationMenuItem>
-                                <NavigationMenuItem>
-                                    <NavigationMenuLink asChild className={cn(
-                                        navigationMenuTriggerStyle(),
-                                        "bg-transparent hover:bg-white/10 text-white hover:text-white font-medium px-4",
-                                        checkActive("/terms-and-conditions") && "bg-white/10 text-white"
-                                    )}>
-                                        <NavLink to="/terms-and-conditions">Terms & Conditions</NavLink>
-                                    </NavigationMenuLink>
-                                </NavigationMenuItem>
                             </NavigationMenuList>
                         </NavigationMenu>
                     </nav>
@@ -192,9 +174,7 @@ const Navbar = () => {
                                         <MobileNavItem to="/travel-guide" icon={<Globe className="h-5 w-5" />} label="Travel Guide" onClick={() => setIsMenuOpen(false)} />
                                         <MobileNavItem to="/about-us" icon={<Home className="h-5 w-5" />} label="About Us" onClick={() => setIsMenuOpen(false)} />
                                         <MobileNavItem to="/contact-us" icon={<Mail className="h-5 w-5" />} label="Contact Us" onClick={() => setIsMenuOpen(false)} />
-                                        <MobileNavItem to="/terms-and-conditions" label="Terms & Conditions" onClick={() => setIsMenuOpen(false)} />
-                                        <MobileNavItem to="/privacy-policy" label="Privacy Policy" onClick={() => setIsMenuOpen(false)} />
-                                        
+
                                     </nav>
 
                                     <div className="p-6 border-t border-white/10 text-[#67e8f9]">
