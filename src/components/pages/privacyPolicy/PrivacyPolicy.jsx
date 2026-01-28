@@ -12,7 +12,7 @@ const sections = [
     { id: 'cookies', title: '4. Cookies', icon: FileText },
     { id: 'third-party', title: '5. Third-Party Links', icon: FileText },
     { id: 'rights', title: '6. Your Rights', icon: ShieldCheck },
-    { id: 'contact', title: '7-8. Contact Us', icon: Globe }
+    { id: 'contact', title: '7. Contact Us', icon: Globe }
 ];
 
 const PrivacyPolicy = () => {
