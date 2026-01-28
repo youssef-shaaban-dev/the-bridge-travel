@@ -9,7 +9,6 @@ import TravelGuideIntro from './TravelGuideIntro';
 import TravelGuideFAQ from './TravelGuideFAQ';
 import TravelGuideMustSee from './TravelGuideMustSee';
 import TravelGuideInfoBoxes from './TravelGuideInfoBoxes';
-import TravelGuideClosing from './TravelGuideClosing';
 
 const faqData = [
     {
@@ -76,7 +75,6 @@ const TravelGuide = () => {
             <TravelGuideFAQ faqData={faqData} />
             <TravelGuideMustSee mustSeePlaces={mustSeePlaces} />
             <TravelGuideInfoBoxes />
-            <TravelGuideClosing logo={logo} />
         </div>
     );
 };

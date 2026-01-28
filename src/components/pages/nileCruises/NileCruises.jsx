@@ -67,21 +67,7 @@ const NileCruises = () => {
                 </div>
             </section>
 
-            {/* Branded Closing */}
-            <section className="py-24 bg-white text-center">
-                <div className="container-custom">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="max-w-2xl mx-auto"
-                    >
-                        <img src={logo} alt="Logo" className="h-20 mx-auto mb-8 opacity-20 grayscale brightness-0" />
-                        <h3 className="text-3xl font-bold text-[#22455C] font-playfair mb-6">Sail Through 5000 Years Of History</h3>
-                        <p className="text-slate-500 italic mb-10">"The Bridge Travel - The Bridge to Luxury Egypt Tours"</p>
-                                           </motion.div>
-                </div>
-            </section>
+           
         </div>
     );
 };
