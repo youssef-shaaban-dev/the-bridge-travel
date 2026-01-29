@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { User, Mail, Phone, Globe, Plus, Minus, Check } from 'lucide-react';
-import emailjs from "@emailjs/browser";
+import { sendEmail } from "@/lib/emailJS";
+import { showSuccess, showError } from "@/lib/alerts";
 
 const InputField = ({ icon: Icon, placeholder, type = "text", name, value, onChange }) => (
     <div className="relative group">
@@ -46,7 +47,7 @@ const BookingSidebar = ({ rates = [], selectedRateIndex = 0, onRateSelect }) => 
         return currentRate.price * travellers;
     };
 
-    const sendEmail = async () => {
+    const handleSendEmail = async () => {
         const templateParams = {
             name: formData.name,
             email: formData.email,
@@ -58,17 +59,10 @@ const BookingSidebar = ({ rates = [], selectedRateIndex = 0, onRateSelect }) => 
         };
 
         try {
-            await emailjs.send(
-                "service_vqtmjhf",
-                "template_u8n02kr",
-                templateParams,
-                "BUWrGakUx8QQaoqOG"
-            );
-
-            alert("Booking details sent successfully ✅");
-        } catch (error) {
-            console.error(error);
-            alert("Failed to send booking ❌");
+            await sendEmail(templateParams);
+            showSuccess("Success!", "Booking details sent successfully ✅");
+        } catch {
+            showError("Oops...", "Failed to send booking ❌");
         }
     };
 
@@ -172,7 +166,7 @@ const BookingSidebar = ({ rates = [], selectedRateIndex = 0, onRateSelect }) => 
                         </div>
                     </div>
 
-                    <Button onClick={sendEmail} className="w-full h-16 mt-6 rounded-[20px] bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-black text-xl transition-all shadow-2xl shadow-[#BC8B22]/30 hover:shadow-[#BC8B22]/40 hover:-translate-y-1 active:translate-y-0 uppercase tracking-widest">
+                    <Button onClick={handleSendEmail} className="w-full h-16 mt-6 rounded-[20px] bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-black text-xl transition-all shadow-2xl shadow-[#BC8B22]/30 hover:shadow-[#BC8B22]/40 hover:-translate-y-1 active:translate-y-0 uppercase tracking-widest">
                         Enquire Now
                     </Button>
                 </div>

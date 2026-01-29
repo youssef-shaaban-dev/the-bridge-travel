@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Send, CheckCircle2, Clock } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { sendEmail } from "@/lib/emailJS";
+import { showError } from "@/lib/alerts";
 
 const ContactMain = () => {
     const [formState, setFormState] = useState({
@@ -12,13 +14,25 @@ const ContactMain = () => {
         status: 'idle' // idle, sending, success
     });
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setFormState(prev => ({ ...prev, status: 'sending' }));
-        // Simulate API call
-        setTimeout(() => {
+
+        const templateParams = {
+            name: formState.name,
+            email: formState.email,
+            phone: formState.phone,
+            message: formState.message,
+            type: "General Contact Enquiry"
+        };
+
+        try {
+            await sendEmail(templateParams);
             setFormState(prev => ({ ...prev, status: 'success' }));
-        }, 1500);
+        } catch {
+            showError("Oops...", "Failed to send message ❌");
+            setFormState(prev => ({ ...prev, status: 'idle' }));
+        }
     };
 
     const contactInfo = [
@@ -60,7 +74,7 @@ const ContactMain = () => {
                             We are here to guide you every step of the way.
                         </h2>
                         <p className="mb-12 text-slate-600 leading-relaxed text-lg">
-                           Whether you are dreaming of a private Nile cruise, a relaxing Red Sea holiday, or a tailor-made cultural tour, our experienced travel specialists are here to assist you with your travel plans.</p>
+                            Whether you are dreaming of a private Nile cruise, a relaxing Red Sea holiday, or a tailor-made cultural tour, our experienced travel specialists are here to assist you with your travel plans.</p>
 
                         <div className="space-y-8">
                             {contactInfo.map((info, index) => (

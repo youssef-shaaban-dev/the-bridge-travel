@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { User, Mail, Phone, Globe, Plus, Minus, MessageSquare, Check, Sparkles, Send } from 'lucide-react';
+import { User, Mail, Phone, Globe, Plus, Minus, MessageSquare, Check, Sparkles, Send, Loader2 } from 'lucide-react';
+import { sendEmail } from "@/lib/emailJS";
+import { showSuccess, showError } from "@/lib/alerts";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/images/Egyptian-Museum-01.webp";
 import logo from "@/assets/logo.png";
@@ -32,9 +34,39 @@ const CustomEgyptTours = () => {
         message: ''
     });
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        const templateParams = {
+            ...formData,
+            travellers,
+            type: "Custom Egypt Tour Enquiry"
+        };
+
+        try {
+            await sendEmail(templateParams);
+            showSuccess("Success!", "Enquiry sent successfully ✅");
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                nationality: '',
+                message: ''
+            });
+            setTravellers(1);
+        } catch {
+            showError("Oops...", "Failed to send enquiry ❌");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -125,7 +157,7 @@ const CustomEgyptTours = () => {
                                         <h3 className="text-xl font-black text-[#22455C] tracking-tight uppercase">Plan Your Custom Egypt Tour</h3>
                                     </div>
 
-                                    <form className="space-y-6">
+                                    <form onSubmit={handleSubmit} className="space-y-6">
                                         <div className="flex flex-col  gap-6">
                                             <InputField
                                                 icon={User}
@@ -205,10 +237,11 @@ const CustomEgyptTours = () => {
                                         </div>
 
                                         <Button
-                                            type="button"
+                                            disabled={isSubmitting}
+                                            type="submit"
                                             className="w-full h-16 rounded-2xl bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-black text-xl transition-all shadow-xl shadow-[#BC8B22]/20 hover:-translate-y-1 active:translate-y-0 uppercase tracking-widest mt-4"
                                         >
-                                            Enquire Now
+                                            {isSubmitting ? <Loader2 className="animate-spin" /> : "Enquire Now"}
                                         </Button>
                                     </form>
                                 </div>
