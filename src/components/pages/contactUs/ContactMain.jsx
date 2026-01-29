@@ -167,12 +167,12 @@ const ContactMain = () => {
                   <div className="text-sm font-medium text-white/90">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold mb-2">5,000+</div>
+                  <div className="text-4xl font-bold mb-2">1975+</div>
                   <div className="text-sm font-medium text-white/90">Happy Travelers</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold mb-2">100+</div>
-                  <div className="text-sm font-medium text-white/90">Destinations</div>
+                  <div className="text-4xl font-bold mb-2">50+</div>
+                  <div className="text-sm font-medium text-white/90">Sightseeing</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold mb-2">24/7</div>
@@ -210,7 +210,7 @@ const ContactMain = () => {
                 We look forward to welcoming you to Egypt.
               </p>
               <p className="mt-2">
-                The Bridge Travel • Since 2008
+                The Bridge Travel
               </p>
             </div>
           </motion.div>
