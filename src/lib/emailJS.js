@@ -10,7 +10,6 @@ export const sendEmail = async (templateParams, templateId = null) => {
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
   const defaultTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const recaptchaKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
   if (!serviceId || !publicKey) {
     console.error(
@@ -25,7 +24,6 @@ export const sendEmail = async (templateParams, templateId = null) => {
       templateId || defaultTemplateId,
       templateParams,
       publicKey,
-      { "g-recaptcha-response": recaptchaKey },
     );
     return response;
   } catch (error) {
