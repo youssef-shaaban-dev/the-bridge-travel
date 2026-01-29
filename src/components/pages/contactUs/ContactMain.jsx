@@ -1,58 +1,8 @@
-import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Send, CheckCircle2, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { sendEmail } from "@/lib/emailJS";
-import { showError, showAlert } from "@/lib/alerts";
-import ReCAPTCHA from "react-google-recaptcha";
+import { MapPin, Phone, Mail, Clock, Star, Users, Globe, Award } from "lucide-react";
 
 const ContactMain = () => {
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-    status: "idle", // idle, sending, success
-    captchaToken: null,
-  });
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (import.meta.env.VITE_RECAPTCHA_SITE_KEY && !formState.captchaToken) {
-      showAlert({
-        title: "Verification Required",
-        text: "Please complete the reCAPTCHA to proceed.",
-        icon: "warning",
-      });
-      return;
-    }
-
-    setFormState((prev) => ({ ...prev, status: "sending" }));
-
-    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_Contact_ID
-
-    const templateParams = {
-      name: formState.name,
-      email: formState.email,
-      phone: formState.phone,
-      message: formState.message,
-      type: "General Contact Enquiry",
-      "g-recaptcha-response": formState.captchaToken,
-    };
-    try {
-      await sendEmail(templateParams, TEMPLATE_ID);
-      setFormState((prev) => ({
-        ...prev,
-        status: "success",
-        captchaToken: null,
-      }));
-    } catch {
-      showError("Oops...", "Failed to send message ❌");
-      setFormState((prev) => ({ ...prev, status: "idle" }));
-    }
-  };
-
+  
   const contactInfo = [
     {
       icon: <MapPin className="h-6 w-6" />,
@@ -74,13 +24,36 @@ const ContactMain = () => {
     },
   ];
 
+  const features = [
+    {
+      icon: <Star className="h-5 w-5" />,
+      title: "Luxury Experience",
+      description: "Tailored travel experiences"
+    },
+    {
+      icon: <Users className="h-5 w-5" />,
+      title: "Expert Team",
+      description: "Professional travel specialists"
+    },
+    {
+      icon: <Globe className="h-5 w-5" />,
+      title: "Global Network",
+      description: "Worldwide partnerships"
+    },
+    {
+      icon: <Award className="h-5 w-5" />,
+      title: "Award Winning",
+      description: "Recognized excellence"
+    }
+  ];
+
   return (
     <section className="section-padding bg-[#FCF9F4] relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-[#22455C]/5 -skew-x-12 transform translate-x-1/2" />
 
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
-          {/* Left Column: Info */}
+          {/* Left Column: Info - نفس التصميم تماماً */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -137,144 +110,109 @@ const ContactMain = () => {
             </div>
           </motion.div>
 
-          {/* Right Column: Form */}
+          {/* Right Column: Features & Stats */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-white rounded-[40px] p-10 shadow-2xl shadow-slate-200 border border-slate-100"
+            className="flex flex-col justify-between"
           >
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold text-[#22455C] mb-2 font-playfair">
-                Contact Us
-              </h3>
-              <p className="text-slate-500 font-medium">
-                Complete the form and we'll contact you shortly.
-              </p>
+            {/* Features Grid */}
+            <div className="bg-white rounded-[40px] p-10 shadow-2xl shadow-slate-200 border border-slate-100 mb-8">
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-[#22455C] mb-2 font-playfair">
+                  Why Choose The Bridge Travel
+                </h3>
+                <p className="text-slate-500 font-medium">
+                  Experience Egypt through our eyes
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {features.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-start gap-4 p-4 rounded-2xl hover:bg-[#FCF9F4] transition-all duration-300 group"
+                  >
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#FCF9F4] text-[#BC8B22] transition-all duration-300 group-hover:bg-[#BC8B22] group-hover:text-white">
+                      {feature.icon}
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-[#22455C] text-lg mb-1">
+                        {feature.title}
+                      </h4>
+                      <p className="text-slate-600 text-sm">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
 
-            {formState.status === "success" ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="flex flex-col items-center justify-center py-12 text-center"
-              >
-                <CheckCircle2 className="h-20 w-20 text-[#6B8E23] mb-6" />
-                <h4 className="text-2xl font-bold text-[#22455C] mb-2">
-                  Message Sent!
+            {/* Stats Section */}
+            <div className="bg-gradient-to-br from-[#BC8B22] to-[#a67c1e] rounded-[40px] p-10 text-white shadow-2xl">
+              <h3 className="text-2xl font-bold mb-8 font-playfair text-center">
+                Our Journey in Numbers
+              </h3>
+              
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center">
+                  <div className="text-4xl font-bold mb-2">15+</div>
+                  <div className="text-sm font-medium text-white/90">Years Experience</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold mb-2">5,000+</div>
+                  <div className="text-sm font-medium text-white/90">Happy Travelers</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold mb-2">100+</div>
+                  <div className="text-sm font-medium text-white/90">Destinations</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold mb-2">24/7</div>
+                  <div className="text-sm font-medium text-white/90">Support</div>
+                </div>
+              </div>
+
+              {/* Quick Contact CTA */}
+              <div className="mt-10 pt-8 border-t border-white/20">
+                <h4 className="text-lg font-bold mb-4 text-center">
+                  Ready to Start Your Journey?
                 </h4>
-                <p className="text-slate-500">
-                  Thank you for reaching out. One of our specialists will
-                  contact you soon.
-                </p>
-                <Button
-                  onClick={() =>
-                    setFormState((prev) => ({ ...prev, status: "idle" }))
-                  }
-                  className="mt-8 bg-[#22455C] hover:bg-[#22455C]/90 text-white px-8 rounded-full"
-                >
-                  Send Another Message
-                </Button>
-              </motion.div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-[#22455C] uppercase tracking-wider">
-                    Full Name
-                  </label>
-                  <input
-                    required
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full px-6 py-4 rounded-2xl bg-[#FCF9F4] border-transparent focus:border-[#BC8B22] focus:bg-white focus:ring-4 focus:ring-[#BC8B22]/10 transition-all outline-none"
-                    onChange={(e) =>
-                      setFormState((p) => ({ ...p, name: e.target.value }))
-                    }
-                  />
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="https://wa.me/201227722233"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-white text-[#22455C] hover:bg-white/90 py-3 px-6 rounded-full font-bold text-center transition-all duration-300 hover:scale-105"
+                  >
+                    WhatsApp Now
+                  </a>
+                  <a
+                    href="tel:+201227722233"
+                    className="flex-1 bg-transparent border-2 border-white text-white hover:bg-white/10 py-3 px-6 rounded-full font-bold text-center transition-all duration-300 hover:scale-105"
+                  >
+                    Call Directly
+                  </a>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-[#22455C] uppercase tracking-wider">
-                      Email Address
-                    </label>
-                    <input
-                      required
-                      type="email"
-                      placeholder="example@mail.com"
-                      className="w-full px-6 py-4 rounded-2xl bg-[#FCF9F4] border-transparent focus:border-[#BC8B22] focus:bg-white focus:ring-4 focus:ring-[#BC8B22]/10 transition-all outline-none"
-                      onChange={(e) =>
-                        setFormState((p) => ({ ...p, email: e.target.value }))
-                      }
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-[#22455C] uppercase tracking-wider">
-                      Phone / WhatsApp
-                    </label>
-                    <input
-                      required
-                      type="tel"
-                      placeholder="+00 000 0000"
-                      className="w-full px-6 py-4 rounded-2xl bg-[#FCF9F4] border-transparent focus:border-[#BC8B22] focus:bg-white focus:ring-4 focus:ring-[#BC8B22]/10 transition-all outline-none"
-                      onChange={(e) =>
-                        setFormState((p) => ({ ...p, phone: e.target.value }))
-                      }
-                    />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-[#22455C] uppercase tracking-wider">
-                    Your Message
-                  </label>
-                  <textarea
-                    required
-                    rows="4"
-                    placeholder="How can we help you plan your journey?"
-                    className="w-full px-6 py-4 rounded-2xl bg-[#FCF9F4] border-transparent focus:border-[#BC8B22] focus:bg-white focus:ring-4 focus:ring-[#BC8B22]/10 transition-all outline-none resize-none"
-                    onChange={(e) =>
-                      setFormState((p) => ({ ...p, message: e.target.value }))
-                    }
-                  />
-                </div>
+              </div>
+            </div>
 
-                {import.meta.env.VITE_RECAPTCHA_SITE_KEY ? (
-                  <div className="flex justify-center">
-                    <ReCAPTCHA
-                      sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                      onChange={(token) =>
-                        setFormState((p) => ({ ...p, captchaToken: token }))
-                      }
-                    />
-                  </div>
-                ) : (
-                  <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs font-medium text-center">
-                    reCAPTCHA site key missing
-                  </div>
-                )}
-
-                <Button
-                  disabled={formState.status === "sending"}
-                  type="submit"
-                  className="w-full py-8 text-lg font-bold bg-[#BC8B22] hover:bg-[#BC8B22]/90 text-white rounded-2xl shadow-xl shadow-[#BC8B22]/20 transition-all active:scale-[0.98]"
-                >
-                  {formState.status === "sending" ? (
-                    <div className="flex items-center gap-3">
-                      <div className="h-5 w-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Sending...
-                    </div>
-                  ) : (
-                    <div className="flex items-center gap-3">
-                      <Send className="h-5 w-5" />
-                      Send Inquiry
-                    </div>
-                  )}
-                </Button>
-                <p className="text-center text-xs text-slate-400 font-medium tracking-wide">
-                  We look forward to welcoming you to Egypt.
-                </p>
-              </form>
-            )}
+            {/* Additional Info */}
+            <div className="mt-8 text-center text-slate-600 text-sm">
+              <p className="font-medium">
+                We look forward to welcoming you to Egypt.
+              </p>
+              <p className="mt-2">
+                The Bridge Travel • Since 2008
+              </p>
+            </div>
           </motion.div>
         </div>
       </div>

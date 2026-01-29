@@ -104,6 +104,7 @@ const TourDetails = () => {
                             rates={rates}
                             selectedRateIndex={selectedRateIndex}
                             onRateSelect={setSelectedRateIndex}
+                            title={tour.title}
                         />
                     </div>
                 </div>

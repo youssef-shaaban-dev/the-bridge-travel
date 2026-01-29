@@ -35,6 +35,7 @@ const BookingSidebar = ({
   rates = [],
   selectedRateIndex = 0,
   onRateSelect,
+  title
 }) => {
   const [travellers, setTravellers] = useState(1);
   const [captchaToken, setCaptchaToken] = useState(null);
