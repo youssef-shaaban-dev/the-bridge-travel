@@ -22,6 +22,7 @@ const InputField = ({ icon: Icon, placeholder, type = "text", value, onChange, n
             onChange={onChange}
             placeholder={placeholder}
             className="w-full h-14 pl-14 pr-6 rounded-2xl bg-[#F8FAFC] border border-slate-100 focus:border-[#BC8B22]/30 focus:bg-white focus:ring-4 focus:ring-[#BC8B22]/5 text-[#22455C] font-semibold placeholder:text-slate-400 transition-all outline-none"
+            required
         />
     </div>
 );
@@ -36,7 +37,6 @@ const CustomEgyptTours = () => {
         message: ''
     });
 
-    const recaptchaKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
     const [captchaToken, setCaptchaToken] = useState(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
