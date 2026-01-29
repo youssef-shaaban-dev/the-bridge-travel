@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Send, CheckCircle2, Clock } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { sendEmail } from "@/lib/emailJS";
-import { showError } from "@/lib/alerts";
+import { showError, showAlert } from "@/lib/alerts";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactMain = () => {
     const [formState, setFormState] = useState({
@@ -11,11 +12,18 @@ const ContactMain = () => {
         email: '',
         phone: '',
         message: '',
-        status: 'idle' // idle, sending, success
+        status: 'idle', // idle, sending, success
+        captchaToken: null
     });
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (import.meta.env.VITE_RECAPTCHA_SITE_KEY && !formState.captchaToken) {
+            showAlert({ title: "Verification Required", text: "Please complete the reCAPTCHA to proceed.", icon: "warning" });
+            return;
+        }
+
         setFormState(prev => ({ ...prev, status: 'sending' }));
 
         const templateParams = {
@@ -23,12 +31,13 @@ const ContactMain = () => {
             email: formState.email,
             phone: formState.phone,
             message: formState.message,
-            type: "General Contact Enquiry"
+            type: "General Contact Enquiry",
+            'g-recaptcha-response': formState.captchaToken
         };
 
         try {
             await sendEmail(templateParams);
-            setFormState(prev => ({ ...prev, status: 'success' }));
+            setFormState(prev => ({ ...prev, status: 'success', captchaToken: null }));
         } catch {
             showError("Oops...", "Failed to send message ❌");
             setFormState(prev => ({ ...prev, status: 'idle' }));
@@ -182,6 +191,20 @@ const ContactMain = () => {
                                         onChange={(e) => setFormState(p => ({ ...p, message: e.target.value }))}
                                     />
                                 </div>
+
+                                {import.meta.env.VITE_RECAPTCHA_SITE_KEY ? (
+                                    <div className="flex justify-center">
+                                        <ReCAPTCHA
+                                            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                                            onChange={(token) => setFormState(p => ({ ...p, captchaToken: token }))}
+                                        />
+                                    </div>
+                                ) : (
+                                    <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs font-medium text-center">
+                                        reCAPTCHA site key missing
+                                    </div>
+                                )}
+
                                 <Button
                                     disabled={formState.status === 'sending'}
                                     type="submit"

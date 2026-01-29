@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { User, Mail, Phone, Globe, Plus, Minus, MessageSquare, Check, Sparkles, Send, Loader2 } from 'lucide-react';
 import { sendEmail } from "@/lib/emailJS";
-import { showSuccess, showError } from "@/lib/alerts";
+import { showSuccess, showError, showAlert } from "@/lib/alerts";
+import ReCAPTCHA from "react-google-recaptcha";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/images/Egyptian-Museum-01.webp";
 import logo from "@/assets/logo.png";
 import AboutClosing from "../aboutUs/AboutClosing";
+
 
 const InputField = ({ icon: Icon, placeholder, type = "text", value, onChange, name }) => (
     <div className="relative group">
@@ -34,6 +36,9 @@ const CustomEgyptTours = () => {
         message: ''
     });
 
+    const recaptchaKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+
+    const [captchaToken, setCaptchaToken] = useState(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleInputChange = (e) => {
@@ -43,12 +48,19 @@ const CustomEgyptTours = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (!captchaToken) {
+            showAlert({ title: "Verification Required", text: "Please complete the reCAPTCHA to proceed.", icon: "warning" });
+            return;
+        }
+
         setIsSubmitting(true);
 
         const templateParams = {
             ...formData,
             travellers,
-            type: "Custom Egypt Tour Enquiry"
+            type: "Custom Egypt Tour Enquiry",
+            'g-recaptcha-response': captchaToken
         };
 
         try {
@@ -62,6 +74,7 @@ const CustomEgyptTours = () => {
                 message: ''
             });
             setTravellers(1);
+            setCaptchaToken(null);
         } catch {
             showError("Oops...", "Failed to send enquiry ❌");
         } finally {
@@ -235,6 +248,19 @@ const CustomEgyptTours = () => {
                                                 />
                                             </div>
                                         </div>
+
+                                        {import.meta.env.VITE_RECAPTCHA_SITE_KEY ? (
+                                            <div className="flex justify-center py-2">
+                                                <ReCAPTCHA
+                                                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                                                    onChange={(token) => setCaptchaToken(token)}
+                                                />
+                                            </div>
+                                        ) : (
+                                            <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs font-medium text-center mb-4">
+                                                reCAPTCHA site key missing
+                                            </div>
+                                        )}
 
                                         <Button
                                             disabled={isSubmitting}

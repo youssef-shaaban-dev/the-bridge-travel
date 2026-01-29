@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { User, Mail, Phone, Globe, Plus, Minus, Check } from 'lucide-react';
 import { sendEmail } from "@/lib/emailJS";
-import { showSuccess, showError } from "@/lib/alerts";
+import { showSuccess, showError, showAlert } from "@/lib/alerts";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const InputField = ({ icon: Icon, placeholder, type = "text", name, value, onChange }) => (
     <div className="relative group">
@@ -27,6 +28,7 @@ const InputField = ({ icon: Icon, placeholder, type = "text", name, value, onCha
 
 const BookingSidebar = ({ rates = [], selectedRateIndex = 0, onRateSelect }) => {
     const [travellers, setTravellers] = useState(1);
+    const [captchaToken, setCaptchaToken] = useState(null);
     const currentRate = rates[selectedRateIndex] || { price: 0 };
 
     const [formData, setFormData] = useState({
@@ -48,6 +50,11 @@ const BookingSidebar = ({ rates = [], selectedRateIndex = 0, onRateSelect }) => 
     };
 
     const handleSendEmail = async () => {
+        if (!captchaToken) {
+            showAlert({ title: "Verification Required", text: "Please complete the reCAPTCHA to proceed.", icon: "warning" });
+            return;
+        }
+
         const templateParams = {
             name: formData.name,
             email: formData.email,
@@ -55,12 +62,14 @@ const BookingSidebar = ({ rates = [], selectedRateIndex = 0, onRateSelect }) => 
             nationality: formData.nationality,
             travellers,
             experience: currentRate.grade,
-            price: `$${calculateTotal().toFixed(0)}`
+            price: `$${calculateTotal().toFixed(0)}`,
+            'g-recaptcha-response': captchaToken
         };
 
         try {
             await sendEmail(templateParams);
             showSuccess("Success!", "Booking details sent successfully ✅");
+            setCaptchaToken(null);
         } catch {
             showError("Oops...", "Failed to send booking ❌");
         }
@@ -165,6 +174,19 @@ const BookingSidebar = ({ rates = [], selectedRateIndex = 0, onRateSelect }) => 
                             </div>
                         </div>
                     </div>
+
+                    {import.meta.env.VITE_RECAPTCHA_SITE_KEY ? (
+                        <div className="mt-6 flex justify-center scale-90 origin-center">
+                            <ReCAPTCHA
+                                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                                onChange={(token) => setCaptchaToken(token)}
+                            />
+                        </div>
+                    ) : (
+                        <div className="mt-4 p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs font-medium text-center">
+                            reCAPTCHA configuration missing (VITE_RECAPTCHA_SITE_KEY)
+                        </div>
+                    )}
 
                     <Button onClick={handleSendEmail} className="w-full h-16 mt-6 rounded-[20px] bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-black text-xl transition-all shadow-2xl shadow-[#BC8B22]/30 hover:shadow-[#BC8B22]/40 hover:-translate-y-1 active:translate-y-0 uppercase tracking-widest">
                         Enquire Now
