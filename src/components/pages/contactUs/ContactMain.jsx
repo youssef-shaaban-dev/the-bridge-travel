@@ -187,7 +187,7 @@ const ContactMain = () => {
                 </h4>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="https://wa.me/201227722233"
+                    href="https://wa.me/201005647138"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-white text-[#22455C] hover:bg-white/90 py-3 px-6 rounded-full font-bold text-center transition-all duration-300 hover:scale-105"
