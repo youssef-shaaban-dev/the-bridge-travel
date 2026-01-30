@@ -1,4 +1,4 @@
-name: Publish Website to cPanel
+name: Build and Deploy Vite Project to cPanel
 
 on:
   push:
@@ -6,17 +6,29 @@ on:
       - main
 
 jobs:
-  ftp-deploy:
-    name: Deploy to cPanel via FTP
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: FTP Deploy
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+     
+      - name: Deploy to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: dist/       # Vite output folder
+          server-dir: public_html/  # مكان الدومين على السيرفر
