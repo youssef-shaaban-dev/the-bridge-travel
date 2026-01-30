@@ -28,22 +28,22 @@ const ContactMain = () => {
     {
       icon: <Star className="h-5 w-5" />,
       title: "Luxury Experience",
-      description: "Tailored travel experiences"
+      description: "Tailor-Made Luxury Egypt Tour Experiences."
     },
     {
       icon: <Users className="h-5 w-5" />,
       title: "Expert Team",
-      description: "Professional travel specialists"
+      description: "Egyptian Tourism Specialists."
     },
     {
       icon: <Globe className="h-5 w-5" />,
-      title: "Global Network",
-      description: "Worldwide partnerships"
+      title: "Global Travellers",
+      description: "Trusted by Travelers from the USA, the UK, Australia & More"
     },
     {
       icon: <Award className="h-5 w-5" />,
       title: "Award Winning",
-      description: "Recognized excellence"
+      description: "Recognized Excellence."
     }
   ];
 
@@ -167,12 +167,12 @@ const ContactMain = () => {
                   <div className="text-sm font-medium text-white/90">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold mb-2">5,000+</div>
+                  <div className="text-4xl font-bold mb-2">1975+</div>
                   <div className="text-sm font-medium text-white/90">Happy Travelers</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold mb-2">100+</div>
-                  <div className="text-sm font-medium text-white/90">Destinations</div>
+                  <div className="text-4xl font-bold mb-2">50+</div>
+                  <div className="text-sm font-medium text-white/90">Sightseeing</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold mb-2">24/7</div>
@@ -187,7 +187,7 @@ const ContactMain = () => {
                 </h4>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="https://wa.me/201227722233"
+                    href="https://wa.me/201005647138"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-white text-[#22455C] hover:bg-white/90 py-3 px-6 rounded-full font-bold text-center transition-all duration-300 hover:scale-105"
@@ -210,7 +210,7 @@ const ContactMain = () => {
                 We look forward to welcoming you to Egypt.
               </p>
               <p className="mt-2">
-                The Bridge Travel • Since 2008
+                The Bridge Travel
               </p>
             </div>
           </motion.div>
