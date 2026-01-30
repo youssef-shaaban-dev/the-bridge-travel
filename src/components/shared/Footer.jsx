@@ -47,7 +47,7 @@ const Footer = () => {
 
                 <div className="mt-8 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-center items-center gap-6 text-md text-slate-400 font-medium">
                     <p>© 2026 The Bridge Travel - All content is copyrighted. Unauthorized use, including AI training, reproduction, or commercial exploitation, is strictly prohibited.
-                        Check our <a href="/privacy-policy">privacy policy.</a></p>
+                        Check our <Link to="/privacy-policy" className="text-[#BC8B22] hover:underline">privacy policy.</Link></p>
                 </div>
             </div>
         </footer>
