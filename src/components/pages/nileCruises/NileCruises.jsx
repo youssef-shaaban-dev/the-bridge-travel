@@ -3,12 +3,17 @@ import { motion } from 'framer-motion';
 import NileCruisesHero from './NileCruisesHero';
 import NileCruiseList from './NileCruiseList';
 import { cruisesData } from './data/cruises';
-import logo from "@/assets/logo.png";
+import SEO from '@/components/shared/SEO';
 import { Ship, Compass, Sparkles } from 'lucide-react';
 
 const NileCruises = () => {
     return (
         <div className="bg-white">
+            <SEO
+                title="Nile Cruises"
+                description="Experience the magic of the Nile with our luxury cruise collection. Sail from Luxor to Aswan and discover the timeless beauty of Ancient Egypt."
+                keywords="Nile Cruises, Luxor Aswan Cruise, Egypt River Cruise, Luxury Nile Cruise"
+            />
             <NileCruisesHero />
 
             {/* Intro Content */}
@@ -67,7 +72,7 @@ const NileCruises = () => {
                 </div>
             </section>
 
-           
+
         </div>
     );
 };

@@ -1,13 +1,17 @@
-import React from 'react';
 import DayExcursionsHero from './DayExcursionsHero';
 import DayExcursionList from './DayExcursionList';
 import { excursionsData } from './data/excursions';
-import logo from "@/assets/logo.png";
+import SEO from '@/components/shared/SEO';
 import { motion } from 'framer-motion';
 
 const DayExcursions = () => {
     return (
         <div className="bg-white">
+            <SEO
+                title="Day Excursions"
+                description="Explore Egypt with our exclusive day tours and excursions. Private guides, luxury transport, and handpicked experiences in Cairo, Luxor, and more."
+                keywords="Egypt Day Tours, Cairo Excursions, Luxor Day Trips, Private Egypt Tours"
+            />
             <DayExcursionsHero />
 
             {/* Intro Section */}

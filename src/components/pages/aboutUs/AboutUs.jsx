@@ -8,6 +8,7 @@ import AboutHero from './AboutHero';
 import AboutIntro from './AboutIntro';
 import AboutFeatures from './AboutFeatures';
 import AboutDeepDive from './AboutDeepDive';
+import SEO from '@/components/shared/SEO';
 
 const stats = [
     {
@@ -39,6 +40,10 @@ const stats = [
 const AboutUs = () => {
     return (
         <div className="bg-white">
+            <SEO
+                title="About Us"
+                description="Learn more about The Bridge Travel. Our mission is to provide the most luxurious and authentic Egyptian travel experiences since 2008."
+            />
             <AboutHero image={heroImage} />
             <AboutIntro image={heroImage} />
             <AboutFeatures stats={stats} />

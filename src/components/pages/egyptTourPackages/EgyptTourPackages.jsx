@@ -4,10 +4,16 @@ import EgyptTourPackagesList from './EgyptTourPackagesList';
 import { motion } from 'framer-motion';
 import logo from "@/assets/logo.png";
 import { Compass, Sparkles, Map } from 'lucide-react';
+import SEO from "@/components/shared/SEO";
 
 const EgyptTourPackages = () => {
     return (
         <div className="bg-white">
+            <SEO
+                title="Egypt Tour Packages"
+                description="Explore our curated collection of luxury Egypt tour packages. From Cairo's pyramids to Nile cruises in Luxor and Aswan, find your perfect journey."
+                keywords="Egypt Tour Packages, Cairo Tours, Nile Cruises, Luxor Tours, Aswan Tours, Luxury Egypt Holidays"
+            />
             <EgyptTourPackagesHero />
 
             {/* Intro Content */}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import { toursData } from './data/tours';
 import { excursionsData } from '../dayExcursions/data/excursions';
 import { cruisesData } from '../nileCruises/data/cruises';
@@ -15,9 +15,11 @@ import TourPricing from './components/TourPricing';
 import TourInclusions from './components/TourInclusions';
 import WhyBookWithUs from './components/WhyBookWithUs';
 import NotFound from '@/components/shared/NotFound';
+import SEO from '@/components/shared/SEO';
 
 const TourDetails = () => {
     const { slug } = useParams();
+    const location = useLocation();
     const [selectedIndex, setSelectedIndex] = useState(null);
 
     // Combine all data for lookup
@@ -69,6 +71,12 @@ const TourDetails = () => {
 
     return (
         <div className="pt-24 pb-20 bg-white min-h-screen">
+            <SEO
+                title={tour.title}
+                description={tour.description}
+                ogImage={tour.images?.[0]}
+                ogTitle={`${tour.title} | The Bridge Travel`}
+            />
             <div className="container-custom">
                 {/* Hero Section */}
                 <TourHero tour={tour} />

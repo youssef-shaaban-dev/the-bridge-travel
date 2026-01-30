@@ -15,6 +15,8 @@ const sections = [
     { id: 'contact', title: '7. Contact Us', icon: Globe }
 ];
 
+import SEO from '@/components/shared/SEO';
+
 const PrivacyPolicy = () => {
     const [activeSection, setActiveSection] = useState('intro');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -52,6 +54,10 @@ const PrivacyPolicy = () => {
 
     return (
         <div className="bg-white min-h-screen">
+            <SEO
+                title="Privacy Policy"
+                description="Our privacy policy details how we collect and protect your data. Learn about your rights and our commitment to your privacy."
+            />
             {/* Hero Section */}
             <section className="relative h-[40vh] min-h-[70vh] w-full overflow-hidden">
                 <div className="absolute inset-0">

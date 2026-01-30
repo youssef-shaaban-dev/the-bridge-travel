@@ -16,6 +16,7 @@ import {
 import { sendEmail } from "@/lib/emailJS";
 import { showSuccess, showError, showAlert } from "@/lib/alerts";
 import ReCAPTCHA from "react-google-recaptcha";
+import SEO from "@/components/shared/SEO";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/images/Egyptian-Museum-01.webp";
 import logo from "@/assets/logo.png";
@@ -108,6 +109,10 @@ const CustomEgyptTours = () => {
 
   return (
     <div className="bg-white min-h-screen">
+      <SEO
+        title="Custom Egypt Tours"
+        description="Design your dream Egyptian holiday with our custom tour planner. Personalized itineraries, private guides, and luxury service tailored to your preferences."
+      />
       {/* Hero Section */}
       <section className="relative h-[80vh] min-h-[500px] w-full overflow-hidden">
         <div className="absolute inset-0">

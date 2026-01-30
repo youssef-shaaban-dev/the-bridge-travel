@@ -15,6 +15,8 @@ const sections = [
     { id: 'contact', title: '14. Contact', icon: Globe }
 ];
 
+import SEO from '@/components/shared/SEO';
+
 const TermsAndConditions = () => {
     const [activeSection, setActiveSection] = useState('booking');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -52,6 +54,10 @@ const TermsAndConditions = () => {
 
     return (
         <div className="bg-white min-h-screen">
+            <SEO
+                title="Terms & Conditions"
+                description="Read the terms and conditions of booking with The Bridge Travel. Essential information about payment, cancellations, and travel responsibilities."
+            />
             {/* Hero Section */}
             <section className="relative h-[40vh] min-h-[70vh] w-full overflow-hidden">
                 <div className="absolute inset-0">
