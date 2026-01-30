@@ -80,6 +80,7 @@ const CustomEgyptTours = () => {
     setIsSubmitting(true);
 
     const templateParams = {
+      title: "Custom Egypt Tour Enquiry",
       ...formData,
       travellers,
       type: "Custom Egypt Tour Enquiry",

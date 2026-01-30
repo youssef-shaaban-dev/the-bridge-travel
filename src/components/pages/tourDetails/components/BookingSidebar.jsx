@@ -86,6 +86,7 @@ const BookingSidebar = ({
     setIsSubmitting(true);
 
     const templateParams = {
+      title: title,
       name: formData.name,
       email: formData.email,
       phone: formData.phone,
@@ -100,7 +101,7 @@ const BookingSidebar = ({
       await sendEmail(templateParams);
       showSuccess("Success!", "Booking details sent successfully ✅");
       setCaptchaToken(null);
-        setFormData({
+      setFormData({
         name: "",
         email: "",
         phone: "",
@@ -215,20 +216,18 @@ const BookingSidebar = ({
             {rates.map((rate, idx) => (
               <div
                 key={idx}
-                className={`flex items-center justify-between p-4 rounded-2xl border transition-all cursor-pointer group ${
-                  selectedRateIndex === idx
-                    ? "bg-[#BC8B22]/5 border-[#BC8B22] translate-x-1"
-                    : "bg-white border-slate-100 hover:border-[#BC8B22]/30"
-                }`}
+                className={`flex items-center justify-between p-4 rounded-2xl border transition-all cursor-pointer group ${selectedRateIndex === idx
+                  ? "bg-[#BC8B22]/5 border-[#BC8B22] translate-x-1"
+                  : "bg-white border-slate-100 hover:border-[#BC8B22]/30"
+                  }`}
                 onClick={() => onRateSelect(idx)}
               >
                 <div className="flex items-center gap-3">
                   <div
-                    className={`h-6 w-6 rounded-lg border-2 transition-all flex items-center justify-center ${
-                      selectedRateIndex === idx
-                        ? "bg-[#BC8B22] border-[#BC8B22]"
-                        : "bg-white border-slate-200 group-hover:border-[#BC8B22]"
-                    }`}
+                    className={`h-6 w-6 rounded-lg border-2 transition-all flex items-center justify-center ${selectedRateIndex === idx
+                      ? "bg-[#BC8B22] border-[#BC8B22]"
+                      : "bg-white border-slate-200 group-hover:border-[#BC8B22]"
+                      }`}
                   >
                     {selectedRateIndex === idx && (
                       <Check size={14} className="text-white stroke-[3px]" />
@@ -295,7 +294,7 @@ const BookingSidebar = ({
           )}
 
           <Button
-            isdisabled={isSubmitting}
+            disabled={isSubmitting}
             onClick={handleSendEmail}
             className="w-full h-16 mt-6 rounded-[20px] bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-black text-xl transition-all shadow-2xl shadow-[#BC8B22]/30 hover:shadow-[#BC8B22]/40 hover:-translate-y-1 active:translate-y-0 uppercase tracking-widest"
           >
