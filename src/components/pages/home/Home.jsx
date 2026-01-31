@@ -9,8 +9,8 @@ const Home = () => {
         <>
             <SEO
                 title="Luxury Egypt Tours & Nile Cruises"
-                description="Luxury Egypt tours, private Nile cruises & Red Sea holidays. Travel Egypt with confidence through Cairo, Luxor & Aswan with The Bridge Travel."
-                keywords="Luxury Egypt Tours, Nile Cruises, Red Sea Holidays, Tailor-made Travel Egypt"
+                description="Luxury Egypt tours, Nile cruises, and Red Sea holidays. Travel Egypt with confidence through Cairo, Luxor & Aswan with The Bridge Travel."
+                keywords="Luxury Egypt Tours, Nile Cruises, Red Sea Holidays, Travel Egypt"
             />
             <HeroSlider />
             <WhyChooseUs />
