@@ -60,7 +60,7 @@ const DayExcursionCard = ({ excursion }) => {
                         <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                     </Link>
 
-                    <Link to={`/day-excursion/${excursion.slug}#booking-section`}>
+                    <Link to={`/day-excursion/${excursion.slug}`}>
                         <Button className="bg-[#22455C] hover:bg-[#BC8B22] text-white rounded-xl px-5 h-10 text-xs font-bold transition-all shadow-md active:scale-95">
                             Book Now
                         </Button>

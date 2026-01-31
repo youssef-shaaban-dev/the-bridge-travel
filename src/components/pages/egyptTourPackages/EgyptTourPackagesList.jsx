@@ -29,7 +29,7 @@ const TourPackageCard = ({ tour, index }) => (
     >
         {/* Image Section */}
         <div className="relative h-72 overflow-hidden">
-            <Link to={`/Egypt-tours-package/${tour.slug}`}>
+            <Link to={`/Egypt-tour-package/${tour.slug}`}>
                 <img
                     src={tour.images[0]}
                     alt={tour.title}
@@ -55,7 +55,7 @@ const TourPackageCard = ({ tour, index }) => (
 
         {/* Content Section */}
         <div className="p-8 flex flex-col flex-1">
-            <Link to={`/Egypt-tours-package/${tour.slug}`}>
+            <Link to={`/Egypt-tour-package/${tour.slug}`}>
                 <h3 className="text-2xl font-bold text-[#22455C] mb-4 group-hover:text-[#BC8B22] transition-colors line-clamp-2 min-h-[64px] font-playfair leading-tight">
                     {tour.title}
                 </h3>
@@ -73,12 +73,12 @@ const TourPackageCard = ({ tour, index }) => (
             </p>
 
             <div className="mt-auto flex flex-col gap-3">
-                <Link to={`/Egypt-tours-package/${tour.slug}`}>
+                <Link to={`/Egypt-tour-package/${tour.slug}`}>
                     <Button variant='link' className="w-full h-12 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#22455C] font-bold group/btn transition-all">
                         View Tour Details
                     </Button>
                 </Link>
-                <Link to={`/Egypt-tours-package/${tour.slug}#booking-section`}>
+                <Link to={`/Egypt-tour-package/${tour.slug}`}>
                     <Button className="w-full h-12 rounded-xl bg-[#22455C] hover:bg-[#BC8B22] text-white font-bold group/btn transition-all">
                         Book Now
                     </Button>

@@ -14,7 +14,7 @@ const NileCruiseCard = ({ cruise }) => {
         >
             {/* Image Section */}
             <div className="relative h-64 overflow-hidden">
-                <Link to={`/nile-cruise/${cruise.slug}`}>
+                <Link to={`/nile-cruises/${cruise.slug}`}>
                     <img
                         src={cruise.images[0]}
                         alt={cruise.title}
@@ -44,7 +44,7 @@ const NileCruiseCard = ({ cruise }) => {
                     <span className="text-[10px] font-bold tracking-widest uppercase">{cruise.location}</span>
                 </div>
 
-                <Link to={`/nile-cruise/${cruise.slug}`}>
+                <Link to={`/nile-cruises/${cruise.slug}`}>
                     <h3 className="text-xl font-bold text-[#22455C] mb-3 font-playfair leading-tight group-hover:text-[#BC8B22] transition-colors line-clamp-2 min-h-[56px]">
                         {cruise.title}
                     </h3>
@@ -55,12 +55,12 @@ const NileCruiseCard = ({ cruise }) => {
                 </p>
 
                 <div className="mt-auto pt-6 border-t border-slate-50 flex items-center justify-between">
-                    <Link to={`/nile-cruise/${cruise.slug}`} className="text-[#22455C] font-bold text-sm flex items-center gap-2 hover:text-[#BC8B22] transition-colors relative group/btn overflow-hidden">
+                    <Link to={`/nile-cruises/${cruise.slug}`} className="text-[#22455C] font-bold text-sm flex items-center gap-2 hover:text-[#BC8B22] transition-colors relative group/btn overflow-hidden">
                         View Itinerary
                         <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                     </Link>
 
-                    <Link to={`/nile-cruise/${cruise.slug}#booking-section`}>
+                    <Link to={`/nile-cruises/${cruise.slug}`}>
                         <Button className="bg-[#22455C] hover:bg-[#BC8B22] text-white rounded-xl px-5 h-10 text-xs font-bold transition-all shadow-md active:scale-95">
                             Book Now
                         </Button>

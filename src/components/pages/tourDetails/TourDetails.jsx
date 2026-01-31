@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { toursData } from './data/tours';
 import { excursionsData } from '../dayExcursions/data/excursions';
 import { cruisesData } from '../nileCruises/data/cruises';
@@ -19,7 +19,6 @@ import SEO from '@/components/shared/SEO';
 
 const TourDetails = () => {
     const { slug } = useParams();
-    const location = useLocation();
     const [selectedIndex, setSelectedIndex] = useState(null);
 
     // Combine all data for lookup
@@ -56,17 +55,7 @@ const TourDetails = () => {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [selectedIndex]);
 
-    useEffect(() => {
-        if (location.hash === '#booking-section') {
-            const element = document.getElementById('booking-section');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-        } else {
-            window.scrollTo(0, 0);
-        }
-    }, [location.pathname, location.hash, tour]);
-
+   
     if (!tour) return <NotFound />;
 
     return (

@@ -39,7 +39,7 @@ const FeaturedExperiences = () => {
                             {/* Image Container */}
                             <div className="relative h-[280px] w-full overflow-hidden">
                                 <Link
-                                    to={`/Egypt-tours-package/${exp.slug}`}
+                                    to={`/Egypt-tour-package/${exp.slug}`}
                                     className="block h-full w-full"
                                 >
                                     <motion.img
@@ -68,7 +68,7 @@ const FeaturedExperiences = () => {
 
                             {/* Content */}
                             <div className="flex flex-col p-8 flex-1">
-                                <Link to={`/Egypt-tours-package/${exp.slug}`}>
+                                <Link to={`/Egypt-tour-package/${exp.slug}`}>
                                     <h3 className="text-2xl font-bold text-[#22455C] mb-4 group-hover:text-[#BC8B22] transition-colors line-clamp-2 min-h-[64px]">
                                         {exp.title}
                                     </h3>
@@ -85,12 +85,12 @@ const FeaturedExperiences = () => {
 
                                 {/* CTA Buttons */}
                                 <div className="mt-auto flex flex-col gap-3">
-                                    <Link to={`/Egypt-tours-package/${exp.slug}`}>
+                                    <Link to={`/Egypt-tour-package/${exp.slug}`}>
                                         <Button variant='link' className="w-full h-12 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#22455C] font-bold group/btn transition-all">
                                             View Tour Details
                                         </Button>
                                     </Link>
-                                    <Link to={`/Egypt-tours-package/${exp.slug}#booking-section`}>
+                                    <Link to={`/Egypt-tour-package/${exp.slug}`}>
                                         <Button className="w-full h-12 rounded-xl bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-bold group/btn transition-all">
                                             Book Now
                                         </Button>

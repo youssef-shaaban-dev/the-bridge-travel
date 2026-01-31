@@ -47,7 +47,7 @@ const NotFound = () => {
                             Return to Home
                         </Link>
                         <Link 
-                            to="/Egypt-tours-package/cairo-and-alexandria" 
+                            to="/Egypt-tour-package/cairo-and-alexandria" 
                             className="w-full sm:w-auto flex items-center justify-center gap-3 px-10 py-5 border-2 border-[#BC8B22]/20 text-[#22455C] font-black rounded-2xl hover:border-[#BC8B22] hover:bg-[#BC8B22]/5 transition-all group"
                         >
                             <MapPin size={20} className="text-[#BC8B22]" />

@@ -28,8 +28,8 @@ const Navbar = () => {
     const checkActive = (to) => {
         if (to === '/') return location.pathname === '/';
         if (location.pathname.startsWith(to)) return true;
-        if (to === '/egypt-tour-packages' && location.pathname.includes('/Egypt-tours-package/')) return true;
-        if (to === '/nile-cruises' && location.pathname.includes('/nile-cruise/')) return true;
+        if (to === '/egypt-tour-packages' && location.pathname.includes('/Egypt-tour-package/')) return true;
+        if (to === '/nile-cruises' && location.pathname.includes('/nile-cruises/')) return true;
         if (to === '/day-excursions' && location.pathname.includes('/day-excursion/')) return true;
         return false;
     };
@@ -194,9 +194,9 @@ const Navbar = () => {
 const MobileNavItem = ({ icon, label, hasChildren = false, to, onClick }) => {
     const location = useLocation();
     const isActive = to === '/' ? location.pathname === '/' : location.pathname.startsWith(to) ||
-        (to === '/nile-cruises' && location.pathname.includes('/nile-cruise/')) ||
+        (to === '/nile-cruises' && location.pathname.includes('/nile-cruises/')) ||
         (to === '/day-excursions' && location.pathname.includes('/day-excursion/')) ||
-        (to === '/egypt-tour-packages' && location.pathname.includes('/Egypt-tours-package/'));
+        (to === '/egypt-tour-packages' && location.pathname.includes('/Egypt-tour-package/'));
 
     return (
         <NavLink to={to} onClick={onClick} className={cn(

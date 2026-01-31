@@ -20,7 +20,7 @@ export const routes = createBrowserRouter([
                 Component: EgyptTourPackages,
             },
             {
-                path: "/Egypt-tours-package/:slug",
+                path: "/Egypt-tour-package/:slug",
                 Component: TourDetails,
             },
             {
@@ -28,7 +28,7 @@ export const routes = createBrowserRouter([
                 Component: TourDetails,
             },
             {
-                path: "/nile-cruise/:slug",
+                path: "/nile-cruises/:slug",
                 Component: TourDetails,
             },
             {
