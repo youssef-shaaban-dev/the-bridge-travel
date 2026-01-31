@@ -90,8 +90,10 @@ const TripAdvisorCard = () => (
                     </div>
                 </div>
                 <a href="#" className="inline-block mt-1 text-xs font-bold text-[#00AA6C] hover:underline transition-all">
-                    Read reviews
-                </a>
+                   <a href="https://www.tripadvisor.com/Attraction_Review-g294202-d23702341-Reviews-The_Bridge_Travel-Giza_Giza_Governorate.html" target="_blank" rel="noopener noreferrer">
+  Read reviews
+</a>
+             </a>
             </div>
         </div>
     </div>
