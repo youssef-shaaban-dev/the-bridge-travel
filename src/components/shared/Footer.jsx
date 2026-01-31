@@ -120,7 +120,7 @@ const TripAdvisorCard = () => (
               <div key={i} className="w-4 h-4 rounded-full bg-[#00AA6C]" />
             ))}
           </div>
-          <span className="text-slate-900 font-bold">22 reviews</span>
+          <span className="text-slate-900 font-bold">23 reviews</span>
         </div>
         <a
           href="https://www.tripadvisor.com/Attraction_Review-g294202-d23702341-Reviews-The_Bridge_Travel-Giza_Giza_Governorate.html"
