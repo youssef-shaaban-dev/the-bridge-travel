@@ -187,7 +187,7 @@ const TermsAndConditions = () => {
                      
                         <section id="responsibility" className="scroll-mt-32">
                             <h2 className="text-3xl font-bold text-[#22455C] font-playfair mb-6 flex items-center gap-4">
-                                <span className="h-10 w-10 rounded-xl bg-[#BC8B22]/10 flex items-center justify-center text-[#BC8B22]">6</span>
+                                <span className="h-10 w-10 rounded-xl bg-[#BC8B22]/10 flex items-center justify-center text-[#BC8B22]">5</span>
                                 Responsibility
                             </h2>
                             <div className="prose prose-slate max-w-none">
@@ -199,7 +199,7 @@ const TermsAndConditions = () => {
 
                         <section id="other" className="scroll-mt-32">
                             <h2 className="text-3xl font-bold text-[#22455C] font-playfair mb-8 flex items-center gap-4">
-                                <span className="h-10 w-10 rounded-xl bg-[#BC8B22]/10 flex items-center justify-center text-[#BC8B22]">7-13</span>
+                                <span className="h-10 w-10 rounded-xl bg-[#BC8B22]/10 flex items-center justify-center text-[#BC8B22]">6-12</span>
                                 General Policies
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -224,7 +224,7 @@ const TermsAndConditions = () => {
                         </section>
 
                         <section id="contact" className="scroll-mt-32 border-t border-slate-100 pt-12">
-                            <h2 className="text-3xl font-bold text-[#22455C] font-playfair mb-8">14. Contact Details</h2>
+                            <h2 className="text-3xl font-bold text-[#22455C] font-playfair mb-8">13. Contact Details</h2>
                             <div className="bg-[#FCF9F4] p-10 rounded-[40px] border border-[#BC8B22]/20 relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#BC8B22]/5 rounded-full -mr-32 -mt-32 blur-3xl opacity-50" />
                                 <div className="relative z-10 flex flex-col md:flex-row gap-8 justify-between">
