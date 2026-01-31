@@ -85,12 +85,20 @@ const TourDetails = () => {
                             selectedRateIndex={selectedRateIndex}
                             onRateSelect={setSelectedRateIndex}
                         />
-                        {(tour.inclusions?.length > 0 || tour.exclusions?.length > 0) && (
-                            <TourInclusions
-                                inclusions={tour.inclusions}
-                                exclusions={tour.exclusions}
-                            />
-                        )}
+                        {/* Normalizing inclusions/exclusions data keys */}
+                        {(() => {
+                            const inclusions = tour.inclusions || tour.includes || [];
+                            const exclusions = tour.exclusions || [];
+                            if (inclusions.length > 0 || exclusions.length > 0) {
+                                return (
+                                    <TourInclusions
+                                        inclusions={inclusions}
+                                        exclusions={exclusions}
+                                    />
+                                );
+                            }
+                            return null;
+                        })()}
                         <WhyBookWithUs />
                     </div>
 

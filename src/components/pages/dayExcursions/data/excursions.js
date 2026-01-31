@@ -46,13 +46,6 @@ export const excursionsData = [
         duration: "4 Hours",
         location: "Cairo / Giza",
         price: 70,
-        includes: [
-            "Nile Dinner Cruise ticket",
-            "Open buffet dinner",
-            "Belly Dancing & Tanoura Show",
-            "All taxes and service charges",
-            "Private transfers by modern A/C vehicle"
-        ],
         exclusions: [
             "Personal expenses",
             "Tipping"
@@ -78,14 +71,6 @@ export const excursionsData = [
         duration: "Full Day",
         location: "Cairo",
         price: 85,
-        includes: [
-            "Entrance fees to all mentioned sites",
-            "Professional tour guide",
-            "Lunch at a local restaurant",
-            "All taxes and service charges",
-            "One bottle of mineral water",
-            "Private transfers by modern air-conditioned vehicle"
-        ],
         exclusions: [
             "Personal expenses",
             "Tipping"
@@ -110,14 +95,6 @@ export const excursionsData = [
         duration: "6 - 8 Hours",
         location: "Cairo / Giza",
         price: 95,
-        includes: [
-            "Private full-day tour to Giza Pyramids, Egyptian Museum & Khan El Khalili",
-            "Professional multilingual Egyptologist guide",
-            "All entrance fees",
-            "Private air-conditioned vehicle",
-            "Meet & assist service",
-            "All taxes and service charges"
-        ],
         exclusions: [
             "Egypt entry visa",
             "Personal expenses",
@@ -144,16 +121,6 @@ export const excursionsData = [
         duration: "Full Day",
         location: "Cairo / Giza",
         price: 120,
-        includes: [
-            "Entrance fees to Giza Pyramids area",
-            "Entrance fees to the Egyptian Museum",
-            "Entrance fees to the National Museum of Egyptian Civilization (Mummies Hall)",
-            "Professional Egyptologist tour guide",
-            "Lunch at a local restaurant",
-            "One bottle of mineral water",
-            "All transfers by private newest model A/C vehicle",
-            "All taxes and service charges"     
-        ],
         exclusions: [
             "Personal expenses",
             "Tipping"
@@ -178,14 +145,6 @@ export const excursionsData = [
         duration: "Full Day",
         location: "Cairo / Giza",
         price: 110,
-        includes: [
-            "Private full-day tour",
-            "Professional multilingual Egyptologist guide",
-            "All entrance fees to mentioned sites",
-            "Private modern A/C vehicle",
-            "Meet & assist service",
-            "All taxes and service charges"
-        ],
         exclusions: [
             "Egypt entry visa",
             "Personal expenses",
@@ -212,15 +171,6 @@ export const excursionsData = [
         duration: "Full Day",
         location: "Cairo / Giza",
         price: 105,
-        includes: [
-            "Entrance fees to the Giza Pyramids area",
-            "Entrance fees to the Grand Egyptian Museum",
-            "Professional Egyptologist tour guide",
-            "Lunch at a local restaurant",
-            "One bottle of mineral water",
-            "All taxes and service charges",
-            "Private transfers by newest model A/C vehicle"
-        ],
         exclusions: [
             "Personal expenses",
             "Tipping"
@@ -245,15 +195,6 @@ export const excursionsData = [
         duration: "Full Day",
         location: "Luxor",
         price: 155,
-        includes: [
-            "Private air-conditioned vehicle",
-            "Professional licensed Egyptologist guide",
-            "Entrance fees to all mentioned sites",
-            "Lunch at a local restaurant",
-            "One bottle of mineral water",
-            "All taxes and service charges",
-            "Pickup and drop-off from hotel, cruise, or airport"
-        ],
         exclusions: [
             "Egypt entry visa",
             "Personal expenses",
@@ -280,14 +221,6 @@ export const excursionsData = [
         duration: "Approx. 8 Hours",
         location: "Aswan",
         price: 99,
-        includes: [
-            "Private full-day tour to Abu Simbel by modern A/C vehicle",
-            "Professional multilingual Egyptologist guide",
-            "All entrance fees",
-            "Meet & assist service",
-            "All transfers in a private A/C minivan",
-            "All taxes and service charges"
-        ],
         exclusions: [
             "Personal expenses",
             "Tipping",
@@ -313,14 +246,6 @@ export const excursionsData = [
         duration: "Full Day",
         location: "Alexandria",
         price: 115,
-        includes: [
-            "Entrance fees to all mentioned sites",
-            "Professional tour guide",
-            "Lunch at a local restaurant",
-            "All taxes and service charges",
-            "One bottle of mineral water",
-            "Private transfers by modern air-conditioned vehicle"
-        ],
         exclusions: [
             "Personal expenses",
             "Tipping"
@@ -345,14 +270,6 @@ export const excursionsData = [
         duration: "Evening",
         location: "Cairo / Giza",
         price: 65,
-        includes: [
-            "Entrance fees to the Sound & Light Show",
-            "Professional tour guide",
-            "Lunch at a local restaurant",
-            "All taxes and service charges",
-            "One bottle of mineral water",
-            "Private transfers by modern air-conditioned vehicle"
-        ],
         exclusions: [
             "Personal expenses",
             "Tipping"
