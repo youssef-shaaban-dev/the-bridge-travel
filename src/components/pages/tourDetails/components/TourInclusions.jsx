@@ -14,7 +14,7 @@ const TourInclusions = ({ inclusions = [], exclusions = [] }) => {
                 <h2 className="text-2xl font-black text-[#22455C] tracking-tight">Included / Not Included</h2>
             </div>
 
-            <div className={`grid grid-cols-1 ${inclusions.length > 0 && exclusions.length > 0 ? 'md:grid-cols-2' : 'max-w-xl w-full'} gap-8`}>
+            <div className={`grid grid-cols-1 ${inclusions.length > 0 && exclusions.length > 0 ? 'md:grid-cols-2' : 'max-w-xl mx-auto w-full'} gap-8`}>
                 {/* Inclusions Card */}
                 {inclusions.length > 0 && (
                     <div className="bg-[#F8FAFC] rounded-[32px] p-8 border border-emerald-100 shadow-sm relative overflow-hidden group">

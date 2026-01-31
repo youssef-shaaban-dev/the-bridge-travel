@@ -85,10 +85,13 @@ const TourDetails = () => {
                             selectedRateIndex={selectedRateIndex}
                             onRateSelect={setSelectedRateIndex}
                         />
-                        {/* Normalizing inclusions/exclusions data keys */}
+                        {/* Normalizing inclusions/exclusions data keys and ensuring they are arrays */}
                         {(() => {
-                            const inclusions = tour.inclusions || tour.includes || [];
-                            const exclusions = tour.exclusions || [];
+                            const rawInclusions = tour.inclusions || tour.includes || [];
+                            const inclusions = Array.isArray(rawInclusions) ? rawInclusions : [rawInclusions];
+                            const rawExclusions = tour.exclusions || [];
+                            const exclusions = Array.isArray(rawExclusions) ? rawExclusions : [rawExclusions];
+
                             if (inclusions.length > 0 || exclusions.length > 0) {
                                 return (
                                     <TourInclusions
