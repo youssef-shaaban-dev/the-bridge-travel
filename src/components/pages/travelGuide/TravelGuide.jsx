@@ -72,7 +72,7 @@ const TravelGuide = () => {
         <div className="bg-white">
             <SEO
                 title="Egypt Travel Guide"
-                description="Everything you need to know before visiting Egypt. Visas, safety, best time to visit, and top places to see. Your ultimate Egypt travel resource."
+                description="Your ultimate Egypt travel guide with essential FAQs, tips, and advice for visitors. Learn about visas, safety, best times to visit, tours, and more."
                 keywords="Egypt Travel Guide, Best Time to Visit Egypt, Egypt Safety, Egypt Visa, Ancient Egypt Facts"
             />
             <TravelGuideHero image={heroImage} />
