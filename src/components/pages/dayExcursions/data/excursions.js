@@ -30,14 +30,6 @@ import Luxor_4 from "@/assets/images/Luxor-04.webp"
 import Luxor_5 from "@/assets/images/Luxor-05.webp"
 import Luxor_6 from "@/assets/images/Luxor-06.webp"
 
-import SharmElShik_1 from "@/assets/images/Sharm-El-Sheikh-01.webp"
-import SharmElShik_2 from "@/assets/images/Sharm-El-Sheikh-02.webp"
-import SharmElShik_3 from "@/assets/images/Sharm-El-Sheikh-03.webp"
-import SharmElShik_4 from "@/assets/images/Sharm-El-Sheikh-04.webp"
-
-import Jordan_1 from "@/assets/images/Jordan-01.webp"
-import Jordan_2 from "@/assets/images/Jordan-02.webp"
-import Jordan_3 from "@/assets/images/Jordan-03.webp"
 
 
 

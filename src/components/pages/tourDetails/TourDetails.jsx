@@ -29,11 +29,10 @@ const TourDetails = () => {
 
     // Rates Data (Normally would come from tour data)
     const rates = tour?.rates || [
-        { grade: "4★ Experience", price: tour?.price || 635, description: "Premium Comfort" },
-        { grade: "5★ Luxury", price: (tour?.price || 635) + 100, description: "Ultimate Elegance", featured: true }
+        { grade: "4★ Experience", price: tour?.price || 635, description: "Premium Comfort" }
     ];
 
-    const [selectedRateIndex, setSelectedRateIndex] = useState(1); // Default to Luxury as per original featured
+    const [selectedRateIndex, setSelectedRateIndex] = useState(0); // Default to first available rate
 
     const openLightbox = (index) => {
         setSelectedIndex(index);
@@ -55,7 +54,7 @@ const TourDetails = () => {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [selectedIndex]);
 
-   
+
     if (!tour) return <NotFound />;
 
     return (

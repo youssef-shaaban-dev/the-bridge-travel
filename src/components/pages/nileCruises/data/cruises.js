@@ -25,6 +25,10 @@ export const cruisesData = [
         duration: "4 Days / 3 Nights",
         location: "Aswan to Luxor",
         price: 570,
+        rates: [
+            { grade: "Standard Cabin", price: 570, description: "Deluxe Comfort" },
+            { grade: "Luxury Cabin", price: 670, description: "Ultimate Elegance", featured: true }
+        ],
         priceNote: "per person (Double Room)",
         itinerary: [
             {
@@ -82,6 +86,10 @@ export const cruisesData = [
         duration: "8 Days / 7 Nights",
         location: "Cairo, Aswan & Luxor",
         price: 1370,
+        rates: [
+            { grade: "Standard Cabin", price: 1370, description: "Deluxe Comfort" },
+            { grade: "Luxury Cabin", price: 1470, description: "Ultimate Elegance", featured: true }
+        ],
         priceNote: "Starting price per person",
         itinerary: [
             { day: 1, title: "Arrival in Cairo", description: "Meet & assist at the airport and transfer to your hotel." },
@@ -121,6 +129,10 @@ export const cruisesData = [
         duration: "5 Days / 4 Nights",
         location: "Luxor to Aswan",
         price: 760,
+        rates: [
+            { grade: "Standard Cabin", price: 760, description: "Deluxe Comfort" },
+            { grade: "Luxury Cabin", price: 860, description: "Ultimate Elegance", featured: true }
+        ],
         priceNote: "per person (Double Room)",
         itinerary: [
             { day: 1, title: "Luxor (L + D)", description: "Embark before lunch. Visit Karnak Temple Complex and Luxor Temple. Belly Dance Show." },

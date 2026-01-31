@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Facebook, Instagram, Twitter, Youtube, X ,Phone} from 'lucide-react';
+import { MessageCircle, X ,Phone} from 'lucide-react';
 
 const SocialFloatingButton = () => {
     const [isOpen, setIsOpen] = useState(false);
