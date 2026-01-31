@@ -9,10 +9,9 @@ const sections = [
     { id: 'payments', title: '2. Deposits & Payments', icon: Scale },
     { id: 'amendments', title: '3. Amendments', icon: ClipboardCheck },
     { id: 'rates', title: '4. Rates', icon: Globe },
-    { id: 'cancellations', title: '5. Cancellations', icon: AlertCircle },
-    { id: 'responsibility', title: '6. Responsibility', icon: Lock },
-    { id: 'other', title: '7-13. General Terms', icon: FileText },
-    { id: 'contact', title: '14. Contact', icon: Globe }
+    { id: 'responsibility', title: '5. Responsibility', icon: Lock },
+    { id: 'other', title: '6-12. General Terms', icon: FileText },
+    { id: 'contact', title: '13. Contact', icon: Globe }
 ];
 
 import SEO from '@/components/shared/SEO';
