@@ -12,8 +12,8 @@ const ContactUs = () => {
     return (
         <div className="bg-white">
             <SEO
-                title="Contact Us"
-                description="Get in touch with The Bridge Travel. We are here to help you plan your perfect luxury Egypt tour. Reach out for any inquiries or custom travel requests."
+                title="Contact Egypt Tour Experts"
+                description="Get in touch with The Bridge Travel for luxury Egypt tours, Nile cruises, Red Sea holidays, and custom itineraries via Egypt tour experts"
             />
             <ContactHero image={heroImage} />
             <ContactMain />
