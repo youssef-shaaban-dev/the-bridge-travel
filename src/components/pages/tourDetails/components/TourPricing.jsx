@@ -37,7 +37,7 @@ const TourPricing = ({ rates, selectedRateIndex, onRateSelect }) => {
                             <span className={`text-sm font-medium ${selectedRateIndex === idx ? 'text-white/40' : 'text-slate-400'}`}>/ per person</span>
                         </div>
                         <p className={`mt-4 text-xs font-bold italic ${selectedRateIndex === idx ? 'text-white/30' : 'text-slate-300'}`}>
-                            (Double occupancy - private tour)
+                            Private tour
                         </p>
                     </div>
                 ))}

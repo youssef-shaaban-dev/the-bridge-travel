@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const AboutIntro = ({ image }) => {
+const AboutIntro = ({ img_1,img_2 }) => {
     return (
         <section className="section-padding bg-[#FCF9F4]">
             <div className="container-custom">
@@ -32,14 +32,14 @@ const AboutIntro = ({ image }) => {
                     >
                         <div className="aspect-4/3 overflow-hidden rounded-[40px] shadow-2xl">
                             <img
-                                src={image}
+                                src={img_2}
                                 alt="Luxury Egypt Travel"
                                 className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                             />
                         </div>
                         <div className="absolute -bottom-8 -right-8 hidden h-48 w-48 overflow-hidden rounded-[32px] border-8 border-white shadow-xl lg:block">
                             <img
-                                src={image}
+                                src={img_1}
                                 alt="Experience"
                                 className="h-full w-full object-cover"
                             />

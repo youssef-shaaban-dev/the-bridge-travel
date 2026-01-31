@@ -2,7 +2,7 @@ import React from 'react';
 import { ShieldCheck, Clock, Globe2, MapPin } from 'lucide-react';
 import heroImage from "@/assets/images/Sharm-El-Sheikh-01.webp";
 import pyramidsImage from "@/assets/images/Jordan-03.webp";
-
+import sphinxImage from "@/assets/images/Sphinx.webp";
 // Sub-components
 import AboutHero from './AboutHero';
 import AboutIntro from './AboutIntro';
@@ -45,7 +45,7 @@ const AboutUs = () => {
                 description="Learn more about The Bridge Travel. Our mission is to provide the most luxurious and authentic Egyptian travel experiences since 2008."
             />
             <AboutHero image={heroImage} />
-            <AboutIntro image={heroImage} />
+            <AboutIntro img_1={heroImage} img_2={sphinxImage} />
             <AboutFeatures stats={stats} />
             <AboutDeepDive pyramidsImage={pyramidsImage} />
         </div>

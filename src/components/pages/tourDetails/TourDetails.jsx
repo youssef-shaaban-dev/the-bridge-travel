@@ -29,7 +29,7 @@ const TourDetails = () => {
 
     // Rates Data (Normally would come from tour data)
     const rates = tour?.rates || [
-        { grade: "4★ Experience", price: tour?.price || 635, description: "Premium Comfort" }
+        { grade: "Experience", price: tour?.price || 635, description: "Premium Comfort" }
     ];
 
     const [selectedRateIndex, setSelectedRateIndex] = useState(0); // Default to first available rate
