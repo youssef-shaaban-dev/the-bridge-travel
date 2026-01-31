@@ -184,42 +184,7 @@ const TermsAndConditions = () => {
                             </p>
                         </section>
 
-                        <section id="cancellations" className="scroll-mt-32">
-                            <h2 className="text-3xl font-bold text-[#22455C] font-playfair mb-8 flex items-center gap-4">
-                                <span className="h-10 w-10 rounded-xl bg-[#BC8B22]/10 flex items-center justify-center text-[#BC8B22]">5</span>
-                                Cancellations
-                            </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {[
-                                    { period: "45 days or more before arrival", charge: "No charge", type: "free" },
-                                    { period: "44–21 days before arrival", charge: "25% of total cost" },
-                                    { period: "20–15 days before arrival", charge: "50% of total cost" },
-                                    { period: "14–8 days before arrival", charge: "75% of total cost" },
-                                    { period: "Less than 7 days / No-show", charge: "100% of total cost", type: "full" }
-                                ].map((item, idx) => (
-                                    <div key={idx} className={cn(
-                                        "p-6 rounded-[32px] border transition-all duration-300",
-                                        item.type === 'free' ? "bg-green-50 border-green-100" :
-                                            item.type === 'full' ? "bg-red-50 border-red-100 md:col-span-2" :
-                                                "bg-slate-50 border-slate-100"
-                                    )}>
-                                        <div className="flex justify-between items-center gap-4">
-                                            <div>
-                                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Time Period</p>
-                                                <h4 className="font-bold text-[#22455C]">{item.period}</h4>
-                                            </div>
-                                            <div className="text-right">
-                                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Charge</p>
-                                                <h4 className={cn("text-xl font-black", item.type === 'free' ? "text-green-600" : "text-[#BC8B22]")}>
-                                                    {item.charge}
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </section>
-
+                     
                         <section id="responsibility" className="scroll-mt-32">
                             <h2 className="text-3xl font-bold text-[#22455C] font-playfair mb-6 flex items-center gap-4">
                                 <span className="h-10 w-10 rounded-xl bg-[#BC8B22]/10 flex items-center justify-center text-[#BC8B22]">6</span>
