@@ -88,7 +88,6 @@ const TripAdvisorCard = () => (
                             <div key={i} className="w-4 h-4 rounded-full bg-[#00AA6C]" />
                         ))}
                     </div>
-                    <span className="text-slate-900 font-bold">22 reviews</span>
                 </div>
                 <a href="#" className="inline-block mt-1 text-xs font-bold text-[#00AA6C] hover:underline transition-all">
                     Read reviews
