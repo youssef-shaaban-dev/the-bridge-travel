@@ -11,6 +11,17 @@
   <meta name="author" content="Mohammed Reiad, https://mreiad.com">
   <meta name="publisher" content="The Bridge Travel">
 
+ <!-- Canonical Link --> 
+ <link rel="canonical" href="" id="canonical-link">
+
+<script>
+  (function () {
+    var link = document.getElementById('canonical-link');
+    var url = window.location.origin + window.location.pathname;
+    link.setAttribute('href', url.replace(/\/$/, '') || window.location.origin + '/');
+  })();
+</script>
+ 
 <!-- Schema Markup -->
   <script type="application/ld+json">
 {
