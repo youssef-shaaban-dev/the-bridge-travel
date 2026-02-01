@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="flex items-center gap-3">
               <img
                 src={logo}
-                alt="Logo"
+                alt="The Bridge Travel - Luxury Egypt Tours"
                 className="h-24 md:h-32 brightness-0 invert"
               />
             </div>
@@ -115,7 +115,7 @@ const TripAdvisorCard = () => (
       <div className="space-y-2 text-center text-[12px]">
         <p className="text-slate-500 font-medium">Traveler Rating</p>
         <div className="flex flex-col items-center gap-1.5">
-          <div className="flex gap-1 justify-center">
+          <div className="flex gap-1 justify-center" aria-label="5 out of 5 stars rating on Tripadvisor">
             {[1, 2, 3, 4, 5].map((i) => (
               <div key={i} className="w-4 h-4 rounded-full bg-[#00AA6C]" />
             ))}

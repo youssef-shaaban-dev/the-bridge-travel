@@ -58,7 +58,7 @@ const HeroSlider = () => {
                             <div className="relative h-full w-full">
                                 {/* Background Image with Zoom Effect */}
                                 <motion.div
-                                    className="absolute inset-0 z-0"
+                                    className="absolute inset-0 z-0 bg-[#22455C]"
                                     initial={{ scale: 1.1 }}
                                     animate={{ scale: isActive ? 1 : 1.1 }}
                                     transition={{ duration: 6, ease: "linear" }}
@@ -67,6 +67,8 @@ const HeroSlider = () => {
                                         src={slide.image}
                                         className="h-full w-full object-cover"
                                         alt={slide.title}
+                                        width={1920}
+                                        height={1080}
                                         loading={index === 0 ? "eager" : "lazy"}
                                         fetchpriority={index === 0 ? "high" : "low"}
                                     />

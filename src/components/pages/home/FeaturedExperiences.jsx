@@ -44,7 +44,9 @@ const FeaturedExperiences = () => {
                                 >
                                     <motion.img
                                         src={exp.images[0]}
-                                        alt={exp.title}
+                                        alt={`Experience: ${exp.title}`}
+                                        width={400}
+                                        height={280}
                                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer"
                                     />
                                     {/* Overlay on hover */}
@@ -85,12 +87,12 @@ const FeaturedExperiences = () => {
 
                                 {/* CTA Buttons */}
                                 <div className="mt-auto flex flex-col gap-3">
-                                    <Link to={`/Egypt-tour-package/${exp.slug}`}>
+                                    <Link to={`/Egypt-tour-package/${exp.slug}`} aria-label={`View tour details for ${exp.title}`}>
                                         <Button variant='link' className="w-full h-12 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#22455C] font-bold group/btn transition-all">
                                             View Tour Details
                                         </Button>
                                     </Link>
-                                    <Link to={`/Egypt-tour-package/${exp.slug}`}>
+                                    <Link to={`/Egypt-tour-package/${exp.slug}`} aria-label={`Book the ${exp.title} tour now`}>
                                         <Button className="w-full h-12 rounded-xl bg-[#BC8B22] hover:bg-[#A67A1D] text-white font-bold group/btn transition-all">
                                             Book Now
                                         </Button>

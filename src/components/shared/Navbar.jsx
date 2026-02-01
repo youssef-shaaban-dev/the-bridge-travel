@@ -145,7 +145,7 @@ const Navbar = () => {
 
                         <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
                             <SheetTrigger asChild>
-                                <Button variant="ghost" className="text-white hover:bg-white/10 h-12 w-12 p-0 flex items-center justify-center transition-all">
+                                <Button variant="ghost" className="text-white hover:bg-white/10 h-12 w-12 p-0 flex items-center justify-center transition-all" aria-label="Toggle Navigation Menu">
                                     <AnimatedHamburger isOpen={isMenuOpen} />
                                 </Button>
                             </SheetTrigger>
