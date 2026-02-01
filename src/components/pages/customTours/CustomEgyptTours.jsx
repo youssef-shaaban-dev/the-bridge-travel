@@ -111,7 +111,7 @@ const CustomEgyptTours = () => {
     <div className="bg-white min-h-screen">
       <SEO
         title="Custom Egypt Tours"
-        description="Design your dream Egyptian holiday with our custom tour planner. Personalized itineraries, private guides, and luxury service tailored to your preferences."
+        description="Create your perfect custom Egypt tour with The Bridge Travel - Luxury Egypt tours, Nile cruises, Red Sea holidays, and personalized experiences in Cairo, Luxor & Aswan."
       />
       {/* Hero Section */}
       <section className="relative h-[80vh] min-h-[500px] w-full overflow-hidden">

@@ -41,8 +41,8 @@ const AboutUs = () => {
     return (
         <div className="bg-white">
             <SEO
-                title="About Us"
-                description="Learn more about The Bridge Travel. Our mission is to provide the most luxurious and authentic Egyptian travel experiences since 2008."
+                title="Crafting Exceptional Journeys to Egypt"
+                description="Learn about The Bridge Travel - Luxury Egypt tours, Nile cruises, Red Sea holidays, and exceptional journeys to Egypt with expert guided experiences in Cairo, Luxor, and Aswan."
             />
             <AboutHero image={heroImage} />
             <AboutIntro img_1={heroImage} img_2={sphinxImage} />
