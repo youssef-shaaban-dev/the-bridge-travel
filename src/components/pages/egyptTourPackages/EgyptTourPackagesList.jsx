@@ -29,10 +29,12 @@ const TourPackageCard = ({ tour, index }) => (
     >
         {/* Image Section */}
         <div className="relative h-72 overflow-hidden">
-            <Link to={`/Egypt-tour-package/${tour.slug}`}>
+            <Link to={`/Egypt-tour-package/${tour.slug}`} aria-label={`View details for ${tour.title}`}>
                 <img
                     src={tour.images[0]}
-                    alt={tour.title}
+                    alt={`Tour: ${tour.title}`}
+                    width={400}
+                    height={288}
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
@@ -73,12 +75,12 @@ const TourPackageCard = ({ tour, index }) => (
             </p>
 
             <div className="mt-auto flex flex-col gap-3">
-                <Link to={`/Egypt-tour-package/${tour.slug}`}>
+                <Link to={`/Egypt-tour-package/${tour.slug}`} aria-label={`View tour details for ${tour.title}`}>
                     <Button variant='link' className="w-full h-12 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#22455C] font-bold group/btn transition-all">
                         View Tour Details
                     </Button>
                 </Link>
-                <Link to={`/Egypt-tour-package/${tour.slug}`}>
+                <Link to={`/Egypt-tour-package/${tour.slug}`} aria-label={`Book the ${tour.title} tour now`}>
                     <Button className="w-full h-12 rounded-xl bg-[#22455C] hover:bg-[#BC8B22] text-white font-bold group/btn transition-all">
                         Book Now
                     </Button>

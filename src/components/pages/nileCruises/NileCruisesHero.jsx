@@ -4,12 +4,16 @@ import { motion } from "framer-motion";
 
 const NileCruisesHero = () => {
     return (
-        <section className="relative h-[80vh] min-h-[500px] w-full overflow-hidden">
+        <section className="relative h-[80vh] min-h-[500px] w-full overflow-hidden bg-[#22455C]">
             <div className="absolute inset-0">
                 <img
                     src={heroImage}
-                    alt="Nile Cruises"
+                    alt="Nile Cruises in Egypt"
+                    width={1920}
+                    height={1080}
                     className="h-full w-full object-cover"
+                    loading="eager"
+                    fetchpriority="high"
                 />
                 <div className="absolute inset-0 bg-black/50" />
             </div>

@@ -64,9 +64,9 @@ const GuestExperiences = () => {
 
                             {/* Star Rating & Verified Badge */}
                             <div className="flex items-center justify-between mb-6 relative z-10">
-                                <div className="flex gap-1">
+                                <div className="flex gap-1" aria-label={`Rating: ${item.rating} out of 5 stars`}>
                                     {[...Array(item.rating)].map((_, i) => (
-                                        <Star key={i} className="h-4 w-4 fill-[#FFBB00] text-[#FFBB00]" />
+                                        <Star key={i} className="h-4 w-4 fill-[#FFBB00] text-[#FFBB00]" aria-hidden="true" />
                                     ))}
                                 </div>
                             </div>

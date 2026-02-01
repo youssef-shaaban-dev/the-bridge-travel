@@ -4,12 +4,16 @@ import { motion } from 'framer-motion';
 
 const ContactHero = ({ image }) => {
     return (
-        <section className="relative h-[80vh] min-h-[500px] w-full overflow-hidden">
+        <section className="relative h-[80vh] min-h-[500px] w-full overflow-hidden bg-[#22455C]">
             <div className="absolute inset-0">
                 <img
                     src={image}
-                    alt="Contact Us"
+                    alt="Contact The Bridge Travel - Luxury Egypt Tours"
+                    width={1920}
+                    height={1080}
                     className="h-full w-full object-cover"
+                    loading="eager"
+                    fetchpriority="high"
                 />
                 <div className="absolute inset-0 bg-black/50" />
             </div>

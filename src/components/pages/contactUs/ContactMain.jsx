@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, Star, Users, Globe, Award } from "lucide-react";
 
 const ContactMain = () => {
-  
+
   const contactInfo = [
     {
       icon: <MapPin className="h-6 w-6" />,
@@ -79,6 +79,7 @@ const ContactMain = () => {
                   href={info.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`${info.title}: ${info.content}`}
                   className="flex items-start gap-6 group"
                 >
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white border border-[#BC8B22]/20 text-[#BC8B22] shadow-sm transition-all duration-300 group-hover:bg-[#BC8B22] group-hover:text-white group-hover:-translate-y-1">
@@ -160,7 +161,7 @@ const ContactMain = () => {
               <h3 className="text-2xl font-bold mb-8 font-playfair text-center">
                 Our Journey in Numbers
               </h3>
-              
+
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="text-4xl font-bold mb-2">15+</div>
@@ -190,12 +191,14 @@ const ContactMain = () => {
                     href="https://wa.me/201005647138"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Contact us on WhatsApp now"
                     className="flex-1 bg-white text-[#22455C] hover:bg-white/90 py-3 px-6 rounded-full font-bold text-center transition-all duration-300 hover:scale-105"
                   >
                     WhatsApp Now
                   </a>
                   <a
                     href="tel:+201227722233"
+                    aria-label="Call us directly"
                     className="flex-1 bg-transparent border-2 border-white text-white hover:bg-white/10 py-3 px-6 rounded-full font-bold text-center transition-all duration-300 hover:scale-105"
                   >
                     Call Directly

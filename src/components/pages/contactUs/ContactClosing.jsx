@@ -18,7 +18,7 @@ const ContactClosing = ({ logo }) => {
                     </p>
 
                     <div className="flex flex-col items-center gap-8">
-                        <img src={logo} alt="Logo" className="h-20 object-contain opacity-50 grayscale" />
+                        <img src={logo} alt="The Bridge Travel Logo" className="h-20 object-contain opacity-50 grayscale" />
                         <p className="text-slate-500 italic max-w-xl mx-auto text-lg leading-relaxed">
                             "Our travel consultants will contact you shortly with a personalized itinerary and the best available offers."
                         </p>

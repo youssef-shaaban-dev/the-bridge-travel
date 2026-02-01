@@ -40,6 +40,7 @@ const InputField = ({
       value={value}
       onChange={onChange}
       placeholder={placeholder}
+      aria-label={placeholder}
       className="w-full h-14 pl-14 pr-6 rounded-2xl bg-[#F8FAFC] border border-slate-100 focus:border-[#BC8B22]/30 focus:bg-white focus:ring-4 focus:ring-[#BC8B22]/5 text-[#22455C] font-semibold placeholder:text-slate-400 transition-all outline-none"
       required
     />
@@ -114,12 +115,16 @@ const CustomEgyptTours = () => {
         description="Create your perfect custom Egypt tour with The Bridge Travel - Luxury Egypt tours, Nile cruises, Red Sea holidays, and personalized experiences in Cairo, Luxor & Aswan."
       />
       {/* Hero Section */}
-      <section className="relative h-[80vh] min-h-[500px] w-full overflow-hidden">
+      <section className="relative h-[80vh] min-h-[500px] w-full overflow-hidden bg-[#22455C]">
         <div className="absolute inset-0">
           <img
             src={heroImage}
-            alt="Custom Egypt Tours"
+            alt="Custom Egypt Tours - Luxury Private Travel"
+            width={1920}
+            height={1080}
             className="h-full w-full object-cover"
+            loading="eager"
+            fetchpriority="high"
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
@@ -262,9 +267,10 @@ const CustomEgyptTours = () => {
                           onClick={() =>
                             setTravellers(Math.max(1, travellers - 1))
                           }
+                          aria-label="Decrease number of travellers"
                           className="h-12 w-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#22455C] hover:bg-[#BC8B22] hover:text-white transition-all active:scale-95"
                         >
-                          <Minus size={20} />
+                          <Minus size={20} aria-hidden="true" />
                         </button>
                         <div className="flex-1 text-center text-lg font-black text-[#22455C]">
                           {travellers}
@@ -272,9 +278,10 @@ const CustomEgyptTours = () => {
                         <button
                           type="button"
                           onClick={() => setTravellers(travellers + 1)}
+                          aria-label="Increase number of travellers"
                           className="h-12 w-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#22455C] hover:bg-[#BC8B22] hover:text-white transition-all active:scale-95"
                         >
-                          <Plus size={20} />
+                          <Plus size={20} aria-hidden="true" />
                         </button>
                       </div>
                     </div>
@@ -292,6 +299,7 @@ const CustomEgyptTours = () => {
                           name="message"
                           value={formData.message}
                           onChange={handleInputChange}
+                          aria-label="Your requirements"
                           placeholder="e.g. 10 days in March, looking for luxury hotels, private guide, interested in ancient history..."
                           className="w-full h-40 pl-14 pr-6 pt-5 rounded-2xl bg-[#F8FAFC] border border-slate-100 focus:border-[#BC8B22]/30 focus:bg-white focus:ring-4 focus:ring-[#BC8B22]/5 text-[#22455C] font-semibold placeholder:text-slate-400 transition-all outline-none resize-none"
                         />

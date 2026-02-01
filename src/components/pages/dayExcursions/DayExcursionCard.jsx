@@ -14,10 +14,12 @@ const DayExcursionCard = ({ excursion }) => {
         >
             {/* Image Section */}
             <div className="relative h-64 overflow-hidden">
-                <Link to={`/day-excursion/${excursion.slug}`}>
+                <Link to={`/day-excursion/${excursion.slug}`} aria-label={`View details for ${excursion.title}`}>
                     <img
                         src={excursion.images[0]}
-                        alt={excursion.title}
+                        alt={`Experience: ${excursion.title}`}
+                        width={400}
+                        height={256}
                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -55,12 +57,12 @@ const DayExcursionCard = ({ excursion }) => {
                 </p>
 
                 <div className="mt-auto pt-6 border-t border-slate-50 flex items-center justify-between">
-                    <Link to={`/day-excursion/${excursion.slug}`} className="text-[#22455C] font-bold text-sm flex items-center gap-2 hover:text-[#BC8B22] transition-colors relative group/btn overflow-hidden">
+                    <Link to={`/day-excursion/${excursion.slug}`} aria-label={`View details for ${excursion.title}`} className="text-[#22455C] font-bold text-sm flex items-center gap-2 hover:text-[#BC8B22] transition-colors relative group/btn overflow-hidden">
                         View Details
-                        <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" aria-hidden="true" />
                     </Link>
 
-                    <Link to={`/day-excursion/${excursion.slug}`}>
+                    <Link to={`/day-excursion/${excursion.slug}`} aria-label={`Book the ${excursion.title} excursion now`}>
                         <Button className="bg-[#22455C] hover:bg-[#BC8B22] text-white rounded-xl px-5 h-10 text-xs font-bold transition-all shadow-md active:scale-95">
                             Book Now
                         </Button>

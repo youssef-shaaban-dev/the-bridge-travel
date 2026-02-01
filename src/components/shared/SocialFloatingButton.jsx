@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X ,Phone} from 'lucide-react';
+import { MessageCircle, X, Phone } from 'lucide-react';
 
 const SocialFloatingButton = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +25,8 @@ const SocialFloatingButton = () => {
                                 key={index}
                                 href="https://wa.me/201005647138"
                                 target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`Contact us on ${link.label}`}
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: index * 0.05 }}
@@ -63,10 +65,11 @@ const SocialFloatingButton = () => {
                     onClick={() => setIsOpen(!isOpen)}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    aria-label={isOpen ? "Close social contact menu" : "Open social contact menu"}
                     className={`relative h-16 w-16 rounded-full flex items-center justify-center shadow-2xl transition-all duration-500 z-10 ${isOpen ? 'bg-[#22455C]' : 'bg-green-500 text-white hover:bg-green-600'}`}
                 >
                     {isOpen ? (
-                        <X className="h-8 w-8 text-white" />
+                        <X className="h-8 w-8 text-white" aria-hidden="true" />
                     ) : (
                         <div className="relative">
                             <MessageCircle className="h-9 w-9 text-white group-hover:scale-110 transition-transform" />

@@ -23,6 +23,7 @@ const InputField = ({
       onChange={onChange}
       type={type}
       placeholder={placeholder}
+      aria-label={placeholder}
       className="w-full h-14 pl-14 pr-6 rounded-2xl bg-[#F8FAFC] border border-slate-100 focus:border-[#BC8B22]/30 focus:bg-white focus:ring-4 focus:ring-[#BC8B22]/5 text-[#22455C] font-semibold placeholder:text-slate-400 transition-all outline-none"
       required
     />
@@ -191,18 +192,20 @@ const BookingSidebar = ({
           <div className="flex items-center gap-4 bg-[#F8FAFC] p-2 rounded-2xl border border-slate-100">
             <button
               onClick={() => setTravellers(Math.max(1, travellers - 1))}
+              aria-label="Decrease number of travellers"
               className="h-12 w-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#22455C] hover:bg-[#BC8B22] hover:text-white hover:border-[#BC8B22] transition-all shadow-sm active:scale-95"
             >
-              <Minus size={20} />
+              <Minus size={20} aria-hidden="true" />
             </button>
             <div className="flex-1 text-center text-lg font-black text-[#22455C]">
               {travellers}
             </div>
             <button
               onClick={() => setTravellers(travellers + 1)}
+              aria-label="Increase number of travellers"
               className="h-12 w-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#22455C] hover:bg-[#BC8B22] hover:text-white hover:border-[#BC8B22] transition-all shadow-sm active:scale-95"
             >
-              <Plus size={20} />
+              <Plus size={20} aria-hidden="true" />
             </button>
           </div>
         </div>
