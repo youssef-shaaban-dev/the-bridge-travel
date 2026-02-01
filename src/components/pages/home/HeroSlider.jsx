@@ -16,10 +16,12 @@ import 'swiper/css/effect-fade';
 import pyramids from "@/assets/images/Sphinx.webp";
 import nile from "@/assets/images/Nile-Cruise.webp";
 import temple from "@/assets/images/Luxor-05.webp";
+import Museum from "@/assets/images/Egyptian-Museum-01.webp";
+import { useNavigate } from 'react-router-dom';
 
 const slides = [
     {
-        image: "/images/Egyptian-Museum-01.webp",
+        image: Museum,
         title: "Grand Egyptian Museum",
     },
     {
@@ -37,6 +39,7 @@ const slides = [
 ];
 
 const HeroSlider = () => {
+    const navigate = useNavigate();
     return (
         <section className="relative h-screen w-full overflow-hidden bg-[#22455C]" style={{ minHeight: '100vh' }}>
             <Swiper
@@ -96,7 +99,7 @@ const HeroSlider = () => {
                                                         transition={{ duration: 0.6, delay: 0.8 }}
                                                         className="flex flex-col gap-4 sm:flex-row"
                                                     >
-                                                        <Button className="h-14 rounded-full bg-[#BC8B22] px-10 text-lg font-bold hover:bg-[#A67A1D] shadow-xl shadow-amber-500/20 mt-4">
+                                                        <Button onClick={() => navigate('/egypt-tour-packages')} className="h-14 rounded-full bg-[#BC8B22] px-10 text-lg font-bold hover:bg-[#A67A1D] shadow-xl shadow-amber-500/20 mt-4 cursor-pointer">
                                                             Egypt Tours
                                                         </Button>
                                                     </motion.div>
