@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Navbar from "./components/shared/Navbar";
 import Footer from "./components/shared/Footer";
 import SocialFloatingButton from "./components/shared/SocialFloatingButton";
@@ -7,6 +8,7 @@ import ScrollToTop from "./components/shared/ScrollToTop";
 import ScrollToTopButton from "./components/shared/ScrollToTopButton";
 import SiteIntro from "./components/shared/SiteIntro";
 import PageView from "./gtm/PageView";
+import Loader from "./components/shared/Loader";
 
 function App() {
   return (
@@ -19,7 +21,9 @@ function App() {
       <Navbar />
       <SocialFloatingButton />
       <main>
-        <Outlet />
+        <Suspense fallback={<Loader />}>
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
     </div>

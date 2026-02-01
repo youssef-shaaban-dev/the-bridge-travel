@@ -1,9 +1,19 @@
+import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import { TourDetails } from "./components/pages/tourDetails";
-import { Home, AboutUs, ContactUs, TravelGuide, DayExcursions, NileCruises, EgyptTourPackages, CustomEgyptTours, TermsAndConditions } from "./components/pages";
-import NotFound from "./components/shared/NotFound";
-import { PrivacyPolicy } from "./components/pages/privacyPolicy";
+
+const Home = lazy(() => import("./components/pages").then(m => ({ default: m.Home })));
+const AboutUs = lazy(() => import("./components/pages").then(m => ({ default: m.AboutUs })));
+const ContactUs = lazy(() => import("./components/pages").then(m => ({ default: m.ContactUs })));
+const TravelGuide = lazy(() => import("./components/pages").then(m => ({ default: m.TravelGuide })));
+const DayExcursions = lazy(() => import("./components/pages").then(m => ({ default: m.DayExcursions })));
+const NileCruises = lazy(() => import("./components/pages").then(m => ({ default: m.NileCruises })));
+const EgyptTourPackages = lazy(() => import("./components/pages").then(m => ({ default: m.EgyptTourPackages })));
+const CustomEgyptTours = lazy(() => import("./components/pages").then(m => ({ default: m.CustomEgyptTours })));
+const TermsAndConditions = lazy(() => import("./components/pages").then(m => ({ default: m.TermsAndConditions })));
+const PrivacyPolicy = lazy(() => import("./components/pages/privacyPolicy").then(m => ({ default: m.PrivacyPolicy })));
+const TourDetails = lazy(() => import("./components/pages/tourDetails").then(m => ({ default: m.TourDetails })));
+const NotFound = lazy(() => import("./components/shared/NotFound"));
 
 export const routes = createBrowserRouter([
     {

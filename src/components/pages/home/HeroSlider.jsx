@@ -67,6 +67,8 @@ const HeroSlider = () => {
                                         src={slide.image}
                                         className="h-full w-full object-cover"
                                         alt={slide.title}
+                                        loading={index === 0 ? "eager" : "lazy"}
+                                        fetchpriority={index === 0 ? "high" : "low"}
                                     />
                                     <div className="absolute inset-0 bg-black/40 bg-linear-to-b from-black/60 via-transparent to-black/60" />
                                 </motion.div>
