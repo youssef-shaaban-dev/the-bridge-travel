@@ -12,14 +12,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
 // Import images
-import egyptianMuseum from "@/assets/images/Egyptian-Museum-01.webp";
+// egyptianMuseum moved to public/images for preloading effectiveness
 import pyramids from "@/assets/images/Sphinx.webp";
 import nile from "@/assets/images/Nile-Cruise.webp";
 import temple from "@/assets/images/Luxor-05.webp";
 
 const slides = [
     {
-        image: egyptianMuseum,
+        image: "/images/Egyptian-Museum-01.webp",
         title: "Grand Egyptian Museum",
     },
     {
@@ -38,7 +38,7 @@ const slides = [
 
 const HeroSlider = () => {
     return (
-        <section className="relative h-screen w-full overflow-hidden bg-slate-900">
+        <section className="relative h-screen w-full overflow-hidden bg-[#22455C]" style={{ minHeight: '100vh' }}>
             <Swiper
                 modules={[Navigation, Pagination, Autoplay, EffectFade]}
                 effect="fade"
