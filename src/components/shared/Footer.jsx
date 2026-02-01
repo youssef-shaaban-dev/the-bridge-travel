@@ -100,7 +100,7 @@ const SocialIcon = ({ icon }) => (
 );
 
 const TripAdvisorCard = () => (
-  <div className="bg-white rounded-[24px] p-5 text-slate-900 shadow-2xl overflow-hidden w-full max-w-[260px] h-fit">
+  <Link to="https://www.tripadvisor.com/Attraction_Review-g294202-d23702341-Reviews-The_Bridge_Travel-Giza_Giza_Governorate.html" target="_blank" className="bg-white rounded-[24px] p-5 text-slate-900 shadow-2xl overflow-hidden w-full max-w-[260px] h-fit ">
     <div className="relative z-10">
       <div className="flex justify-center mb-3">
         <span className="bg-[#00AA6C]/10 text-[#00AA6C] px-3 py-0.5 rounded-full text-[10px] font-bold tracking-widest uppercase">
@@ -122,15 +122,14 @@ const TripAdvisorCard = () => (
           </div>
           <span className="text-slate-900 font-bold">23 reviews</span>
         </div>
-        <a
-          href="https://www.tripadvisor.com/Attraction_Review-g294202-d23702341-Reviews-The_Bridge_Travel-Giza_Giza_Governorate.html"
-          className="inline-block mt-1 text-xs font-bold text-[#00AA6C] hover:underline transition-all"
+        <p
+          className="inline-block mt-1 text-xs font-bold text-[#00AA6C]"
         >
           Read reviews
-        </a>
+        </p>
       </div>
     </div>
-  </div>
+  </Link>
 );
 
 // Minimal Star Icon
