@@ -5,6 +5,8 @@
   --font-playfair: "Playfair Display", serif;
   --color-primary-brand: #22455C;
   --color-secondary-brand: #BC8B22;
+  --color-secondary-brand-dark: #9A711B; /* WCAG AA compliant on white */
+  --color-secondary-brand-light: #FDF8ED;
 
   --color-background: white;
   --color-foreground: #22455C;
@@ -68,9 +70,14 @@
 }
 
 .button-secondary {
-  @apply bg-secondary-brand text-white hover:bg-secondary-brand/90;
+  @apply bg-secondary-brand text-white hover:bg-secondary-brand-dark transition-colors;
+}
+
+/* Accessibility: Text that must be gold on light backgrounds */
+.text-brand-gold {
+  color: var(--color-secondary-brand-dark);
 }
 
 nav a.active {
-  @apply bg-primary-brand  text-white border-b border-white ;
+  @apply bg-primary-brand text-white border-b border-white;
 }

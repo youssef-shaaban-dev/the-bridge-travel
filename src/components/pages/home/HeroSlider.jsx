@@ -12,16 +12,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
 // Import images
-// egyptianMuseum moved to public/images for preloading effectiveness
 import pyramids from "@/assets/images/Sphinx.webp";
 import nile from "@/assets/images/Nile-Cruise.webp";
 import temple from "@/assets/images/Luxor-05.webp";
-import Museum from "@/assets/images/Egyptian-Museum-01.webp";
 import { useNavigate } from 'react-router-dom';
 
 const slides = [
     {
-        image: Museum,
+        image: "/images/Egyptian-Museum-01.webp",
         title: "Grand Egyptian Museum",
     },
     {

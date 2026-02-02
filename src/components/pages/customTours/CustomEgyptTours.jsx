@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// motion used in JSX below
 import { motion } from "framer-motion";
 import {
   User,
@@ -18,7 +19,7 @@ import { showSuccess, showError, showAlert } from "@/lib/alerts";
 import ReCAPTCHA from "react-google-recaptcha";
 import SEO from "@/components/shared/SEO";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/images/Egyptian-Museum-01.webp";
+const heroImage = "/images/Egyptian-Museum-01.webp";
 import logo from "@/assets/logo.png";
 import AboutClosing from "../aboutUs/AboutClosing";
 

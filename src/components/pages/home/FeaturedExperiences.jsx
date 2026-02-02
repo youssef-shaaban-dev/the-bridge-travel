@@ -19,7 +19,7 @@ const FeaturedExperiences = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl font-bold text-[#22455C] md:text-6xl">Egypt Tour Packages</h2>
-                    <div className="mx-auto my-4 h-1 w-20 rounded-full bg-[#BC8B22]" />
+                    <div className="mx-auto my-4 h-1 w-20 rounded-full bg-secondary-brand" />
                     <p className="text-slate-500 italic max-w-2xl mx-auto">
                         Discover expertly crafted Egypt tour packages that blend iconic history, refined luxury, and authentic experiences - designed for worldwide travelers seeking a journey of a lifetime.
                     </p>
@@ -71,7 +71,7 @@ const FeaturedExperiences = () => {
                             {/* Content */}
                             <div className="flex flex-col p-8 flex-1">
                                 <Link to={`/Egypt-tour-package/${exp.slug}`}>
-                                    <h3 className="text-2xl font-bold text-[#22455C] mb-4 group-hover:text-[#BC8B22] transition-colors line-clamp-2 min-h-[64px]">
+                                    <h3 className="text-2xl font-bold text-[#22455C] mb-4 group-hover:text-brand-gold transition-colors line-clamp-2 min-h-[64px]">
                                         {exp.title}
                                     </h3>
                                 </Link>
@@ -109,7 +109,7 @@ const FeaturedExperiences = () => {
 
 const MetaTag = ({ icon, text }) => (
     <div className="flex items-center gap-1.5 rounded-md bg-[#FCF9F4] px-2.5 py-1.5 text-[10px] font-bold text-slate-500 border border-slate-100">
-        <span className="text-[#BC8B22]">{icon}</span>
+        <span className="text-brand-gold">{icon}</span>
         {text}
     </div>
 );
