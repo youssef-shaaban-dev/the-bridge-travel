@@ -11,30 +11,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-// Import images
-import pyramids from "@/assets/images/Sphinx.webp";
-import nile from "@/assets/images/Nile-Cruise.webp";
-import temple from "@/assets/images/Luxor-05.webp";
 import { useNavigate } from 'react-router-dom';
 
 const slides = [
-    {
-        image: "/images/Egyptian-Museum-01.webp",
-        title: "Grand Egyptian Museum",
-    },
-    {
-        image: pyramids,
-        title: "Giza Pyramids",
-    },
-    {
-        image: temple,
-        title: "Luxor Temple",
-    },
-    {
-        image: nile,
-        title: "Nile Cruises",
-    }
+    { image: "/images/Egyptian-Museum-01.webp", title: "Grand Egyptian Museum" },
+    { image: "/images/Sphinx.webp", title: "Giza Pyramids" },
+    { image: "/images/Luxor-05.webp", title: "Luxor Temple" },
+    { image: "/images/Nile-Cruise.webp", title: "Nile Cruises" },
 ];
+
 
 const HeroSlider = () => {
     const navigate = useNavigate();
