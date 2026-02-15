@@ -60,7 +60,7 @@ export const toursData = [
             { day: 1, title: "VIP Arrival in Cairo", description: "A personal representative welcomes you at the airport, assists with fast-track procedures, and escorts you to your hotel." },
             { day: 2, title: "Pyramids, Museum & Old Bazaar", description: "Explore the Egyptian Museum and stand before the Great Pyramids and the Sphinx." },
             { day: 3, title: "Sakkara, Memphis & Spiritual Cairo", description: "Discover the Step Pyramid, ancient tombs, and sacred sites of Old Cairo." },
-            { day: 4, title: "Alexandria Day Trip", description: "A full-day private tour to Egypt’s Mediterranean jewel: Roman Theater, Catacombs, and more." },
+            { day: 4, title: "Alexandria Day Trip", description: "The tour includes visits to the Roman Theater, Pompey’s Pillar, and the Catacombs of Kom El Shoqafa, followed by exterior photo stops at the Bibliotheca Alexandrina, Qaitbay Citadel, and El Mursi Abu El Abbas Mosque." },
             { day: 5, title: "At Leisure or Optional Royal Cairo Tour", description: "Enjoy a free day or choose a guided visit to the Citadel and Islamic Cairo." },
             { day: 6, title: "Smooth Departure", description: "Private transfer and assistance at the airport for your return flight." }
         ],
