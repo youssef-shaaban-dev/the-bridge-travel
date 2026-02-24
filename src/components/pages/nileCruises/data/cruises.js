@@ -155,5 +155,86 @@ export const cruisesData = [
         ],
         tags: ["In-Depth", "Luxor-Aswan", "Culture"],
         category: "Nile Cruises",
+    },
+    {
+        id: 4,
+        slug: "7-nights-luxor-to-luxor-cruise",
+        title: "7 Nights / 8 Days Luxor to Luxor Nile Cruise",
+        subtitle: "Luxor to Aswan Round Trip | A Complete Upper Egypt Experience",
+        description: "Sail along the legendary Nile River on a 7-night cruise between Luxor and Aswan, discovering Egypt’s most iconic temples, royal tombs, and ancient wonders—all while enjoying the comfort of a full-board luxury Nile cruise.",
+        images: [ Aswan_1,Luxor_1, Luxor_2, Aswan_7],
+        duration: "8 Days / 7 Nights",
+        location: "Luxor to Luxor",
+        price: 950,
+        rates: [
+            { grade: "Standard Cabin", price: 950, description: "Deluxe Comfort" },
+            { grade: "Luxury Cabin", price: 1100, description: "Ultimate Elegance", featured: true }
+        ],
+        priceNote: "per person (Double Room)",
+        itinerary: [
+            {
+                day: 1,
+                title: "Arrival in Luxor (East Bank)",
+                description: "Meet & assist at Luxor Airport or train station. Transfer to your Nile cruise & check in. Visit Karnak Temple, the largest temple complex ever built, and explore Luxor Temple. Lunch and dinner onboard. Overnight in Luxor."
+            },
+            {
+                day: 2,
+                title: "Luxor West Bank & Sailing to Edfu",
+                description: "Visit the legendary Valley of the Kings, explore the Temple of Hatshepsut, and stop at the Colossi of Memnon. Lunch onboard. Sail toward Edfu via Esna Lock. Dinner & overnight onboard."
+            },
+            {
+                day: 3,
+                title: "Edfu & Kom Ombo",
+                description: "Visit the remarkably preserved Temple of Horus in Edfu. Sail to Kom Ombo and explore Kom Ombo Temple, uniquely dedicated to two gods. Continue sailing to Aswan. Dinner & overnight onboard."
+            },
+            {
+                day: 4,
+                title: "Aswan Highlights",
+                description: "Visit the impressive Aswan High Dam. Take a boat ride to the beautiful Philae Temple. Lunch onboard. Free afternoon to relax or explore Aswan. Dinner & overnight onboard."
+            },
+            {
+                day: 5,
+                title: "Optional Abu Simbel Excursion",
+                description: "Optional early morning tour to the magnificent Abu Simbel Temples (highly recommended). Return to the cruise for lunch. Leisure time onboard or in Aswan. Dinner & overnight onboard."
+            },
+            {
+                day: 6,
+                title: "Sailing Back Toward Luxor",
+                description: "Full day sailing north along the Nile. Relax on the sun deck and enjoy panoramic countryside views. Lunch & dinner onboard. Overnight sailing."
+            },
+            {
+                day: 7,
+                title: "Leisure Day in Luxor",
+                description: "Free day in Luxor. Optional experiences: Sunrise hot air balloon ride, Luxor Museum visit, or Sound & Light Show at Karnak Temple. Farewell dinner onboard. Overnight in Luxor."
+            },
+            {
+                day: 8,
+                title: "Departure",
+                description: "Breakfast onboard. Check-out and transfer to Luxor Airport or train station."
+            }
+        ],
+        includes: [
+            "7 Nights on a 5★ Deluxe Nile Cruise (Full Board)",
+            "All sightseeing mentioned in the itinerary",
+            "Professional multilingual Egyptologist guide",
+            "All entrance fees",
+            "All taxes and service charges"
+        ],
+        exclusions: [
+            "Personal expenses",
+            "Tipping",
+            "Optional excursions (Abu Simbel, Hot Air Balloon, etc.)"
+        ],
+        highlights: [
+            "Karnak & Luxor Temples",
+            "Valley of the Kings",
+            "Hatshepsut Temple",
+            "Colossi of Memnon",
+            "Edfu & Kom Ombo Temples",
+            "Philae Temple & Aswan High Dam",
+            "Optional Abu Simbel Excursion"
+        ],
+        tags: ["Round Trip", "In-Depth", "Luxury"],
+        category: "Nile Cruises",
     }
 ];
