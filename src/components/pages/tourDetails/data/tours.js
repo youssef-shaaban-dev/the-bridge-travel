@@ -8,9 +8,6 @@ import Sphinx from "@/assets/images/Sphinx.webp"
 import Sakkara_Pyramids from "@/assets/images/Sakkara-Pyramids.webp"
 import Saladin_Citadel from "@/assets/images/Saladin-Citadel.webp"
 
-import Alexandria_1 from "@/assets/images/Alexandria-01.webp"
-import Alexandria_2 from "@/assets/images/Alexandria-02.webp"
-
 import NileCruise from "@/assets/images/Nile-Cruise.webp"
 
 import Aswan_1 from "@/assets/images/Aswan-01.webp"
@@ -88,9 +85,9 @@ export const toursData = [
        
     },
     {
-        id: 3,
+        id: 2,
         slug: "cairo-premium-experience",
-        title: "6 Days Cairo Experience",
+        title: "6 Days / 5 Nights Cairo Experience",
         location: "Cairo, Egypt",
         rating: 4.9,
         reviews: 28,
@@ -115,8 +112,8 @@ export const toursData = [
         description: "Discover the timeless beauty of Egypt with a carefully crafted itinerary that combines iconic history, cultural depth, and seamless five-star service - all in the heart of Cairo.",
         itinerary: [
             { day: 1, title: "Arrival in Cairo", description: "Welcomed by The Bridge Travel representative, assistance through customs, and escort to your hotel. Prepare for an unforgettable journey." },
-            { day: 2, title: "Pyramids, Museum & Khan El Khalili", description: "Explore the Egyptian Museum (Tutankhamun treasures), the Great Pyramids of Giza, the Sphinx, and Khan El Khalili Bazaar." },
-            { day: 3, title: "Sakkara, Memphis & Old Cairo", description: "Visit the Step Pyramid of Djoser, ancient tombs (Unas, Teti, etc.), Memphis (Ramses II statue), Coptic Cairo, and Amr Ibn El-Aas Mosque." },
+            { day: 2, title: "Pyramids, Museum & Khan El Khalili", description: "Explore the Egyptian Museum, the Great Pyramids of Giza, the Sphinx, and Khan El Khalili Bazaar." },
+            { day: 3, title: "Memphis & Old Cairo", description: "Visit the ancient tombs (Unas, Teti, etc.), Memphis (Ramses II statue), Coptic Cairo, and Amr Ibn El-Aas Mosque." },
             { day: 4, title: "Alexandria Day Tour", description: "Full-day excursion: Roman Theater, Pompey's Pillar, Catacombs, Montaza Gardens, and external views of the Library/Citadel. Return to Cairo." },
             { day: 5, title: "Free Day or Optional Islamic Cairo Tour", description: "Leisure time or optional visit to Cairo Citadel, Alabaster Mosque, Sultan Hassan & Al-Refa’i Mosques." },
             { day: 6, title: "Departure", description: "Transfer to Cairo International Airport with full assistance for your departure." }
@@ -137,7 +134,7 @@ export const toursData = [
         ]
     },
     {
-        id: 4,
+        id: 3,
         slug: "egypt-holidays-nile-cruise",
         title: "Egypt Holidays & Nile Cruise",
         location: "Cairo & Nile",
@@ -189,7 +186,7 @@ export const toursData = [
         ]
     },
     {
-        id: 5,
+        id: 4,
         slug: "egypt-discovery-red-sea",
         title: "Egypt Discovery & Red Sea Escape",
         location: "Cairo, Aswan, Luxor & Hurghada",
@@ -243,7 +240,7 @@ export const toursData = [
         ]
     },
     {
-        id: 6,
+        id: 5,
         slug: "egypt-grand-red-sea",
         title: "Egypt Grand Experience & Red Sea Escape",
         location: "Cairo, Nile & Sharm El-Sheikh",
@@ -296,7 +293,7 @@ export const toursData = [
         ]
     },
     {
-        id: 7,
+        id: 6,
         slug: "egypt-grand-hurghada",
         title: "Egypt Grand Experience (Hurghada)",
         location: "Cairo, Nile & Hurghada",
@@ -350,7 +347,7 @@ export const toursData = [
         ]
     },
     {
-        id: 8,
+        id: 7,
         slug: "egypt-jordan-discovery",
         title: "Grand Egypt & Jordan Discovery",
         location: "Egypt & Jordan",

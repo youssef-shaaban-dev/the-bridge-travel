@@ -79,7 +79,7 @@ const TourDetails = () => {
                         <TourInfoBar duration={tour.duration} category={tour.category} />
                         <TourDescription description={tour.description} />
                         <TourItinerary itinerary={tour.itinerary} />
-                        <TourAccommodation />
+                        {tour.category !== "Nile Cruises" && <TourAccommodation />}
                         <TourPricing
                             rates={rates}
                             selectedRateIndex={selectedRateIndex}

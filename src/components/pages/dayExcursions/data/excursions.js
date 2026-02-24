@@ -46,10 +46,6 @@ export const excursionsData = [
         duration: "4 Hours",
         location: "Cairo / Giza",
         price: 70,
-        exclusions: [
-            "Personal expenses",
-            "Tipping"
-        ],
         details: {
             operatingDays: "Daily",
             pickupLocation: "All Cairo & Giza hotels",
@@ -71,10 +67,6 @@ export const excursionsData = [
         duration: "Full Day",
         location: "Cairo",
         price: 85,
-        exclusions: [
-            "Personal expenses",
-            "Tipping"
-        ],
         details: {
             operatingDays: "Daily",
             pickupLocation: "All Cairo & Giza hotels",
@@ -95,12 +87,6 @@ export const excursionsData = [
         duration: "6 - 8 Hours",
         location: "Cairo / Giza",
         price: 95,
-        exclusions: [
-            "Egypt entry visa",
-            "Personal expenses",
-            "Tipping",
-            "Any items not mentioned"
-        ],
         details: {
             operatingDays: "Daily",
             pickupLocation: "All Cairo hotels",
@@ -121,10 +107,6 @@ export const excursionsData = [
         duration: "Full Day",
         location: "Cairo / Giza",
         price: 120,
-        exclusions: [
-            "Personal expenses",
-            "Tipping"
-        ],
         details: {
             operatingDays: "Daily",
             pickupLocation: "All Cairo & Giza hotels",
@@ -145,12 +127,6 @@ export const excursionsData = [
         duration: "Full Day",
         location: "Cairo / Giza",
         price: 110,
-        exclusions: [
-            "Egypt entry visa",
-            "Personal expenses",
-            "Tipping",
-            "Optional activities at Giza"
-        ],
         details: {
             operatingDays: "Daily",
             pickupLocation: "All Cairo & Giza hotels",
@@ -171,10 +147,6 @@ export const excursionsData = [
         duration: "Full Day",
         location: "Cairo / Giza",
         price: 105,
-        exclusions: [
-            "Personal expenses",
-            "Tipping"
-        ],
         details: {
             operatingDays: "Daily",
             pickupLocation: "All Cairo & Giza hotels",
@@ -195,12 +167,6 @@ export const excursionsData = [
         duration: "Full Day",
         location: "Luxor",
         price: 155,
-        exclusions: [
-            "Egypt entry visa",
-            "Personal expenses",
-            "Tipping",
-            "Any items not mentioned"
-        ],
         details: {
             operatingDays: "Daily",
             pickupLocation: "All Luxor hotels, Nile cruises, or Luxor Airport",
@@ -221,11 +187,6 @@ export const excursionsData = [
         duration: "Approx. 8 Hours",
         location: "Aswan",
         price: 99,
-        exclusions: [
-            "Personal expenses",
-            "Tipping",
-            "Any items not mentioned"
-        ],
         details: {
             operatingDays: "Daily",
             pickupLocation: "All Aswan hotels",
@@ -246,10 +207,6 @@ export const excursionsData = [
         duration: "Full Day",
         location: "Alexandria",
         price: 115,
-        exclusions: [
-            "Personal expenses",
-            "Tipping"
-        ],
         details: {
             operatingDays: "Daily",
             pickupLocation: "All Cairo & Giza hotels",
@@ -270,10 +227,6 @@ export const excursionsData = [
         duration: "Evening",
         location: "Cairo / Giza",
         price: 65,
-        exclusions: [
-            "Personal expenses",
-            "Tipping"
-        ],
         details: {
             operatingDays: "Daily",
             pickupLocation: "All hotels in Cairo & Giza",
