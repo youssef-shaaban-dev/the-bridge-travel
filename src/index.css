@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 
 @theme inline {
-  --font-playfair: "Playfair Display", serif;
+  --font-playfair: "Playfair Display", sans-serif;
   --color-primary-brand: #22455C;
   --color-secondary-brand: #BC8B22;
   --color-secondary-brand-dark: #9A711B; /* WCAG AA compliant on white */
@@ -33,14 +33,14 @@
   }
 
   body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', sans-serif;
     @apply bg-white text-primary-brand;
     margin: 0;
     min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', sans-serif;
     @apply font-bold;
   }
 }

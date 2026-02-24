@@ -44,11 +44,31 @@ export const toursData = [
             { grade: "4★ Hotels", price: 635, description: "Premium Comfort" },
             { grade: "5★ Hotels", price: 735, description: "Ultimate Elegance", featured: true }
         ],
-        duration: "6 Days / 5 Nights",
+        duration: "6 Days / 5 Nights (4 Nights Cairo - 1 Night Alexandria)",
         category: "Tour Egypt Packages",
         badge: "Best Seller",
         type: "Private Tour",
-        includes: "VIP Fast Track",
+        inclusions: [
+            "4 Nights hotel accommodation in Cairo on bed and breakfast basis.",
+            "1 Nights hotel accommodation in Alexandria on bed and breakfast basis.",
+            "1 Full day tour in Cairo visiting the Egyptian Museum, Pyramids, Sphinx & Khan El Khalili. with Lunch",
+            "1 Full day tour in Cairo visiting Sakkara, Memphis & Old Cairo with Lunch",
+            "1 Full day tour in Alexandria with Lunch",
+            "All Transfers in Cairo.",
+            "All your tours and excursions are with private A/C minivan",
+            "The service of meet and assist at all your destinations.",
+            "Multilingual expert Egyptologist guide.",
+            "All your visits include entrance fees.",
+            "Our prices include all taxes and services."
+        ],
+        exclusions: [
+            "Visa Entry for Egypt.",
+            "International Flights",
+            "Personal items.",
+            "Tipping.",
+            "Any other items not mentioned.",
+            "Any Optional tours."
+        ],
         images: [
             Cairo_1, 
             Cairo_2,
@@ -60,60 +80,12 @@ export const toursData = [
             { day: 1, title: "VIP Arrival in Cairo", description: "A personal representative welcomes you at the airport, assists with fast-track procedures, and escorts you to your hotel." },
             { day: 2, title: "Pyramids, Museum & Old Bazaar", description: "Explore the Egyptian Museum and stand before the Great Pyramids and the Sphinx." },
             { day: 3, title: "Sakkara, Memphis & Spiritual Cairo", description: "Discover the Step Pyramid, ancient tombs, and sacred sites of Old Cairo." },
-            { day: 4, title: "Alexandria Day Trip", description: "The tour includes visits to the Roman Theater, Pompey’s Pillar, and the Catacombs of Kom El Shoqafa, followed by exterior photo stops at the Bibliotheca Alexandrina, Qaitbay Citadel, and El Mursi Abu El Abbas Mosque." },
-            { day: 5, title: "At Leisure or Optional Royal Cairo Tour", description: "After breakfast, return to Cairo by air-conditioned vehicle with transfer to your hotel, enjoy a free day at leisure, or choose an optional tour to Islamic and Coptic Cairo." },
+            { day: 4, title: "Alexandria Day Trip", description: "The tour includes exterior photo stops at the Bibliotheca Alexandrina." },
+            { day: 5, title: "At Leisure or Optional Royal Cairo Tour", description: "After breakfast, Back to Cairo by A / C car, transfer you back to your Hotel, enjoy a Free Day at leisure, or choose an (Optional) tour to Islamic and Coptic Cairo." },
             { day: 6, title: "Smooth Departure", description: "Private transfer and assistance at the airport for your return flight." }
         ],
+        
        
-    },
-    {
-        id: 2,
-        slug: "cairo-alexandria-premium",
-        title: "6 Days Cairo & Alexandria",
-        location: "Cairo & Alexandria",
-        rating: 5.0,
-        reviews: 32,
-        isFeatured: true,
-        price: 640,
-        rates: [
-            { grade: "4★ Hotels", price: 640, description: "Premium Comfort" },
-            { grade: "5★ Hotels", price: 735, description: "Ultimate Elegance", featured: true }
-        ],
-        duration: "6 Days / 5 Nights",
-        category: "Tour Egypt Packages",
-        badge: "Top Choice",
-        type: "Private Tour",
-        includes: "Cairo | Alexandria",
-        images: [
-            Alexandria_1,
-            Alexandria_2,
-            Cairo_1,
-            Cairo_2
-        ],
-        description: "Discover the magic of Egypt with a perfectly balanced itinerary combining ancient wonders, Mediterranean charm, and five-star comfort. This private tour is designed for travelers who seek culture, history, and seamless service.",
-        itinerary: [
-            { day: 1, title: "Arrival in Cairo", description: "Warm welcome by The Bridge Travel representative, assistance through airport formalities, and escort to your hotel. Settle in and relax." },
-            { day: 2, title: "Pyramids, Museum & Bazaar", description: "Explore the Egyptian Museum (Tutankhamun treasures), the Great Pyramids of Giza, the Sphinx, and Khan El Khalili Bazaar." },
-            { day: 3, title: "Sakkara, Memphis & Old Cairo", description: "Visit the Step Pyramid of Djoser, Memphis (Ramses II statue), Coptic Cairo churches, and Amr Ibn El-Aas Mosque." },
-            { day: 4, title: "Alexandria Day Tour & Overnight", description: "Travel to Alexandria: Roman Theater, Pompey's Pillar, Catacombs, Montaza Gardens, and external views of the Library and Citadel." },
-            { day: 5, title: "Return to Cairo & Free Day", description: "Drive back to Cairo. Enjoy free time or take an optional Islamic Cairo tour including the Citadel and famous mosques." },
-            { day: 6, title: "Final Departure", description: "Transfer to Cairo International Airport with full assistance for your departure." }
-        ],
-        inclusions: [
-            "4 Nights Cairo + 1 Night Alexandria (B&B)",
-            "All private guided tours with Egyptologist",
-            "All entrance fees",
-            "Private A/C transportation",
-            "Lunch during full-day tours",
-            "Meet & assist at arrival and departure",
-            "All taxes and service charges"
-        ],
-        exclusions: [
-            "International flights",
-            "Egypt entry visa",
-            "Personal expenses & tips",
-            "Optional tours"
-        ]
     },
     {
         id: 3,

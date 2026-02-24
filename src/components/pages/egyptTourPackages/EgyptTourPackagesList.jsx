@@ -64,10 +64,10 @@ const TourPackageCard = ({ tour, index }) => (
             </Link>
 
             <div className="flex flex-wrap gap-2 mb-6">
-                <div className="flex items-center gap-1.5 rounded-md bg-[#FCF9F4] px-2.5 py-1.5 text-[10px] font-bold text-slate-500 border border-slate-100">
-                    <Clock className="h-3.5 w-3.5 text-[#BC8B22]" />
+                <p className="flex items-center gap-1.5 rounded-md bg-[#FCF9F4] px-2.5 py-1.5 text-[10px] font-bold text-slate-500 border border-slate-100">
+                    <Clock className="h-3.5 w-3.5 text-[#BC8B22] " />
                     {tour.duration}
-                </div>
+                </p>
             </div>
 
             <p className="text-slate-500 text-sm leading-relaxed mb-8 line-clamp-3 font-medium">
