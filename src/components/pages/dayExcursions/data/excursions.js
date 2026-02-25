@@ -62,11 +62,8 @@ export const excursionsData = [
         title: "Full Day Cairo Tour - Christian & Islamic Sights",
         subtitle: "Private Tour",
         description: "Discover the spiritual heart of Cairo on a full-day private tour through its most important Christian and Islamic landmarks",
-        longDescription: "Discover the spiritual heart of Cairo on a private full-day tour to Coptic Cairo and Islamic Cairo. Visit the Hanging Church, Abu Serga Church, and Ben Ezra Synagogue, then explore Cairo’s most iconic mosques, including Sultan Hassan, Al-Rifa’i, and the Alabaster Mosque at the Citadel. End your experience at the famous Khan El Khalili Bazaar.",
+        longDescription: "Includes private guide, hotel pickup & drop-off, and luxury transportation.Perfect for travelers seeking history, faith heritage, and authentic Cairo culture in one unforgettable day.",
 
-Includes private guide, hotel pickup & drop-off, and luxury transportation.
-
-Perfect for travelers seeking history, faith heritage, and authentic Cairo culture in one unforgettable day.",
         images: [Alexandria_1,  Cairo_3, Alexandria_2, Cairo_4, Cairo_5],
         duration: "Full Day",
         location: "Cairo",
