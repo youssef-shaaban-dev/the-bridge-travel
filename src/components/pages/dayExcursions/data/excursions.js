@@ -453,5 +453,62 @@ export const excursionsData = [
                 description: "Around 18:00 pm we will pick you up from your Hotel in Cairo or Giza city then transfer you by private car with A/C to Enjoy one of the most amazing night show at Giza pyramids and after the show we will transfer you back to your Hotel in Cairo"
             }
         ]
+    },
+    {
+        id: 11,
+        slug: "overnight-tour-el-baharia",
+        title: "Over Night Tour to El Baharia",
+        subtitle: "Private Safari Tour",
+        images: [Cairo_2, Sphinx, Sakkara_Pyramids], // Placeholder, please add real safari images later
+        duration: "2 Days / 1 Night",
+        location: "El Bahariya Oasis",
+        price: 350,
+        details: {
+            operatingDays: "Daily",
+            pickupLocation: "Cairo",
+            pickupTime: "8:00 am",
+            return: "To Cairo"
+        },
+        inclusions: [
+            "1 night desert safari Camping / Hotel on full board basis.",
+            "All transfers.",
+            "Multilingual expert Egyptologist guide.",
+            "All your tours and excursions are with 4x4.",
+            "All your visits include entrance fees.",
+            "Our prices include all taxes and services.",
+            "Private day trip Full day Tour By Private Car +Tour Guide + Lunch"
+        ],
+        exclusions: [
+            "Visa Entry for Egypt.",
+            "Personal items.",
+            "Tipping.",
+            "Any other items not mentioned"
+        ],
+        tags: ["Safari", "Camping", "Oasis", "White Desert"],
+        category: "Day Excursions",
+        itinerary: [
+            {
+                day: 1,
+                title: "Cairo to El Bahariya & White Desert",
+                description: `Departure from Cairo at 8:00 am to El Bahariya Oasis (385km) about four hours.
+
+Drive on a half asphalt / half of road towards the incredible White Desert. On the way we will stop at the Black and Crystal Mountain. Sunset at the white desert. Dinner
+
+Overnight in White Desert (Camp)`
+            },
+            {
+                day: 2,
+                title: "El Bahariya Exploration & Return",
+                description: `Breakfast. Back to El Bahariya Oasis’s Starting tour in El Bahariya Oasis’s city, and have lunch. Later we visit the temple of Alexander the great, tombs of the nobles and the English mountain. We join a camel caravan for one hour, later have dinner. Possibility of enjoying a bathe in the hot water of the spring.
+
+                Then back to Cairo.
+                            
+                More Detail About Safari 
+                Transportation: All the mentioned itinerary by 4WD Toyota land Cruiser newest model. Every 4WD will be equipped with: Powerful Diesel engines, Radio Am/Fm and cassette player, Cool bottle. The leading car will be equipped with: GPS system, First aid kit, Tour leader/Guide, Cool box.
+                Tented camp will include: Spacious, well ventilated dome tents including Mattresses, blankets, sleeping bags and bed sheets. All necessary cooking gear, kitchen utensils, mugs and glassware. Binoculars, reference books on Egypt. Cool boxes, Trash bags, Ice boxes, Fire grill and cooking stoves.
+                Accommodation: Camping or hotel used is clean (with hot water bathrooms, the best in the oases.)
+                Food and Beverage: Breakfast: (Juice, tea, coffee, jam, cheese, beans, eggs and bread). Picnic lunch: (Fresh vegetables, white cheese, tuna, sardines, chips & fruits). Dinner: (Rice or pasta, cooked vegetables, soup and chicken or beef). (Tea & coffee with all meals .1 mineral water).`
+            }
+        ]
     }
 ];
