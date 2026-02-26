@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { Bus, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const TourItinerary = ({ itinerary }) => {
@@ -40,8 +40,8 @@ const TourItinerary = ({ itinerary }) => {
                                 </div>
 
                                 {/* Day Title */}
-                                <span className={`text-left text-sm md:text-lg font-bold text-white tracking-tight ${openIndex === idx ? 'opacity-100' : 'opacity-90'}`}>
-                                    Day {item.day.toString().padStart(2, '0')}: {item.title}
+                                <span className={`flex items-center gap-2 text-left text-sm md:text-lg font-bold text-white tracking-tight ${openIndex === idx ? 'opacity-100' : 'opacity-90'}`}>
+                                    <Bus className="w-5 h-5 md:w-8 md:h-8 mr-2 " /> Exclusive Day Excursions
                                 </span>
                             </div>
 

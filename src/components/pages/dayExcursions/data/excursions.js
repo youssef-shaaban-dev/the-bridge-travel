@@ -98,8 +98,11 @@ export const excursionsData = [
                 description: `Cairo's day tours to Christian and Islamic Sights starts at 8:00 am Pickup from your hotel in Cairo By Our Tours guide to Start your full day tour visiting Old Cairo that known as Christian Coptic Cairo which is Among the most important locations visited by the Holy Family where the spiritual impact of their presence is most felt still, There you will be able to visit and Enter the Church of Abu-Sergah and St. Barbara, the hanging church, and the old jewish synagogue – Ben Ezra Synagogue. 
  
                 Then continue your day tour to Islamic Cairo that was founded in 641 A.D By the First Muslam leader Amr Ibn Elas Over there in Islamic Cairo you will be able to Visit and Enter the Following Mosques \`Masjid\` Amr Ibn Elas Mosque that was built in 642 A.D By the Muslim leader Amr Ibn Elas at El FUSTAT area
+                
                 then followed by a visit to the Most and Biggest mosques in Cairo which is El Sultan Hassan Mosque that also known as \`Madrasa El Sultan Hassan\` that was founded by Sultan Hassan in 1356 A.D The Mosque-Madrassa of Sultan Hassan is a massive Mamluk era mosque and madrassa located near The Citadel in Cairo.
+
                 Then followed by another big famous Mosque Which is Al-Rifa’i Mosque The building is located opposite the Mosque-Madrassa of Sultan Hassan, which dates from around 1361, and was architecturally conceived as a complement to the older structure.
+
                 Then visit The Citadel of Cairo where you can visit the most famous mosque in Cairo which is Mohamed Ali\`s mosque that known as the Alabaster Mosque 
                 Then End your day tour with a visit to Khan Khalili Bazaar 
                 At the end of the Tour, you will be transferred back to your Hotel`
