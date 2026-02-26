@@ -55,27 +55,52 @@ export const excursionsData = [
         },
         tags: ["Evening", "Dinner", "Cultural Show"],
         category: "Day Excursions",
+        itinerary: [
+            {
+                day: 1,
+                title: "Dinner Cruise Experience",
+                description: "Around 6:30 PM, our representative will pick you up from your hotel in Cairo or Giza and transfer you by private air-conditioned vehicle to your Nile cruise boat. Board the ship and enjoy a two-hour sailing along the Nile while watching an exciting Belly Dancing Show and the traditional Tanoura (Whirling Dervish) Show. During the cruise, you will enjoy a delicious open buffet dinner with a beautiful view of Cairo by night reflected on the waters of the Nile. After the cruise, you will be transferred back to your hotel around 10:30 PM."
+            }
+        ]
     },
     {
         id: 2,
         slug: "full-day-cairo-tour-religious-sights",
-        title: "Full Day Cairo Tour - Christian & Islamic Sights",
+        title: "Full Day Cairo Day Tour to Christian & Islamic Sights",
         subtitle: "Private Tour",
-        description: "Discover the spiritual heart of Cairo on a full-day private tour through its most important Christian and Islamic landmarks",
-        longDescription: "Includes private guide, hotel pickup & drop-off, and luxury transportation.Perfect for travelers seeking history, faith heritage, and authentic Cairo culture in one unforgettable day.",
-
+        description: "Discover the spiritual heart of Cairo on a full-day private tour through its most important Christian and Islamic landmarks.",
+        longDescription: "Starts at 8:00 am with pickup from your hotel in Cairo. Visit Old Cairo (Christian Coptic Cairo), including the Church of Abu-Sergah, St. Barbara, the Hanging Church, and Ben Ezra Synagogue. Continue to Islamic Cairo to visit the Amr Ibn Elas Mosque, El Sultan Hassan Mosque, and Al-Rifa’i Mosque. Proceed to The Citadel of Cairo to visit Mohamed Ali's Alabaster Mosque, and end your day tour with a visit to Khan Khalili Bazaar.",
         images: [Alexandria_1,  Cairo_3, Alexandria_2, Cairo_4, Cairo_5],
         duration: "Full Day",
         location: "Cairo",
-        price: 85,
+        price: 95,
         details: {
             operatingDays: "Daily",
-            pickupLocation: "All Cairo & Giza hotels",
-            pickupTime: "Around 8:00 AM",
-            return: "To your hotel after the tour"
+            pickupLocation: "All Cairo & Giza Hotels",
+            pickupTime: "About 8:00 am",
+            return: "In your hotel accommodation"
         },
+        inclusions: [
+            "Entry Fees",
+            "Expert Tour guide",
+            "Lunch at Local restaurant",
+            "All Taxes Services",
+            "Bottle of Water",
+            "All Transfers by Private A/C Vehicles Newest Model"
+        ],
+        exclusions: [
+            "Personal Items",
+            "Tipping"
+        ],
         tags: ["Spiritual", "Religious", "History"],
         category: "Day Excursions",
+        itinerary: [
+            {
+                day: 1,
+                title: "Christian & Islamic Sights",
+                description: "Start your full day tour visiting Old Cairo (Christian Coptic Cairo) to enter the Church of Abu-Sergah, St. Barbara, the hanging church, and the old jewish synagogue – Ben Ezra Synagogue. Continue to Islamic Cairo to visit Amr Ibn Elas Mosque, El Sultan Hassan Mosque, and Al-Rifa’i Mosque. Then visit The Citadel of Cairo to see Mohamed Ali's Alabaster Mosque. End your day tour with a visit to Khan Khalili Bazaar."
+            }
+        ]
     },
     {
         id: 3,
@@ -96,6 +121,13 @@ export const excursionsData = [
         },
         tags: ["Must-See", "History", "Professional Guide"],
         category: "Day Excursions",
+        itinerary: [
+            {
+                day: 1,
+                title: "Pyramids, Museum & Bazaar",
+                description: "Your private tour begins with pickup from your hotel in Cairo by your professional Egyptologist guide. Drive to the Giza Plateau to explore the Great Pyramid of King Cheops, Chephren, and Mykerinos. Experience the panoramic viewpoint and the Great Sphinx. Next, visit the world-famous Egyptian Museum, home to thousands of authentic statues and artifacts. Finally, stroll through the vibrant Khan El Khalili Bazaar for a traditional shopping experience."
+            }
+        ]
     },
     {
         id: 4,
@@ -116,6 +148,13 @@ export const excursionsData = [
         },
         tags: ["History", "Museums", "Private"],
         category: "Day Excursions",
+        itinerary: [
+            {
+                day: 1,
+                title: "Pyramids & Dual Museums",
+                description: "Start your day with pickup from your hotel in Cairo or Giza. Your first stop is the legendary Giza Pyramids, including Great Pyramid of Cheops and the Sphinx. Then visit the world-famous Egyptian Museum. Proceed to the National Museum of Egyptian Civilization (NMEC) to explore the Royal Mummies Hall and unique artifacts. Enjoy lunch at a local restaurant before returning to your hotel."
+            }
+        ]
     },
     {
         id: 5,
@@ -136,6 +175,13 @@ export const excursionsData = [
         },
         tags: ["Ancient Capital", "Step Pyramid", "Giza"],
         category: "Day Excursions",
+        itinerary: [
+            {
+                day: 1,
+                title: "Giza & Ancient Capitals",
+                description: "Your tour starts at the Giza Plateau to explore the pyramids and the Sphinx. Continue to Sakkara, home of the world's first pyramid: The Step Pyramid of King Djoser. Then drive to Memphis, the first capital of unified Egypt, to see the colossal Statue of Ramses II and the Alabaster Sphinx. At the end, you'll be transferred back to your hotel."
+            }
+        ]
     },
     {
         id: 6,
@@ -156,6 +202,13 @@ export const excursionsData = [
         },
         tags: ["GEM", "Pyramids", "Luxury"],
         category: "Day Excursions",
+        itinerary: [
+            {
+                day: 1,
+                title: "GEM & Giza Pyramids",
+                description: "Explore the iconic Giza Pyramids, the Sphinx, and the Valley Temple. Then, head to the Grand Egyptian Museum (GEM) for a guided tour through its impressive galleries, including Tutankhamun’s treasures. Enjoy lunch at a local restaurant before returning comfortably to your hotel."
+            }
+        ]
     },
     {
         id: 7,
@@ -176,6 +229,13 @@ export const excursionsData = [
         },
         tags: ["Luxor", "Valley of the Kings", "Karnak"],
         category: "Day Excursions",
+        itinerary: [
+            {
+                day: 1,
+                title: "Luxor East & West Banks",
+                description: "Start with a visit to the Valley of the Kings, the Temple of Queen Hatshepsut, and the Colossi of Memnon. Enjoy lunch at a local restaurant. Then cross to the East Bank to explore the vast Karnak Temple Complex and the elegant Luxor Temple. After the tour, you will be transferred back to your hotel, Nile Cruise, or airport in Luxor."
+            }
+        ]
     },
     {
         id: 8,
@@ -196,6 +256,13 @@ export const excursionsData = [
         },
         tags: ["Abu Simbel", "Ramses II", "UNESCO"],
         category: "Day Excursions",
+        itinerary: [
+            {
+                day: 1,
+                title: "Abu Simbel Temples",
+                description: "The two magnificent rock temples of Abu Simbel are masterpieces of ancient Egyptian architecture and a symbol of power. Carved during the reign of Pharaoh Ramses II, the Great Temple is dedicated to the gods Amun-Re, Re-Harakhty, Ptah, and Ramses II himself. Nearby stands the Temple of Queen Nefertari, dedicated to the goddess Hathor. After your guided visit, you will be transferred back to your hotel in Aswan."
+            }
+        ]
     },
     {
         id: 9,
@@ -216,13 +283,20 @@ export const excursionsData = [
         },
         tags: ["Alexandria", "Coast", "Roman Context"],
         category: "Day Excursions",
+        itinerary: [
+            {
+                day: 1,
+                title: "Alexandria Highlights",
+                description: "Drive from Cairo to Alexandria to visit the Roman Theater, Catacombs of Kom El-Shoqafa, and Pompey’s Pillar. See the Alexandria Library and Qaitbay Citadel from outside. Walk along the Corniche by the Mediterranean Sea. Enjoy lunch at a local restaurant before returning to Cairo."
+            }
+        ]
     },
     {
         id: 10,
         slug: "sound-light-show-giza-pyramids",
         title: "Sound & Light Show at the Giza Pyramids",
         subtitle: "Evening Tour",
-        longDescription: "Around 18:00 pm we will pick you up from your Hotel in Cairo or Giza city then transfer you by private car with A\C to Enjoy one of the most amazing night show at Giza pyramids and after the show we will transfer you back to your Hotel in Cairo.",
+        longDescription: "Around 18:00 pm we will pick you up from your Hotel in Cairo or Giza city then transfer you by private car with A/C to Enjoy one of the most amazing night show at Giza pyramids and after the show we will transfer you back to your Hotel in Cairo.",
         images: [Sakkara_Pyramids,Sphinx,Abu_Simbel_1,Abu_Simbel_2],
         duration: "Evening",
         location: "Cairo / Giza",
@@ -235,5 +309,12 @@ export const excursionsData = [
         },
         tags: ["Evening", "Show", "Legendary"],
         category: "Day Excursions",
+        itinerary: [
+            {
+                day: 1,
+                title: "Sound & Light Experience",
+                description: "Around 18:00 pm we will pick you up from your Hotel in Cairo or Giza city then transfer you by private car with A/C to Enjoy one of the most amazing night show at Giza pyramids and after the show we will transfer you back to your Hotel in Cairo."
+            }
+        ]
     }
 ];
