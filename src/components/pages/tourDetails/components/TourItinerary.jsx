@@ -19,7 +19,7 @@ const TourItinerary = ({ itinerary }) => {
         setOpenIndex(openIndex === index ? -1 : index);
     };
 
-    
+
     return (
         <div className="space-y-8">
             <div className="space-y-4">
@@ -29,8 +29,8 @@ const TourItinerary = ({ itinerary }) => {
                         <button
                             onClick={() => toggleAccordion(idx)}
                             className={`w-full flex items-center justify-between p-3 md:p-4 rounded-[40px] transition-all duration-300 group ${openIndex === idx
-                                    ? 'bg-[#22455C] shadow-lg shadow-[#22455C]/20'
-                                    : 'bg-[#22455C] hover:bg-[#2c5774]'
+                                ? 'bg-[#22455C] shadow-lg shadow-[#22455C]/20'
+                                : 'bg-[#22455C] hover:bg-[#2c5774]'
                                 }`}
                         >
                             <div className="flex items-center gap-4 md:gap-6">
@@ -60,12 +60,12 @@ const TourItinerary = ({ itinerary }) => {
                                     exit={{ height: 0, opacity: 0 }}
                                     transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
                                 >
-                                    <div className="px-16 md:px-24 py-6">
-                                        <div className="p-6 rounded-3xl bg-slate-50 border border-slate-100 relative">
+                                    <div className="py-4 md:py-6 mt-2">
+                                        <div className="p-6 md:p-8 rounded-[32px] bg-slate-50 border border-slate-100 relative shadow-sm">
                                             {/* Decorative indicator line */}
                                             <div className="absolute left-0 top-6 bottom-6 w-1 bg-[#BC8B22] rounded-r-full"></div>
 
-                                            <p className="text-[#22455C] leading-relaxed font-semibold text-base md:text-lg opacity-80">
+                                            <p className="text-[#22455C] leading-relaxed font-semibold text-base md:text-lg opacity-80 whitespace-pre-line">
                                                 {item.description}
                                             </p>
                                         </div>

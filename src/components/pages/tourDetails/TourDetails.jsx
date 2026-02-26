@@ -77,7 +77,7 @@ const TourDetails = () => {
                     {/* Left Column: Details */}
                     <div className="w-full lg:w-[60%] space-y-12">
                         <TourInfoBar duration={tour.duration} category={tour.category} />
-                        <TourDescription description={tour.description} />
+                        {/* <TourDescription description={tour.description} /> */}
                         <TourItinerary itinerary={tour.itinerary} />
                         {tour.category !== "Nile Cruises" && tour.category !== "Day Excursions" && <TourAccommodation />}
                         <TourPricing
