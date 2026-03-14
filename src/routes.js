@@ -10,7 +10,7 @@ const DayExcursions = lazy(() => import("./components/pages").then(m => ({ defau
 const NileCruises = lazy(() => import("./components/pages").then(m => ({ default: m.NileCruises })));
 const EgyptTourPackages = lazy(() => import("./components/pages").then(m => ({ default: m.EgyptTourPackages })));
 const CustomEgyptTours = lazy(() => import("./components/pages").then(m => ({ default: m.CustomEgyptTours })));
-const TermsAndConditions = lazy(() => import("./components/pages").then(m => ({ default: m.TermsAndConditions })));
+const PaymentPolicy = lazy(() => import("./components/pages").then(m => ({ default: m.PaymentPolicy })));
 const PrivacyPolicy = lazy(() => import("./components/pages/privacyPolicy").then(m => ({ default: m.PrivacyPolicy })));
 const TourDetails = lazy(() => import("./components/pages/tourDetails").then(m => ({ default: m.TourDetails })));
 const NotFound = lazy(() => import("./components/shared/NotFound"));
@@ -66,8 +66,8 @@ export const routes = createBrowserRouter([
                 Component: DayExcursions,
             },
             {
-                path: "/terms-and-conditions",
-                Component: TermsAndConditions,
+                path: "/payment-policy",
+                Component: PaymentPolicy,
             },
             {
                 path: "/privacy-policy",

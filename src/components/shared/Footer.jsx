@@ -50,8 +50,8 @@ const Footer = () => {
               <FooterLink text="About Us" to="/about-us" />
               <FooterLink text="Contact Us" to="/contact-us" />
               <FooterLink
-                text="Terms & Conditions"
-                to="/terms-and-conditions"
+                text="Payment Policy"
+                to="/payment-policy"
               />
               <FooterLink text="Privacy Policy" to="/privacy-policy" />
             </ul>

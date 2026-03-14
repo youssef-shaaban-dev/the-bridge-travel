@@ -16,7 +16,7 @@ const sections = [
 
 import SEO from '@/components/shared/SEO';
 
-const TermsAndConditions = () => {
+const PaymentPolicy = () => {
     const [activeSection, setActiveSection] = useState('booking');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -54,7 +54,7 @@ const TermsAndConditions = () => {
     return (
         <div className="bg-white min-h-screen">
             <SEO
-                title="Terms & Conditions"
+                title="Payment Policy"
                 description="Read the terms and conditions of booking with The Bridge Travel. Essential information about payment, cancellations, and travel responsibilities."
             />
             {/* Hero Section */}
@@ -66,7 +66,7 @@ const TermsAndConditions = () => {
                 <div className="container-custom relative flex h-full items-end pb-12">
                     <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
                         <span className="text-[#BC8B22] font-bold uppercase tracking-widest text-sm mb-2 block">Legal Documentation</span>
-                        <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair">Terms & Conditions</h1>
+                        <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair">Payment Policy</h1>
                     </motion.div>
                 </div>
             </section>
@@ -208,7 +208,7 @@ const TermsAndConditions = () => {
                                     { id: 8, title: "Insurance", text: "Clients are strongly advised to obtain comprehensive travel insurance covering medical, emergency evacuation, and trip cancellation." },
                                     { id: 9, title: "Baggage", text: "All luggage and personal belongings are carried at the client's own risk. The Bridge Travel is not responsible for loss, theft, or damage." },
                                     { id: 10, title: "Health", text: "Clients are responsible for ensuring they meet all health requirements and vaccination regulations prior to travel." },
-                                    { id: 11, title: "Modifications", text: "The Bridge Travel reserves the right to modify these Terms & Conditions at any time." },
+                                    { id: 11, title: "Modifications", text: "The Bridge Travel reserves the right to modify this Payment Policy at any time." },
                                     { id: 12, title: "Data Protection", text: "Personal information is handled in accordance with our Privacy Policy and treated as strictly confidential." }
                                 ].map((item) => (
                                     <div key={item.id} className="p-8 rounded-[32px] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300">
@@ -257,4 +257,4 @@ const TermsAndConditions = () => {
     );
 };
 
-export default TermsAndConditions;
+export default PaymentPolicy;
