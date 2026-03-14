@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FileText, Scale, Globe, AlertCircle, ClipboardCheck, Lock, ChevronRight, Menu, X } from 'lucide-react';
+import { FileText, Scale, Globe, AlertCircle, ClipboardCheck, ChevronRight, Menu } from 'lucide-react';
 import heroImage from "@/assets/images/Jordan-03.webp";
 import { cn } from "@/lib/utils";
-
-const sections = [
-    { id: 'booking', title: '1. Booking Security', icon: FileText },
-    { id: 'payments', title: '2. Deposits & Payments', icon: Scale },
-    { id: 'amendments', title: '3. Amendments', icon: ClipboardCheck },
-    { id: 'rates', title: '4. Rates', icon: Globe },
-    { id: 'responsibility', title: '5. Responsibility', icon: Lock },
-    { id: 'other', title: '6-12. General Terms', icon: FileText },
-    { id: 'contact', title: '13. Contact', icon: Globe }
-];
-
 import SEO from '@/components/shared/SEO';
 
+const sections = [
+    { id: 'payment-policy', title: '1. Payment Policy', icon: FileText },
+    { id: 'payment-method', title: '2. Payment Method', icon: Scale },
+    { id: 'cancellation', title: '3. Cancellation Policy', icon: AlertCircle },
+    { id: 'children', title: '4. Children Policy', icon: ClipboardCheck },
+    { id: 'tour-leader', title: '5. Tour Leader Policy', icon: Globe }
+];
+
 const PaymentPolicy = () => {
-    const [activeSection, setActiveSection] = useState('booking');
+    const [activeSection, setActiveSection] = useState('payment-policy');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
@@ -55,12 +52,12 @@ const PaymentPolicy = () => {
         <div className="bg-white min-h-screen">
             <SEO
                 title="Payment Policy"
-                description="Read the terms and conditions of booking with The Bridge Travel. Essential information about payment, cancellations, and travel responsibilities."
+                description="Read the payment policy of booking with The Bridge Travel. Essential information about payment, cancellations, and policies."
             />
             {/* Hero Section */}
             <section className="relative h-[40vh] min-h-[70vh] w-full overflow-hidden">
                 <div className="absolute inset-0">
-                    <img src={heroImage} alt="The Bridge Travel Terms" className="h-full w-full object-cover" />
+                    <img src={heroImage} alt="The Bridge Travel Payment Policy" className="h-full w-full object-cover" />
                     <div className="absolute inset-0 bg-linear-to-b from-[#22455C]/80 to-white/10" />
                 </div>
                 <div className="container-custom relative flex h-full items-end pb-12">
@@ -138,117 +135,159 @@ const PaymentPolicy = () => {
 
                     {/* Main Content Area */}
                     <div className="flex-1 space-y-24 pb-24">
-                        <section id="booking" className="scroll-mt-32">
+                        <section id="payment-policy" className="scroll-mt-32">
                             <h2 className="text-3xl font-bold text-[#22455C] font-playfair mb-6 flex items-center gap-4">
                                 <span className="h-10 w-10 rounded-xl bg-[#BC8B22]/10 flex items-center justify-center text-[#BC8B22]">1</span>
-                                Booking Security
+                                Payment Policy
                             </h2>
-                            <p className="text-slate-600 leading-relaxed text-lg font-medium">
-                                All bookings must be requested in writing via email or through our website. Upon confirmation, clients must review and approve the final itinerary, services, and payment terms. Payments may be made by bank transfer or credit card (Visa / MasterCard).
-                            </p>
+                            <div className="space-y-6">
+                                <div>
+                                    <h3 className="font-bold text-[#22455C] text-xl mb-3">Individual Travelers less than 15 persons</h3>
+                                    <ul className="list-disc list-inside text-slate-600 leading-relaxed text-lg font-medium space-y-2">
+                                        <li><span className="text-[#BC8B22] font-bold">50%</span> of total bill must be paid upon confirmation of reservation by Wire Transfer or through Western Union.</li>
+                                        <li>The <span className="text-[#BC8B22] font-bold">50%</span> rest of payment to be paid in cash to our representative upon arrival to Cairo.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-[#22455C] text-xl mb-3">Groups 15 persons & up</h3>
+                                    <ul className="list-disc list-inside text-slate-600 leading-relaxed text-lg font-medium space-y-2">
+                                        <li><span className="text-[#BC8B22] font-bold">50%</span> must be paid upon confirmation.</li>
+                                        <li><span className="text-[#BC8B22] font-bold">50%</span> 25 days prior to the arrival date.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </section>
 
-                        <section id="payments" className="scroll-mt-32">
+                        <section id="payment-method" className="scroll-mt-32">
                             <h2 className="text-3xl font-bold text-[#22455C] font-playfair mb-6 flex items-center gap-4">
                                 <span className="h-10 w-10 rounded-xl bg-[#BC8B22]/10 flex items-center justify-center text-[#BC8B22]">2</span>
-                                Deposits & Payments
+                                Payment Method Information
                             </h2>
                             <div className="bg-slate-50 p-8 rounded-[40px] border border-slate-100">
-                                <p className="text-slate-600 leading-relaxed text-lg font-medium mb-6">
-                                    A deposit of <span className="text-[#BC8B22] font-bold">50%</span> of the total tour cost is required to confirm any booking. The remaining balance must be paid no later than <span className="text-[#22455C] font-bold">45 days</span> prior to arrival.
-                                </p>
-                                <div className="p-6 bg-white rounded-3xl border border-slate-200">
-                                    <h4 className="font-bold text-[#22455C] mb-2 text-sm uppercase tracking-wider">Note:</h4>
-                                    <p className="text-slate-500 text-sm">For bookings made within 45 days of travel, full payment is required at the time of confirmation. During peak seasons (Christmas, New Year, and Easter), full payment is mandatory upon booking.</p>
+                                <h3 className="font-bold text-[#22455C] text-xl mb-6">The Bank Wire Transfer Details:</h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-4 text-slate-600 font-medium">
+                                    <div className="md:col-span-2">
+                                        <span className="text-slate-400 uppercase text-xs tracking-wider block mb-1">Bank Name</span>
+                                        <span className="text-lg">National Bank of Egypt - El-Golf Branch</span>
+                                    </div>
+                                    <div>
+                                        <span className="text-slate-400 uppercase text-xs tracking-wider block mb-1">Swift Code</span>
+                                        <span className="text-lg font-mono tracking-wide text-[#22455C]">NBEGEGCX138</span>
+                                    </div>
+                                    <div className="md:col-span-2 break-all">
+                                        <span className="text-slate-400 uppercase text-xs tracking-wider block mb-1">IBAN</span>
+                                        <span className="text-lg font-mono tracking-wide text-[#22455C]">EG330003013850002536643010190</span>
+                                    </div>
+                                    <div className="md:col-span-2 break-all">
+                                        <span className="text-slate-400 uppercase text-xs tracking-wider block mb-1">Account Number by USA</span>
+                                        <span className="text-lg font-mono tracking-wide text-[#22455C]">1385000253664301019</span>
+                                    </div>
+                                    <div className="md:col-span-2">
+                                        <span className="text-slate-400 uppercase text-xs tracking-wider block mb-1">Full Name</span>
+                                        <span className="text-lg font-bold">Ahmed Hamdy Mahmoud Younes</span>
+                                    </div>
+                                    <div className="md:col-span-2">
+                                        <span className="text-slate-400 uppercase text-xs tracking-wider block mb-1">Address</span>
+                                        <span>5 Sakaliya Street Nasr city Cairo – Egypt</span>
+                                    </div>
+                                    <div>
+                                        <span className="text-slate-400 uppercase text-xs tracking-wider block mb-1">ID Number</span>
+                                        <span className="font-mono tracking-wide">272 12 080 10 14 13</span>
+                                    </div>
+                                    <div>
+                                        <span className="text-slate-400 uppercase text-xs tracking-wider block mb-1">Phone Number</span>
+                                        <span className="font-mono tracking-wide">+201227722233</span>
+                                    </div>
                                 </div>
                             </div>
                         </section>
 
-                        <section id="amendments" className="scroll-mt-32">
+                        <section id="cancellation" className="scroll-mt-32">
                             <h2 className="text-3xl font-bold text-[#22455C] font-playfair mb-6 flex items-center gap-4">
                                 <span className="h-10 w-10 rounded-xl bg-[#BC8B22]/10 flex items-center justify-center text-[#BC8B22]">3</span>
-                                Amendments
+                                Cancellation Policy
                             </h2>
-                            <p className="text-slate-600 leading-relaxed text-lg font-medium">
-                                Any amendments to confirmed bookings are subject to availability and may result in additional charges. Requests for changes should be made as early as possible.
-                            </p>
+                            
+                            <div className="space-y-8">
+                                <div>
+                                    <h3 className="font-bold text-[#22455C] text-xl mb-3">Individual Travelers</h3>
+                                    <p className="text-slate-600 leading-relaxed text-lg font-medium mb-4">
+                                        For any cancellation before arrival date <span className="font-bold text-[#BC8B22]">10%</span> of total bill will be charged as cancellation fees in return of management and office fees.
+                                    </p>
+                                    <ul className="list-disc list-inside text-slate-600 leading-relaxed text-lg font-medium space-y-2">
+                                        <li><span className="font-bold text-[#22455C]">45 days before arrival date:</span> no cancellation fees.</li>
+                                        <li><span className="font-bold text-[#22455C]">35 days before arrival date:</span> 25% of total bill will be charged as cancellation fees.</li>
+                                        <li><span className="font-bold text-[#22455C]">25 days before arrival date:</span> 50% of total bill will be charged as cancellation fees.</li>
+                                        <li><span className="font-bold text-[#22455C]">10 days before arrival date:</span> 100% of total bill will be charged as cancellation fees.</li>
+                                    </ul>
+                                </div>
+
+                                <div className="p-6 bg-[#FCF9F4] rounded-3xl border border-[#BC8B22]/20">
+                                    <h4 className="font-bold text-[#BC8B22] mb-2 text-sm uppercase tracking-wider">Note:</h4>
+                                    <p className="text-slate-600 font-medium">Except peak period from 22/12 till 07/01 & Eastern holidays & high seasons periods around the year must be revised with your tour operator upon confirmation of your reservation by correspondence for down payment policy.</p>
+                                </div>
+
+                                <div>
+                                    <h3 className="font-bold text-[#22455C] text-xl mb-3">Groups</h3>
+                                    <ul className="list-disc list-inside text-slate-600 leading-relaxed text-lg font-medium space-y-2">
+                                        <li><span className="font-bold text-[#22455C]">50 days before arrival date:</span> no cancellation fees.</li>
+                                        <li><span className="font-bold text-[#22455C]">40 days before arrival date:</span> 25% of total bill will be charged as cancellation fees.</li>
+                                        <li><span className="font-bold text-[#22455C]">35 days before arrival date:</span> 50% of total bill will be charged as cancellation fees.</li>
+                                        <li><span className="font-bold text-[#22455C]">30 days before arrival date:</span> 100% of total bill will be charged as cancellation fees.</li>
+                                        <li><span className="font-bold text-[#22455C]">100%</span> will be charged as a cancellation fees in case of no show.</li>
+                                    </ul>
+                                </div>
+
+                                <div className="bg-slate-50 p-6 rounded-[32px] border border-slate-100">
+                                    <h3 className="font-bold text-[#22455C] text-xl mb-3">Cancellation Policy for Sleeping train:</h3>
+                                    <ul className="list-disc list-inside text-slate-600 leading-relaxed font-medium space-y-2">
+                                        <li><span className="font-bold text-[#22455C]">48 Hours before train departure:</span> 20% cancellation fee</li>
+                                        <li><span className="font-bold text-[#22455C]">Less than 48 hours before departure:</span> cancellation fee will apply 25%</li>
+                                        <li><span className="font-bold text-[#22455C]">Less than 24 hours:</span> Full payment (no Refund)</li>
+                                    </ul>
+                                </div>
+
+                                <div className="bg-slate-50 p-6 rounded-[32px] border border-slate-100">
+                                    <h3 className="font-bold text-[#22455C] text-xl mb-3">Cancellation Policy for Domestic Flights:</h3>
+                                    <p className="text-slate-600 leading-relaxed font-medium">
+                                        Domestic airfares are subject to different rules and cancellation fees: some maybe non-refundable. Details will be quoted per case.
+                                    </p>
+                                </div>
+                            </div>
                         </section>
 
-                        <section id="rates" className="scroll-mt-32">
+                        <section id="children" className="scroll-mt-32">
                             <h2 className="text-3xl font-bold text-[#22455C] font-playfair mb-6 flex items-center gap-4">
                                 <span className="h-10 w-10 rounded-xl bg-[#BC8B22]/10 flex items-center justify-center text-[#BC8B22]">4</span>
-                                Rates
+                                Children Policy
                             </h2>
-                            <p className="text-slate-600 leading-relaxed text-lg font-medium">
-                                All prices are quoted per person in <span className="text-[#BC8B22] font-bold">US Dollars</span> and include applicable taxes and service charges unless stated otherwise. Prices are subject to change in the event of increases in government fees, fuel surcharges, exchange rates, or supplier costs.
-                            </p>
+                            <div className="space-y-6">
+                                <ul className="list-disc list-inside text-slate-600 leading-relaxed text-lg font-medium space-y-3">
+                                    <li>Children till 2 years old will be charge only <span className="font-bold text-[#BC8B22]">20%</span> of domestic airfare.</li>
+                                    <li>Children between 2 / 12 years old will be charge with <span className="font-bold text-[#BC8B22]">60%</span> of total bill & sharing with parent's room in hotels & Cruises (***Excepted Domestic Flight will be 68% from adult's rate).</li>
+                                    <li>Children more than 12 years old: are considered as adults.</li>
+                                    <li>Children between above 9 Years old will be considered as an adult in Sleeping Train.</li>
+                                </ul>
+
+                                <div className="p-6 bg-white rounded-3xl border border-slate-200">
+                                    <h4 className="font-bold text-[#22455C] mb-2 text-sm uppercase tracking-wider">Please Note:</h4>
+                                    <ul className="list-disc list-inside text-slate-500 text-sm space-y-1">
+                                        <li>Children age will be calculated according to the documented date of birth.</li>
+                                        <li>For the domestic air fare, children will be charged according to their exact age on the day of the internal travel & for the hotels they will be charged according to the check-in day.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </section>
 
-                     
-                        <section id="responsibility" className="scroll-mt-32">
+                        <section id="tour-leader" className="scroll-mt-32">
                             <h2 className="text-3xl font-bold text-[#22455C] font-playfair mb-6 flex items-center gap-4">
                                 <span className="h-10 w-10 rounded-xl bg-[#BC8B22]/10 flex items-center justify-center text-[#BC8B22]">5</span>
-                                Responsibility
+                                Tour Leader Policy
                             </h2>
-                            <div className="prose prose-slate max-w-none">
-                                <p className="text-slate-600 leading-relaxed text-lg font-medium">
-                                    The Bridge Travel acts solely as an intermediary between clients and service providers such as hotels, airlines, cruise companies, and transportation operators. The company shall not be liable for force majeure events, airline delays, weather conditions, political situations, acts of terrorism, natural disasters, or any supplier failures beyond its control.
-                                </p>
-                            </div>
-                        </section>
-
-                        <section id="other" className="scroll-mt-32">
-                            <h2 className="text-3xl font-bold text-[#22455C] font-playfair mb-8 flex items-center gap-4">
-                                <span className="h-10 w-10 rounded-xl bg-[#BC8B22]/10 flex items-center justify-center text-[#BC8B22]">6-12</span>
-                                General Policies
-                            </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                {[
-                                    { id: 7, title: "Complaints", text: "Issues must be reported immediately to our local representative. Written complaints must be submitted within 14 days of tour completion." },
-                                    { id: 8, title: "Insurance", text: "Clients are strongly advised to obtain comprehensive travel insurance covering medical, emergency evacuation, and trip cancellation." },
-                                    { id: 9, title: "Baggage", text: "All luggage and personal belongings are carried at the client's own risk. The Bridge Travel is not responsible for loss, theft, or damage." },
-                                    { id: 10, title: "Health", text: "Clients are responsible for ensuring they meet all health requirements and vaccination regulations prior to travel." },
-                                    { id: 11, title: "Modifications", text: "The Bridge Travel reserves the right to modify this Payment Policy at any time." },
-                                    { id: 12, title: "Data Protection", text: "Personal information is handled in accordance with our Privacy Policy and treated as strictly confidential." }
-                                ].map((item) => (
-                                    <div key={item.id} className="p-8 rounded-[32px] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300">
-                                        <span className="text-[#BC8B22] font-black text-xs uppercase tracking-[0.2em] mb-2 block">{item.id}. {item.title}</span>
-                                        <p className="text-slate-600 text-sm leading-relaxed">{item.text}</p>
-                                    </div>
-                                ))}
-                                <div className="md:col-span-2 p-8 rounded-[32px] bg-[#22455C] text-white">
-                                    <span className="text-[#BC8B22] font-black text-xs uppercase tracking-[0.2em] mb-2 block">13. Governing Law</span>
-                                    <p className="text-white/80 font-medium">All agreements shall be governed by and interpreted in accordance with the laws of the Arab Republic of Egypt.</p>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section id="contact" className="scroll-mt-32 border-t border-slate-100 pt-12">
-                            <h2 className="text-3xl font-bold text-[#22455C] font-playfair mb-8">13. Contact Details</h2>
-                            <div className="bg-[#FCF9F4] p-10 rounded-[40px] border border-[#BC8B22]/20 relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-64 h-64 bg-[#BC8B22]/5 rounded-full -mr-32 -mt-32 blur-3xl opacity-50" />
-                                <div className="relative z-10 flex flex-col md:flex-row gap-8 justify-between">
-                                    <div className="space-y-4">
-                                        <h4 className="text-2xl font-bold text-[#22455C] font-playfair">The Bridge Travel</h4>
-                                        <p className="text-slate-500 font-medium">Cairo, Egypt</p>
-                                        <a href="https://www.thebridgetravel.com" className="text-[#BC8B22] font-bold hover:underline block">www.thebridgetravel.com</a>
-                                    </div>
-                                    <div className="space-y-4">
-                                        <div className="flex flex-col">
-                                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Email</span>
-                                            <span className="font-bold text-[#22455C]">info@thebridgetravel.com</span>
-                                        </div>
-                                        <div className="flex flex-col">
-                                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Phone / WhatsApp</span>
-                                            <span className="font-bold text-[#22455C]">+20 122 77 22233</span>
-                                            <span className="font-bold text-[#22455C]">+20 100 56 47138</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="mt-12 pt-8 border-t border-slate-200 text-center">
-                                    <p className="text-slate-400 text-xs italic font-medium">The Bridge Travel - The Bridge to Luxury Egypt Tours</p>
-                                </div>
-                            </div>
+                            <p className="text-slate-600 leading-relaxed text-lg font-medium mb-6">
+                                For every 21 paying persons, the 22th person will be <span className="text-[#BC8B22] font-bold">free of charge</span> staying in a double cabin. (A maximum of one double cabin is allowed.)
+                            </p>
+                            <p className="text-slate-500 italic">In case the Egyptian laws are changed, the new laws will prevail.</p>
                         </section>
                     </div>
                 </div>
