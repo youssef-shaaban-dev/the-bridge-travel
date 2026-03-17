@@ -191,10 +191,6 @@ const PaymentPolicy = () => {
                                         <span>5 Sakaliya Street Nasr city Cairo – Egypt</span>
                                     </div>
                                     <div>
-                                        <span className="text-slate-400 uppercase text-xs tracking-wider block mb-1">ID Number</span>
-                                        <span className="font-mono tracking-wide">272 12 080 10 14 13</span>
-                                    </div>
-                                    <div>
                                         <span className="text-slate-400 uppercase text-xs tracking-wider block mb-1">Phone Number</span>
                                         <span className="font-mono tracking-wide">+201227722233</span>
                                     </div>

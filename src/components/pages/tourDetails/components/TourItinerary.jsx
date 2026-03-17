@@ -41,7 +41,7 @@ const TourItinerary = ({ itinerary }) => {
 
                                 {/* Day Title */}
                                 <span className={`flex items-center gap-2 text-left text-sm md:text-lg font-bold text-white tracking-tight ${openIndex === idx ? 'opacity-100' : 'opacity-90'}`}>
-                                    <Bus className="w-5 h-5 md:w-8 md:h-8 mr-2 " /> Exclusive Day Excursions
+                                    Day {item.day}
                                 </span>
                             </div>
 
