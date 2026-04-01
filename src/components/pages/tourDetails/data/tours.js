@@ -1,4 +1,7 @@
 import Cairo_1 from "@/assets/images/Cairo-01.webp"
+import Egyptian_Museum_1 from "@/assets/images/Egyptian-Museum-01.webp"
+import Hurghada_2 from "@/assets/images/Hurghada-02.webp"
+import Abu_Simble_1 from "@/assets/images/Abu-Simble-01.webp"
 import Cairo_2 from "@/assets/images/Cairo-02.webp"
 import Cairo_3 from "@/assets/images/Cairo-Cruise.webp"
 import Cairo_4 from "@/assets/images/Cairo-Coptic.webp"
@@ -410,10 +413,9 @@ export const toursData = [
         type: "Private Tour",
         includes: "Cairo | Nile Cruise | Hurghada",
         images: [
-            Cairo_1,
             NileCruise,
+            Hurghada_2,
             Luxor_1,
-            Aswan_1
         ],
         description: "Note: The Nile cruises 3 nights sailing dates on Friday and Wednesday every week From Aswan so the client must be in Cairo before the sailing day by 2 days.",
         itinerary: [
@@ -470,11 +472,11 @@ export const toursData = [
         type: "Private Tour",
         includes: "Cairo | Nile Cruise | Bahariya",
         images: [
-            Cairo_1,
-            Sphinx,
+            "https://i0.wp.com/landioustravel.com/wp-content/uploads/2022/12/Bahariya-Oasis-Tour-Hurghada-e1672346695818.jpg?resize=1024%2C576&ssl=1",
             NileCruise,
-            Aswan_1,
-            Luxor_1
+            Sphinx,
+            Aswan_3,
+            Luxor_2
         ],
         description: "An incredible journey covering the ancient wonders of Cairo, a luxurious Nile Cruise through Aswan and Luxor, and an unforgettable desert adventure in El Bahariya Oasis and the White Desert.",
         itinerary: [
@@ -551,9 +553,10 @@ export const toursData = [
             "Any Optional tours."
         ],
         images: [
-            Cairo_1,
-            NileCruise,
             Aswan_3,
+            NileCruise,
+            Abu_Simble_1,
+            Cairo_2,
             Luxor_1
         ],
         description: "Note: The Nile cruises 3 nights sailing dates on Friday and Wednesday every week From Aswan so the client must be in Cairo before the sailing day by 2 days.",
