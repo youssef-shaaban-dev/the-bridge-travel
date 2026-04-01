@@ -459,7 +459,7 @@ export const excursionsData = [
         slug: "overnight-tour-el-baharia",
         title: "Over Night Tour to El Baharia",
         subtitle: "Private Safari Tour",
-        images: [Cairo_2, Sphinx, Sakkara_Pyramids], // Placeholder, please add real safari images later
+        images: ["https://i0.wp.com/landioustravel.com/wp-content/uploads/2022/12/Bahariya-Oasis-Tour-Hurghada-e1672346695818.jpg?resize=1024%2C576&ssl=1", Sphinx, Sakkara_Pyramids], // Placeholder, please add real safari images later
         duration: "2 Days / 1 Night",
         location: "El Bahariya Oasis",
         price: 350,
