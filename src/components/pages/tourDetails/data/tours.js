@@ -1,6 +1,6 @@
 // 1
 import Pyramids from "@/assets/images/Pyramids.webp"
-import Sakkara_Pyramids from "@/assets/images/pyramids.webp"
+import Sakkara_Pyramids from "@/assets/images/Sakkara-Pyramids.webp"
 import Alexandria_2 from "@/assets/images/Alexandria-02.webp"
 import Egyptian_Museum_1 from "@/assets/images/Egyptian-Museum-01.webp"
 
