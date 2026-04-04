@@ -1,6 +1,6 @@
 // 1
 import Pyramids from "@/assets/images/Pyramids.webp"
-import Sakkara_Pyramids from "@/assets/images/Sakkara-Pyramids.webp"
+import Sakkara_Pyramids from "@/assets/images/pyramids.webp"
 import Alexandria_2 from "@/assets/images/Alexandria-02.webp"
 import Egyptian_Museum_1 from "@/assets/images/Egyptian-Museum-01.webp"
 
@@ -13,7 +13,6 @@ import Luxor_5 from "@/assets/images/Luxor-05.webp"
 // 3
 import Luxor_4 from "@/assets/images/Luxor-04.webp"
 import Hurghada_2 from "@/assets/images/Hurghada-02.webp"
-import Aswan from "@/assets/images/Aswan.webp"
 // 4- pyramids
 
 // 5
@@ -26,13 +25,11 @@ import sharm from "@/assets/images/sharm.png"
 import Jordan_1 from "@/assets/images/Jordan-01.webp"
 // Pyramids
 // Nile Cruise
-import SharmElShik_4 from "@/assets/images/Sharm-El-Sheikh-04.webp"
 
 // 7
 // Sakara
 // Abu Simpel
 // Hurghada
-import Khan_El_Khalili from "@/assets/images/Khan-El-Khalil.webp"
 
 // 8
 //     bahariya-oasis    "https://i0.wp.com/landioustravel.com/wp-content/uploads/2022/12/Bahariya-Oasis-Tour-Hurghada-e1672346695818.jpg?resize=1024%2C576&ssl=1",
@@ -47,29 +44,12 @@ import Sphinx from "@/assets/images/Sphinx.webp"
 // Temple of Horus in Edfu.
 // Colossi of Memnon
 
-import Cairo_1 from "@/assets/images/Cairo-01.webp"
-import Egyptian_Museum_2 from "@/assets/images/Egyptian-Museum-02.webp"
-import Cairo_2 from "@/assets/images/Cairo-02.webp"
-
 import Cairo_5 from "@/assets/images/Khan-El-Khalil.webp"
 import Abu_Simble_2 from "@/assets/images/Abu-Simble-02.webp"
-
-
-
-import Aswan_1 from "@/assets/images/Aswan-01.webp"
 import Aswan_3 from "@/assets/images/Aswan-03.webp"
-import Aswan_7 from "@/assets/images/Aswan-07.webp"
-
-import Luxor_1 from "@/assets/images/Luxor.webp"
 import Luxor_2 from "@/assets/images/Luxor-02.webp"
-import Luxor_3 from "@/assets/images/Luxor-03.webp"
-
-import SharmElShik_1 from "@/assets/images/Sharm-El-Sheikh-01.webp"
-import SharmElShik_2 from "@/assets/images/Sharm-El-Sheikh-02.webp"
-import SharmElShik_3 from "@/assets/images/Sharm-El-Sheikh-03.webp"
 
 
-import Bahariya_1 from "@/assets/images/Bahariya-01.webp"
 
 
 export const toursData = [
