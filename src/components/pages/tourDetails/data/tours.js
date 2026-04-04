@@ -1,17 +1,60 @@
-import Cairo_1 from "@/assets/images/Cairo-01.webp"
-import Egyptian_Museum_1 from "@/assets/images/Egyptian-Museum-01.webp"
-import Hurghada_2 from "@/assets/images/Hurghada-02.webp"
-import Abu_Simble_1 from "@/assets/images/Abu-Simble-01.webp"
-import Cairo_2 from "@/assets/images/Cairo-02.webp"
-import Cairo_3 from "@/assets/images/Cairo-Cruise.webp"
-import Cairo_4 from "@/assets/images/Cairo-Coptic.webp"
-import Cairo_5 from "@/assets/images/Khan-El-Khalil.webp"
-
-import Sphinx from "@/assets/images/Sphinx.webp"
+// 1
+import Pyramids from "@/assets/images/Pyramids.webp"
 import Sakkara_Pyramids from "@/assets/images/Sakkara-Pyramids.webp"
-import Saladin_Citadel from "@/assets/images/Saladin-Citadel.webp"
+import Alexandria_2 from "@/assets/images/Alexandria-02.webp"
+import Egyptian_Museum_1 from "@/assets/images/Egyptian-Museum-01.webp"
 
+// 2
 import NileCruise from "@/assets/images/Nile-Cruise.webp"
+import Abu_Simble_1 from "@/assets/images/Abu-Simble-01.webp"
+import Luxor_5 from "@/assets/images/Luxor-05.webp"
+// Queen Hatshepsut
+
+// 3
+import Luxor_4 from "@/assets/images/Luxor-04.webp"
+import Hurghada_2 from "@/assets/images/Hurghada-02.webp"
+import Aswan from "@/assets/images/Aswan.webp"
+// 4- pyramids
+
+// 5
+// Abu Simble
+import sharm from "@/assets/images/sharm.png"
+// Egyptian Museym 
+// Karnak
+
+// 6
+import Jordan_1 from "@/assets/images/Jordan-01.webp"
+// Pyramids
+// Nile Cruise
+import SharmElShik_4 from "@/assets/images/Sharm-El-Sheikh-04.webp"
+
+// 7
+// Sakara
+// Abu Simpel
+// Hurghada
+import Khan_El_Khalili from "@/assets/images/Khan-El-Khalil.webp"
+
+// 8
+//     bahariya-oasis    "https://i0.wp.com/landioustravel.com/wp-content/uploads/2022/12/Bahariya-Oasis-Tour-Hurghada-e1672346695818.jpg?resize=1024%2C576&ssl=1",
+
+// Great Pyramids
+// Luxor template
+//  Nile Cruise
+
+// 9
+import Sphinx from "@/assets/images/Sphinx.webp"
+// the Philae temple
+// Temple of Horus in Edfu.
+// Colossi of Memnon
+
+import Cairo_1 from "@/assets/images/Cairo-01.webp"
+import Egyptian_Museum_2 from "@/assets/images/Egyptian-Museum-02.webp"
+import Cairo_2 from "@/assets/images/Cairo-02.webp"
+
+import Cairo_5 from "@/assets/images/Khan-El-Khalil.webp"
+import Abu_Simble_2 from "@/assets/images/Abu-Simble-02.webp"
+
+
 
 import Aswan_1 from "@/assets/images/Aswan-01.webp"
 import Aswan_3 from "@/assets/images/Aswan-03.webp"
@@ -19,15 +62,14 @@ import Aswan_7 from "@/assets/images/Aswan-07.webp"
 
 import Luxor_1 from "@/assets/images/Luxor.webp"
 import Luxor_2 from "@/assets/images/Luxor-02.webp"
+import Luxor_3 from "@/assets/images/Luxor-03.webp"
 
 import SharmElShik_1 from "@/assets/images/Sharm-El-Sheikh-01.webp"
 import SharmElShik_2 from "@/assets/images/Sharm-El-Sheikh-02.webp"
 import SharmElShik_3 from "@/assets/images/Sharm-El-Sheikh-03.webp"
-import SharmElShik_4 from "@/assets/images/Sharm-El-Sheikh-04.webp"
 
-import Jordan_1 from "@/assets/images/Jordan-01.webp"
-import Jordan_2 from "@/assets/images/Jordan-02.webp"
-import Jordan_3 from "@/assets/images/Jordan-03.webp"
+
+import Bahariya_1 from "@/assets/images/Bahariya-01.webp"
 
 
 export const toursData = [
@@ -70,10 +112,10 @@ export const toursData = [
             "Any Optional tours."
         ],
         images: [
-            Cairo_1,
-            Cairo_2,
-            Cairo_3,
-            Cairo_4,
+            Pyramids,
+            Sakkara_Pyramids,
+            Alexandria_2,
+            Egyptian_Museum_1,
         ],
         description: "Step into the heart of ancient civilization with a perfectly curated Egypt experience that blends iconic sights, five-star comfort, and personal service from the moment you land. From the Great Pyramids and the Sphinx to the treasures of King Tut, from the spiritual beauty of Old Cairo to the Mediterranean charm of Alexandria - this journey is crafted to turn your dream of Egypt into a seamless, unforgettable reality.",
         itinerary: [
@@ -86,7 +128,7 @@ export const toursData = [
         ]
     },
     {
-        id: 3,
+        id: 2,
         slug: "egypt-holidays-nile-cruise",
         title: "7 Days / 6 Nights Egypt Holidays & Nile Cruise",
         location: "Cairo & Nile",
@@ -105,10 +147,9 @@ export const toursData = [
         includes: "Cairo | Nile Cruise",
         images: [
             NileCruise,
-            Aswan_1,
-            Aswan_3,
-            Cairo_1,
-            Cairo_5
+            Abu_Simble_1,
+            Luxor_5,
+            "https://www.cairotoptours.com/storage/3002/conversions/Queen%20Hatshepsut%20Egypt-webp.webp",
         ],
         description: "Experience the very best of Egypt with a perfect combination of iconic Cairo, a relaxing Nile Cruise, and the legendary temples of Upper Egypt — all with private guiding and five-star comfort. Note: The Nile cruises 3 nights sailing dates on Friday and Wednesday every week From Aswan so the client must be in Cairo before the sailing day by 2 days.",
         itinerary: [
@@ -142,7 +183,7 @@ export const toursData = [
         ]
     },
     {
-        id: 4,
+        id: 3,
         slug: "egypt-discovery-red-sea",
         title: "Egypt Discovery & Red Sea Escape",
         location: "Cairo, Aswan, Luxor & Hurghada",
@@ -160,10 +201,10 @@ export const toursData = [
         type: "Private Tour",
         includes: "Sleeper Train | Red Sea",
         images: [
-            Luxor_1,
-            Luxor_2,
-            Aswan_7,
-            Cairo_5,
+            Luxor_5,
+            Hurghada_2,
+            Aswan_3,
+            Pyramids,
         ],
         description: "A perfectly balanced journey combining Egypt’s ancient wonders, a romantic sleeper train experience, the magic of Upper Egypt, and pure relaxation on the Red Sea.",
         itinerary: [
@@ -205,7 +246,7 @@ export const toursData = [
         ]
     },
     {
-        id: 5,
+        id: 4,
         slug: "egypt-grand-red-sea",
         title: "Egypt Grand Experience & Red Sea Escape",
         location: "Cairo, Nile & Sharm El-Sheikh",
@@ -222,10 +263,9 @@ export const toursData = [
         type: "Private Tour",
         includes: "Nile Cruise | Sharm",
         images: [
-            SharmElShik_1,
-            SharmElShik_2,
-            SharmElShik_3,
-            SharmElShik_4,
+            sharm,
+            Abu_Simble_2,
+            "https://holidaytours.one/wp-content/uploads/2023/07/Luxor_hot_air_balloons_flying_over-1000x667.png",
         ],
         description: "A perfect blend of ancient wonders, luxury Nile cruising, and relaxing beach time on the Red Sea — designed for travelers who want culture and comfort.",
         itinerary: [
@@ -263,7 +303,7 @@ export const toursData = [
         ]
     },
     {
-        id: 6,
+        id: 5,
         slug: "egypt-grand-hurghada",
         title: "Egypt Grand Experience (Hurghada)",
         location: "Cairo, Nile & Hurghada",
@@ -280,10 +320,10 @@ export const toursData = [
         type: "Private Tour",
         includes: "Nile Cruise | Hurghada",
         images: [
-            Sakkara_Pyramids,
-            Saladin_Citadel,
-            NileCruise,
-            Aswan_1
+            Abu_Simble_1,
+            sharm,
+            Egyptian_Museum_1,
+            Luxor_5,
         ],
         description: "A perfect blend of ancient wonders, luxury Nile cruising, and pure relaxation on the Red Sea's Hurghada coast. Note: The Nile cruises 3 nights sailing dates on Friday and Wednesday every week From Aswan so the client must be in Cairo before the sailing day by 2 days.",
         itinerary: [
@@ -323,7 +363,7 @@ export const toursData = [
         ]
     },
     {
-        id: 7,
+        id: 6,
         slug: "egypt-jordan-discovery",
         title: "Grand Egypt & Jordan Discovery",
         location: "Egypt & Jordan",
@@ -342,9 +382,9 @@ export const toursData = [
         includes: "Egypt + Jordan",
         images: [
             Jordan_1,
-            Jordan_2,
-            Jordan_3,
-            Sphinx
+            Pyramids,
+            NileCruise,
+            sharm,
         ],
         description: "An extraordinary journey that connects the wonders of Ancient Egypt with the timeless beauty of Jordan - from the Pyramids and the Nile to Petra, Wadi Rum, and the Dead Sea. Note: The Nile cruises 3 nights sailing dates on Friday and Wednesday every week From Aswan so the client must be in Cairo before the sailing day by 2 days.",
         itinerary: [
@@ -395,7 +435,7 @@ export const toursData = [
         ]
     },
     {
-        id: 8,
+        id: 7,
         slug: "egypt-nile-hurghada-9days",
         title: "9 Days / 8 Nights Egypt, Nile Cruise & Hurghada",
         location: "Cairo, Nile Cruise & Hurghada",
@@ -413,9 +453,10 @@ export const toursData = [
         type: "Private Tour",
         includes: "Cairo | Nile Cruise | Hurghada",
         images: [
-            NileCruise,
+            Sakkara_Pyramids,
+            Abu_Simble_1,
             Hurghada_2,
-            Luxor_1,
+            Cairo_5,
         ],
         description: "Note: The Nile cruises 3 nights sailing dates on Friday and Wednesday every week From Aswan so the client must be in Cairo before the sailing day by 2 days.",
         itinerary: [
@@ -454,7 +495,7 @@ export const toursData = [
         ]
     },
     {
-        id: 9,
+        id: 8,
         slug: "egypt-bahariya-oasis-10days",
         title: "10 Days / 9 Nights Egypt & El Bahariya Oasis",
         location: "Cairo, Nile Cruise & Bahariya Oasis",
@@ -473,10 +514,9 @@ export const toursData = [
         includes: "Cairo | Nile Cruise | Bahariya",
         images: [
             "https://i0.wp.com/landioustravel.com/wp-content/uploads/2022/12/Bahariya-Oasis-Tour-Hurghada-e1672346695818.jpg?resize=1024%2C576&ssl=1",
+            Pyramids,
+            Luxor_5,
             NileCruise,
-            Sphinx,
-            Aswan_3,
-            Luxor_2
         ],
         description: "An incredible journey covering the ancient wonders of Cairo, a luxurious Nile Cruise through Aswan and Luxor, and an unforgettable desert adventure in El Bahariya Oasis and the White Desert.",
         itinerary: [
@@ -515,7 +555,7 @@ export const toursData = [
         ]
     },
     {
-        id: 10,
+        id: 9,
         slug: "egypt-nile-adventure",
         title: "8 Days / 7 Nights Egypt & Nile Adventure",
         location: "Cairo & Nile Cruise",
@@ -553,11 +593,10 @@ export const toursData = [
             "Any Optional tours."
         ],
         images: [
-            Aswan_3,
-            NileCruise,
-            Abu_Simble_1,
-            Cairo_2,
-            Luxor_1
+            Sphinx,
+            Luxor_4,
+            Luxor_2,
+            Luxor_5
         ],
         description: "Note: The Nile cruises 3 nights sailing dates on Friday and Wednesday every week From Aswan so the client must be in Cairo before the sailing day by 2 days.",
         itinerary: [
