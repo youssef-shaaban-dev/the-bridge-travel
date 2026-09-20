@@ -13,8 +13,9 @@ const SEO = ({
 }) => {
     const siteTitle = 'The Bridge Travel';
     const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
-    const defaultDescription = 'Luxury Egypt Tours and Tailor-made Travel Experiences. Explore the wonders of Ancient Egypt with The Bridge Travel.';
+    const defaultDescription = 'Luxury Egypt tours, private Nile cruises & Red Sea holidays. Explore Cairo, Luxor & Aswan with The Bridge Travel.';
     const defaultKeywords = 'Egypt Tours, Luxury Travel Egypt, Nile Cruise, Pyramids Tour, Custom Egypt Tours';
+    const defaultImage = 'https://thebridgetravel.com/logo.png';
 
     return (
         <Helmet>
@@ -28,14 +29,14 @@ const SEO = ({
             <meta property="og:type" content="website" />
             <meta property="og:title" content={ogTitle || fullTitle} />
             <meta property="og:description" content={ogDescription || description || defaultDescription} />
-            {ogImage && <meta property="og:image" content={ogImage} />}
+            <meta property="og:image" content={ogImage || defaultImage} />
             {ogUrl && <meta property="og:url" content={ogUrl} />}
 
             {/* Twitter */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={ogTitle || fullTitle} />
             <meta name="twitter:description" content={ogDescription || description || defaultDescription} />
-            {ogImage && <meta name="twitter:image" content={ogImage} />}
+            <meta name="twitter:image" content={ogImage || defaultImage} />
         </Helmet>
     );
 };
